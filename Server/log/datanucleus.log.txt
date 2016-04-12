@@ -1,0 +1,796 @@
+20 Jan 2016 - 17:23:54,787 (main) DEBUG [DataNucleus.General] - Using PluginRegistry org.datanucleus.plugin.NonManagedPluginRegistry
+20 Jan 2016 - 17:23:54,823 (main) DEBUG [DataNucleus.General] - Registering bundle org.datanucleus.api.jdo version 4.1.0.m4 at URL file:/tmp/TralalaServer/lib/datanucleus-api-jdo-4.1.0-m4.jar.
+20 Jan 2016 - 17:23:54,888 (main) DEBUG [DataNucleus.General] - Loading extension points from plug-in file jar:file:/tmp/TralalaServer/lib/datanucleus-api-jdo-4.1.0-m4.jar!/plugin.xml.
+20 Jan 2016 - 17:23:54,893 (main) DEBUG [DataNucleus.General] - Loading extensions from plug-in file jar:file:/tmp/TralalaServer/lib/datanucleus-api-jdo-4.1.0-m4.jar!/plugin.xml.
+20 Jan 2016 - 17:23:54,897 (main) DEBUG [DataNucleus.General] - Registering bundle org.datanucleus version 4.1.0.m4 at URL file:/tmp/TralalaServer/lib/datanucleus-core-4.1.0-m4.jar.
+20 Jan 2016 - 17:23:54,926 (main) DEBUG [DataNucleus.General] - Loading extension points from plug-in file jar:file:/tmp/TralalaServer/lib/datanucleus-core-4.1.0-m4.jar!/plugin.xml.
+20 Jan 2016 - 17:23:54,951 (main) DEBUG [DataNucleus.General] - Loading extensions from plug-in file jar:file:/tmp/TralalaServer/lib/datanucleus-core-4.1.0-m4.jar!/plugin.xml.
+20 Jan 2016 - 17:23:54,962 (main) DEBUG [DataNucleus.General] - Registering bundle org.datanucleus.store.rdbms version 4.1.0.m4 at URL file:/tmp/TralalaServer/lib/datanucleus-rdbms-4.1.0-m4.jar.
+20 Jan 2016 - 17:23:55,002 (main) DEBUG [DataNucleus.General] - Loading extension points from plug-in file jar:file:/tmp/TralalaServer/lib/datanucleus-rdbms-4.1.0-m4.jar!/plugin.xml.
+20 Jan 2016 - 17:23:55,032 (main) DEBUG [DataNucleus.General] - Loading extensions from plug-in file jar:file:/tmp/TralalaServer/lib/datanucleus-rdbms-4.1.0-m4.jar!/plugin.xml.
+20 Jan 2016 - 17:23:55,089 (main) DEBUG [DataNucleus.Persistence] - Java types support initialising ...
+20 Jan 2016 - 17:23:55,121 (main) DEBUG [DataNucleus.Persistence] - Java types support loaded : supported java types=[B, [C, [D, [F, [I, [J, [Ljava.lang.Boolean;, [Ljava.lang.Byte;, [Ljava.lang.Character;, [Ljava.lang.Double;, [Ljava.lang.Enum;, [Ljava.lang.Float;, [Ljava.lang.Integer;, [Ljava.lang.Long;, [Ljava.lang.Number;, [Ljava.lang.Short;, [Ljava.lang.String;, [Ljava.math.BigDecimal;, [Ljava.math.BigInteger;, [Ljava.util.Date;, [Ljava.util.Locale;, [S, [Z, boolean, byte, char, double, float, int, java.awt.Color, java.awt.image.BufferedImage, java.lang.Boolean, java.lang.Byte, java.lang.Character, java.lang.Class, java.lang.Double, java.lang.Enum, java.lang.Float, java.lang.Integer, java.lang.Long, java.lang.Number, java.lang.Short, java.lang.String, java.lang.StringBuffer, java.lang.StringBuilder, java.math.BigDecimal, java.math.BigInteger, java.net.URI, java.net.URL, java.sql.Date, java.sql.Time, java.sql.Timestamp, java.util.ArrayList, java.util.Arrays$ArrayList, java.util.BitSet, java.util.Calendar, java.util.Collection, java.util.Currency, java.util.Date, java.util.GregorianCalendar, java.util.HashMap, java.util.HashSet, java.util.Hashtable, java.util.LinkedHashMap, java.util.LinkedHashSet, java.util.LinkedList, java.util.List, java.util.Locale, java.util.Map, java.util.PriorityQueue, java.util.Properties, java.util.Queue, java.util.Set, java.util.SortedMap, java.util.SortedSet, java.util.Stack, java.util.TimeZone, java.util.TreeMap, java.util.TreeSet, java.util.UUID, java.util.Vector, long, short
+20 Jan 2016 - 17:23:55,121 (main) DEBUG [DataNucleus.Persistence] - Type converter support initialising ...
+20 Jan 2016 - 17:23:55,144 (main) DEBUG [DataNucleus.Persistence] - Type converter support loaded
+20 Jan 2016 - 17:23:55,145 (main) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for byte[] to : java.nio.ByteBuffer
+20 Jan 2016 - 17:23:55,145 (main) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for char[] to : java.nio.ByteBuffer
+20 Jan 2016 - 17:23:55,145 (main) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for double[] to : java.nio.ByteBuffer
+20 Jan 2016 - 17:23:55,145 (main) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for float[] to : java.nio.ByteBuffer
+20 Jan 2016 - 17:23:55,145 (main) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for int[] to : java.nio.ByteBuffer
+20 Jan 2016 - 17:23:55,145 (main) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for long[] to : java.nio.ByteBuffer
+20 Jan 2016 - 17:23:55,145 (main) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for short[] to : java.nio.ByteBuffer
+20 Jan 2016 - 17:23:55,145 (main) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for boolean[] to : java.nio.ByteBuffer
+20 Jan 2016 - 17:23:55,145 (main) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for java.awt.Color to : java.lang.String,int[]
+20 Jan 2016 - 17:23:55,145 (main) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for java.io.Serializable to : java.lang.String,java.nio.ByteBuffer,byte[]
+20 Jan 2016 - 17:23:55,145 (main) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for java.lang.Boolean to : java.lang.Character,java.lang.Integer
+20 Jan 2016 - 17:23:55,146 (main) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for java.lang.Character to : java.lang.String
+20 Jan 2016 - 17:23:55,146 (main) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for java.lang.Class to : java.lang.String
+20 Jan 2016 - 17:23:55,146 (main) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for java.lang.Integer to : java.lang.String
+20 Jan 2016 - 17:23:55,146 (main) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for java.lang.Long to : java.lang.String
+20 Jan 2016 - 17:23:55,146 (main) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for java.lang.StringBuffer to : java.lang.String
+20 Jan 2016 - 17:23:55,146 (main) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for java.lang.StringBuilder to : java.lang.String
+20 Jan 2016 - 17:23:55,146 (main) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for java.math.BigDecimal to : java.lang.String,java.nio.ByteBuffer,java.lang.Double
+20 Jan 2016 - 17:23:55,146 (main) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for java.math.BigInteger to : java.lang.String,java.nio.ByteBuffer,java.lang.Long
+20 Jan 2016 - 17:23:55,146 (main) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for java.net.URI to : java.lang.String
+20 Jan 2016 - 17:23:55,146 (main) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for java.net.URL to : java.lang.String
+20 Jan 2016 - 17:23:55,146 (main) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for java.sql.Date to : java.util.Date,java.lang.String,java.lang.Long
+20 Jan 2016 - 17:23:55,146 (main) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for java.sql.Time to : java.util.Date,java.lang.String,java.lang.Long
+20 Jan 2016 - 17:23:55,147 (main) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for java.sql.Timestamp to : java.util.Date,java.lang.String,java.lang.Long
+20 Jan 2016 - 17:23:55,147 (main) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for java.util.BitSet to : java.lang.String
+20 Jan 2016 - 17:23:55,147 (main) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for java.util.Calendar to : java.sql.Timestamp,java.util.Date,java.lang.String,[Ljava.lang.Object;
+20 Jan 2016 - 17:23:55,147 (main) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for java.util.Currency to : java.lang.String
+20 Jan 2016 - 17:23:55,147 (main) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for java.util.Date to : java.lang.String,java.lang.Long
+20 Jan 2016 - 17:23:55,147 (main) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for java.util.Locale to : java.lang.String
+20 Jan 2016 - 17:23:55,147 (main) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for java.util.TimeZone to : java.lang.String
+20 Jan 2016 - 17:23:55,147 (main) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for java.util.UUID to : java.lang.String
+20 Jan 2016 - 17:23:55,149 (main) DEBUG [DataNucleus.MetaData] - MetaDataManager : Input=(XML,Annotations), XML-Validation=false, XML-Suffices=(persistence=*.jdo, orm=orm, query=*.jdoquery), JDO-listener=false
+20 Jan 2016 - 17:23:55,149 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (version 4.1.0.m4) for API "JDO"
+20 Jan 2016 - 17:23:55,149 (main) DEBUG [DataNucleus.Enhancer] - DataNucleus Enhancer : Classpath
+20 Jan 2016 - 17:23:55,149 (main) DEBUG [DataNucleus.Enhancer] - >>  /tmp/TralalaServer/lib/AuthServer.jar
+20 Jan 2016 - 17:23:55,149 (main) DEBUG [DataNucleus.Enhancer] - >>  /tmp/TralalaServer/lib/datanucleus-api-jdo-4.1.0-m4.jar
+20 Jan 2016 - 17:23:55,149 (main) DEBUG [DataNucleus.Enhancer] - >>  /tmp/TralalaServer/lib/datanucleus-core-4.1.0-m4.jar
+20 Jan 2016 - 17:23:55,149 (main) DEBUG [DataNucleus.Enhancer] - >>  /tmp/TralalaServer/lib/datanucleus-rdbms-4.1.0-m4.jar
+20 Jan 2016 - 17:23:55,150 (main) DEBUG [DataNucleus.Enhancer] - >>  /tmp/TralalaServer/lib/jdo-api-3.1.jar
+20 Jan 2016 - 17:23:55,150 (main) DEBUG [DataNucleus.Enhancer] - >>  /tmp/TralalaServer/lib/log4j-1.2.17.jar
+20 Jan 2016 - 17:23:55,150 (main) DEBUG [DataNucleus.Enhancer] - >>  /tmp/TralalaServer/lib/mysql-connector-java-5.1.35.jar
+20 Jan 2016 - 17:23:55,150 (main) DEBUG [DataNucleus.Enhancer] - >>  /tmp/TralalaServer/bin
+20 Jan 2016 - 17:23:55,150 (main) DEBUG [DataNucleus.Enhancer] - >>  /tmp/TralalaServer/resources
+20 Jan 2016 - 17:23:55,150 (main) DEBUG [DataNucleus.Enhancer] - Enhancing classes
+20 Jan 2016 - 17:23:55,161 (main) DEBUG [DataNucleus.MetaData] - MetaData Management : Loading Metadata for classes "[deusto.ingenieria.sd.tralala.tralalaserver.DAO.DAOFactory, deusto.ingenieria.sd.tralala.tralalaserver.DAO.ITralalaDAO, deusto.ingenieria.sd.tralala.tralalaserver.DAO.TralalaDBDAO, deusto.ingenieria.sd.tralala.tralalaserver.TralaLauncher, deusto.ingenieria.sd.tralala.tralalaserver.TralaLauncher_populate, deusto.ingenieria.sd.tralala.tralalaserver.data.FavPlay, deusto.ingenieria.sd.tralala.tralalaserver.data.Member, deusto.ingenieria.sd.tralala.tralalaserver.data.Payment, deusto.ingenieria.sd.tralala.tralalaserver.data.Play, deusto.ingenieria.sd.tralala.tralalaserver.data.RealPlay, deusto.ingenieria.sd.tralala.tralalaserver.data.Song, deusto.ingenieria.sd.tralala.tralalaserver.dto.DTOAssembler, deusto.ingenieria.sd.tralala.tralalaserver.dto.SongDTO, deusto.ingenieria.sd.tralala.tralalaserver.payment.BankPaymentDelegate, deusto.ingenieria.sd.tralala.tralalaserver.payment.PayPalPaymentDelegate, deusto.ingenieria.sd.tralala.tralalaserver.payment.PaymentGW, deusto.ingenieria.sd.tralala.tralalaserver.payment.PaymentGWFactory, deusto.ingenieria.sd.tralala.tralalaserver.remote.facade.LoginFacade, deusto.ingenieria.sd.tralala.tralalaserver.remote.facade.PaymentFacade, deusto.ingenieria.sd.tralala.tralalaserver.remote.facade.TralalaFacade, deusto.ingenieria.sd.tralala.tralalaserver.remote.interfaces.ILoginManager, deusto.ingenieria.sd.tralala.tralalaserver.remote.interfaces.IPaymentManager, deusto.ingenieria.sd.tralala.tralalaserver.remote.interfaces.ITralalaManager, deusto.ingenieria.sd.tralala.tralalaserver.server.TralalaService]" ...
+20 Jan 2016 - 17:23:55,166 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.DAO.DAOFactory" NOT found at /META-INF/package.jdo
+20 Jan 2016 - 17:23:55,167 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.DAO.DAOFactory" NOT found at /WEB-INF/package.jdo
+20 Jan 2016 - 17:23:55,167 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.DAO.DAOFactory" NOT found at /package.jdo
+20 Jan 2016 - 17:23:55,168 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.DAO.DAOFactory" NOT found at /deusto/package.jdo
+20 Jan 2016 - 17:23:55,169 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.DAO.DAOFactory" NOT found at /deusto.jdo
+20 Jan 2016 - 17:23:55,169 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.DAO.DAOFactory" NOT found at /deusto/ingenieria/package.jdo
+20 Jan 2016 - 17:23:55,170 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.DAO.DAOFactory" NOT found at /deusto/ingenieria.jdo
+20 Jan 2016 - 17:23:55,170 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.DAO.DAOFactory" NOT found at /deusto/ingenieria/sd/package.jdo
+20 Jan 2016 - 17:23:55,171 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.DAO.DAOFactory" NOT found at /deusto/ingenieria/sd.jdo
+20 Jan 2016 - 17:23:55,171 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.DAO.DAOFactory" NOT found at /deusto/ingenieria/sd/tralala/package.jdo
+20 Jan 2016 - 17:23:55,171 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.DAO.DAOFactory" NOT found at /deusto/ingenieria/sd/tralala.jdo
+20 Jan 2016 - 17:23:55,172 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.DAO.DAOFactory" NOT found at /deusto/ingenieria/sd/tralala/tralalaserver/package.jdo
+20 Jan 2016 - 17:23:55,172 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.DAO.DAOFactory" NOT found at /deusto/ingenieria/sd/tralala/tralalaserver.jdo
+20 Jan 2016 - 17:23:55,173 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.DAO.DAOFactory" NOT found at /deusto/ingenieria/sd/tralala/tralalaserver/DAO/package.jdo
+20 Jan 2016 - 17:23:55,173 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.DAO.DAOFactory" NOT found at /deusto/ingenieria/sd/tralala/tralalaserver/DAO.jdo
+20 Jan 2016 - 17:23:55,173 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.DAO.DAOFactory" NOT found at /deusto/ingenieria/sd/tralala/tralalaserver/DAO/DAOFactory.jdo
+20 Jan 2016 - 17:23:55,174 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.DAO.DAOFactory" not found
+20 Jan 2016 - 17:23:55,174 (main) DEBUG [DataNucleus.MetaData] - Registering class "deusto.ingenieria.sd.tralala.tralalaserver.DAO.DAOFactory" as not having MetaData.
+20 Jan 2016 - 17:23:55,174 (main) DEBUG [DataNucleus.MetaData] - Class "deusto.ingenieria.sd.tralala.tralalaserver.DAO.DAOFactory" has no MetaData or annotations.
+20 Jan 2016 - 17:23:55,174 (main) DEBUG [DataNucleus.MetaData] - Class "deusto.ingenieria.sd.tralala.tralalaserver.DAO.ITralalaDAO" has no MetaData or annotations.
+20 Jan 2016 - 17:23:55,175 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.DAO.TralalaDBDAO" NOT found at /META-INF/package.jdo
+20 Jan 2016 - 17:23:55,176 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.DAO.TralalaDBDAO" NOT found at /WEB-INF/package.jdo
+20 Jan 2016 - 17:23:55,176 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.DAO.TralalaDBDAO" NOT found at /package.jdo
+20 Jan 2016 - 17:23:55,176 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.DAO.TralalaDBDAO" NOT found at /deusto/package.jdo
+20 Jan 2016 - 17:23:55,177 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.DAO.TralalaDBDAO" NOT found at /deusto.jdo
+20 Jan 2016 - 17:23:55,177 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.DAO.TralalaDBDAO" NOT found at /deusto/ingenieria/package.jdo
+20 Jan 2016 - 17:23:55,178 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.DAO.TralalaDBDAO" NOT found at /deusto/ingenieria.jdo
+20 Jan 2016 - 17:23:55,178 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.DAO.TralalaDBDAO" NOT found at /deusto/ingenieria/sd/package.jdo
+20 Jan 2016 - 17:23:55,178 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.DAO.TralalaDBDAO" NOT found at /deusto/ingenieria/sd.jdo
+20 Jan 2016 - 17:23:55,179 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.DAO.TralalaDBDAO" NOT found at /deusto/ingenieria/sd/tralala/package.jdo
+20 Jan 2016 - 17:23:55,179 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.DAO.TralalaDBDAO" NOT found at /deusto/ingenieria/sd/tralala.jdo
+20 Jan 2016 - 17:23:55,179 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.DAO.TralalaDBDAO" NOT found at /deusto/ingenieria/sd/tralala/tralalaserver/package.jdo
+20 Jan 2016 - 17:23:55,180 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.DAO.TralalaDBDAO" NOT found at /deusto/ingenieria/sd/tralala/tralalaserver.jdo
+20 Jan 2016 - 17:23:55,180 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.DAO.TralalaDBDAO" NOT found at /deusto/ingenieria/sd/tralala/tralalaserver/DAO/package.jdo
+20 Jan 2016 - 17:23:55,181 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.DAO.TralalaDBDAO" NOT found at /deusto/ingenieria/sd/tralala/tralalaserver/DAO.jdo
+20 Jan 2016 - 17:23:55,181 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.DAO.TralalaDBDAO" NOT found at /deusto/ingenieria/sd/tralala/tralalaserver/DAO/TralalaDBDAO.jdo
+20 Jan 2016 - 17:23:55,181 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.DAO.TralalaDBDAO" not found
+20 Jan 2016 - 17:23:55,181 (main) DEBUG [DataNucleus.MetaData] - Registering class "deusto.ingenieria.sd.tralala.tralalaserver.DAO.TralalaDBDAO" as not having MetaData.
+20 Jan 2016 - 17:23:55,181 (main) DEBUG [DataNucleus.MetaData] - Class "deusto.ingenieria.sd.tralala.tralalaserver.DAO.TralalaDBDAO" has no MetaData or annotations.
+20 Jan 2016 - 17:23:55,182 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.TralaLauncher" NOT found at /META-INF/package.jdo
+20 Jan 2016 - 17:23:55,183 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.TralaLauncher" NOT found at /WEB-INF/package.jdo
+20 Jan 2016 - 17:23:55,183 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.TralaLauncher" NOT found at /package.jdo
+20 Jan 2016 - 17:23:55,183 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.TralaLauncher" NOT found at /deusto/package.jdo
+20 Jan 2016 - 17:23:55,184 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.TralaLauncher" NOT found at /deusto.jdo
+20 Jan 2016 - 17:23:55,184 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.TralaLauncher" NOT found at /deusto/ingenieria/package.jdo
+20 Jan 2016 - 17:23:55,184 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.TralaLauncher" NOT found at /deusto/ingenieria.jdo
+20 Jan 2016 - 17:23:55,185 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.TralaLauncher" NOT found at /deusto/ingenieria/sd/package.jdo
+20 Jan 2016 - 17:23:55,185 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.TralaLauncher" NOT found at /deusto/ingenieria/sd.jdo
+20 Jan 2016 - 17:23:55,185 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.TralaLauncher" NOT found at /deusto/ingenieria/sd/tralala/package.jdo
+20 Jan 2016 - 17:23:55,186 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.TralaLauncher" NOT found at /deusto/ingenieria/sd/tralala.jdo
+20 Jan 2016 - 17:23:55,186 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.TralaLauncher" NOT found at /deusto/ingenieria/sd/tralala/tralalaserver/package.jdo
+20 Jan 2016 - 17:23:55,186 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.TralaLauncher" NOT found at /deusto/ingenieria/sd/tralala/tralalaserver.jdo
+20 Jan 2016 - 17:23:55,187 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.TralaLauncher" NOT found at /deusto/ingenieria/sd/tralala/tralalaserver/TralaLauncher.jdo
+20 Jan 2016 - 17:23:55,187 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.TralaLauncher" not found
+20 Jan 2016 - 17:23:55,187 (main) DEBUG [DataNucleus.MetaData] - Registering class "deusto.ingenieria.sd.tralala.tralalaserver.TralaLauncher" as not having MetaData.
+20 Jan 2016 - 17:23:55,187 (main) DEBUG [DataNucleus.MetaData] - Class "deusto.ingenieria.sd.tralala.tralalaserver.TralaLauncher" has no MetaData or annotations.
+20 Jan 2016 - 17:23:55,188 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.TralaLauncher_populate" NOT found at /META-INF/package.jdo
+20 Jan 2016 - 17:23:55,188 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.TralaLauncher_populate" NOT found at /WEB-INF/package.jdo
+20 Jan 2016 - 17:23:55,189 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.TralaLauncher_populate" NOT found at /package.jdo
+20 Jan 2016 - 17:23:55,189 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.TralaLauncher_populate" NOT found at /deusto/package.jdo
+20 Jan 2016 - 17:23:55,189 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.TralaLauncher_populate" NOT found at /deusto.jdo
+20 Jan 2016 - 17:23:55,190 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.TralaLauncher_populate" NOT found at /deusto/ingenieria/package.jdo
+20 Jan 2016 - 17:23:55,190 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.TralaLauncher_populate" NOT found at /deusto/ingenieria.jdo
+20 Jan 2016 - 17:23:55,190 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.TralaLauncher_populate" NOT found at /deusto/ingenieria/sd/package.jdo
+20 Jan 2016 - 17:23:55,191 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.TralaLauncher_populate" NOT found at /deusto/ingenieria/sd.jdo
+20 Jan 2016 - 17:23:55,191 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.TralaLauncher_populate" NOT found at /deusto/ingenieria/sd/tralala/package.jdo
+20 Jan 2016 - 17:23:55,191 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.TralaLauncher_populate" NOT found at /deusto/ingenieria/sd/tralala.jdo
+20 Jan 2016 - 17:23:55,192 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.TralaLauncher_populate" NOT found at /deusto/ingenieria/sd/tralala/tralalaserver/package.jdo
+20 Jan 2016 - 17:23:55,192 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.TralaLauncher_populate" NOT found at /deusto/ingenieria/sd/tralala/tralalaserver.jdo
+20 Jan 2016 - 17:23:55,192 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.TralaLauncher_populate" NOT found at /deusto/ingenieria/sd/tralala/tralalaserver/TralaLauncher_populate.jdo
+20 Jan 2016 - 17:23:55,193 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.TralaLauncher_populate" not found
+20 Jan 2016 - 17:23:55,193 (main) DEBUG [DataNucleus.MetaData] - Registering class "deusto.ingenieria.sd.tralala.tralalaserver.TralaLauncher_populate" as not having MetaData.
+20 Jan 2016 - 17:23:55,193 (main) DEBUG [DataNucleus.MetaData] - Class "deusto.ingenieria.sd.tralala.tralalaserver.TralaLauncher_populate" has no MetaData or annotations.
+20 Jan 2016 - 17:23:55,194 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.data.FavPlay" NOT found at /META-INF/package.jdo
+20 Jan 2016 - 17:23:55,194 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.data.FavPlay" NOT found at /WEB-INF/package.jdo
+20 Jan 2016 - 17:23:55,194 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.data.FavPlay" NOT found at /package.jdo
+20 Jan 2016 - 17:23:55,195 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.data.FavPlay" NOT found at /deusto/package.jdo
+20 Jan 2016 - 17:23:55,195 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.data.FavPlay" NOT found at /deusto.jdo
+20 Jan 2016 - 17:23:55,195 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.data.FavPlay" NOT found at /deusto/ingenieria/package.jdo
+20 Jan 2016 - 17:23:55,196 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.data.FavPlay" NOT found at /deusto/ingenieria.jdo
+20 Jan 2016 - 17:23:55,196 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.data.FavPlay" NOT found at /deusto/ingenieria/sd/package.jdo
+20 Jan 2016 - 17:23:55,197 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.data.FavPlay" NOT found at /deusto/ingenieria/sd.jdo
+20 Jan 2016 - 17:23:55,197 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.data.FavPlay" NOT found at /deusto/ingenieria/sd/tralala/package.jdo
+20 Jan 2016 - 17:23:55,198 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.data.FavPlay" NOT found at /deusto/ingenieria/sd/tralala.jdo
+20 Jan 2016 - 17:23:55,198 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.data.FavPlay" NOT found at /deusto/ingenieria/sd/tralala/tralalaserver/package.jdo
+20 Jan 2016 - 17:23:55,199 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.data.FavPlay" NOT found at /deusto/ingenieria/sd/tralala/tralalaserver.jdo
+20 Jan 2016 - 17:23:55,199 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.data.FavPlay" NOT found at /deusto/ingenieria/sd/tralala/tralalaserver/data/package.jdo
+20 Jan 2016 - 17:23:55,200 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.data.FavPlay" NOT found at /deusto/ingenieria/sd/tralala/tralalaserver/data.jdo
+20 Jan 2016 - 17:23:55,200 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.data.FavPlay" NOT found at /deusto/ingenieria/sd/tralala/tralalaserver/data/FavPlay.jdo
+20 Jan 2016 - 17:23:55,200 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.data.FavPlay" not found
+20 Jan 2016 - 17:23:55,201 (main) DEBUG [DataNucleus.MetaData] - Registering class "deusto.ingenieria.sd.tralala.tralalaserver.data.FavPlay" as not having MetaData.
+20 Jan 2016 - 17:23:55,201 (main) DEBUG [DataNucleus.MetaData] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.FavPlay" has no MetaData or annotations.
+20 Jan 2016 - 17:23:55,284 (main) DEBUG [DataNucleus.MetaData] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Member" has been specified with JDO annotations so using those.
+20 Jan 2016 - 17:23:55,292 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.data.Payment" NOT found at /META-INF/package.jdo
+20 Jan 2016 - 17:23:55,292 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.data.Payment" NOT found at /WEB-INF/package.jdo
+20 Jan 2016 - 17:23:55,292 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.data.Payment" NOT found at /package.jdo
+20 Jan 2016 - 17:23:55,293 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.data.Payment" NOT found at /deusto/package.jdo
+20 Jan 2016 - 17:23:55,293 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.data.Payment" NOT found at /deusto.jdo
+20 Jan 2016 - 17:23:55,293 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.data.Payment" NOT found at /deusto/ingenieria/package.jdo
+20 Jan 2016 - 17:23:55,294 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.data.Payment" NOT found at /deusto/ingenieria.jdo
+20 Jan 2016 - 17:23:55,294 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.data.Payment" NOT found at /deusto/ingenieria/sd/package.jdo
+20 Jan 2016 - 17:23:55,294 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.data.Payment" NOT found at /deusto/ingenieria/sd.jdo
+20 Jan 2016 - 17:23:55,295 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.data.Payment" NOT found at /deusto/ingenieria/sd/tralala/package.jdo
+20 Jan 2016 - 17:23:55,295 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.data.Payment" NOT found at /deusto/ingenieria/sd/tralala.jdo
+20 Jan 2016 - 17:23:55,295 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.data.Payment" NOT found at /deusto/ingenieria/sd/tralala/tralalaserver/package.jdo
+20 Jan 2016 - 17:23:55,296 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.data.Payment" NOT found at /deusto/ingenieria/sd/tralala/tralalaserver.jdo
+20 Jan 2016 - 17:23:55,296 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.data.Payment" NOT found at /deusto/ingenieria/sd/tralala/tralalaserver/data/package.jdo
+20 Jan 2016 - 17:23:55,296 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.data.Payment" NOT found at /deusto/ingenieria/sd/tralala/tralalaserver/data.jdo
+20 Jan 2016 - 17:23:55,297 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.data.Payment" NOT found at /deusto/ingenieria/sd/tralala/tralalaserver/data/Payment.jdo
+20 Jan 2016 - 17:23:55,297 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.data.Payment" not found
+20 Jan 2016 - 17:23:55,297 (main) DEBUG [DataNucleus.MetaData] - Registering class "deusto.ingenieria.sd.tralala.tralalaserver.data.Payment" as not having MetaData.
+20 Jan 2016 - 17:23:55,297 (main) DEBUG [DataNucleus.MetaData] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Payment" has no MetaData or annotations.
+20 Jan 2016 - 17:23:55,298 (main) DEBUG [DataNucleus.MetaData] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Play" has been specified with JDO annotations so using those.
+20 Jan 2016 - 17:23:55,304 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.data.RealPlay" NOT found at /META-INF/package.jdo
+20 Jan 2016 - 17:23:55,305 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.data.RealPlay" NOT found at /WEB-INF/package.jdo
+20 Jan 2016 - 17:23:55,305 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.data.RealPlay" NOT found at /package.jdo
+20 Jan 2016 - 17:23:55,306 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.data.RealPlay" NOT found at /deusto/package.jdo
+20 Jan 2016 - 17:23:55,306 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.data.RealPlay" NOT found at /deusto.jdo
+20 Jan 2016 - 17:23:55,307 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.data.RealPlay" NOT found at /deusto/ingenieria/package.jdo
+20 Jan 2016 - 17:23:55,307 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.data.RealPlay" NOT found at /deusto/ingenieria.jdo
+20 Jan 2016 - 17:23:55,308 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.data.RealPlay" NOT found at /deusto/ingenieria/sd/package.jdo
+20 Jan 2016 - 17:23:55,308 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.data.RealPlay" NOT found at /deusto/ingenieria/sd.jdo
+20 Jan 2016 - 17:23:55,309 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.data.RealPlay" NOT found at /deusto/ingenieria/sd/tralala/package.jdo
+20 Jan 2016 - 17:23:55,309 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.data.RealPlay" NOT found at /deusto/ingenieria/sd/tralala.jdo
+20 Jan 2016 - 17:23:55,310 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.data.RealPlay" NOT found at /deusto/ingenieria/sd/tralala/tralalaserver/package.jdo
+20 Jan 2016 - 17:23:55,310 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.data.RealPlay" NOT found at /deusto/ingenieria/sd/tralala/tralalaserver.jdo
+20 Jan 2016 - 17:23:55,311 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.data.RealPlay" NOT found at /deusto/ingenieria/sd/tralala/tralalaserver/data/package.jdo
+20 Jan 2016 - 17:23:55,311 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.data.RealPlay" NOT found at /deusto/ingenieria/sd/tralala/tralalaserver/data.jdo
+20 Jan 2016 - 17:23:55,312 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.data.RealPlay" NOT found at /deusto/ingenieria/sd/tralala/tralalaserver/data/RealPlay.jdo
+20 Jan 2016 - 17:23:55,312 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.data.RealPlay" not found
+20 Jan 2016 - 17:23:55,312 (main) DEBUG [DataNucleus.MetaData] - Registering class "deusto.ingenieria.sd.tralala.tralalaserver.data.RealPlay" as not having MetaData.
+20 Jan 2016 - 17:23:55,312 (main) DEBUG [DataNucleus.MetaData] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.RealPlay" has no MetaData or annotations.
+20 Jan 2016 - 17:23:55,313 (main) DEBUG [DataNucleus.MetaData] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Song" has been specified with JDO annotations so using those.
+20 Jan 2016 - 17:23:55,315 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.dto.DTOAssembler" NOT found at /META-INF/package.jdo
+20 Jan 2016 - 17:23:55,316 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.dto.DTOAssembler" NOT found at /WEB-INF/package.jdo
+20 Jan 2016 - 17:23:55,316 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.dto.DTOAssembler" NOT found at /package.jdo
+20 Jan 2016 - 17:23:55,317 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.dto.DTOAssembler" NOT found at /deusto/package.jdo
+20 Jan 2016 - 17:23:55,317 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.dto.DTOAssembler" NOT found at /deusto.jdo
+20 Jan 2016 - 17:23:55,318 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.dto.DTOAssembler" NOT found at /deusto/ingenieria/package.jdo
+20 Jan 2016 - 17:23:55,318 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.dto.DTOAssembler" NOT found at /deusto/ingenieria.jdo
+20 Jan 2016 - 17:23:55,319 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.dto.DTOAssembler" NOT found at /deusto/ingenieria/sd/package.jdo
+20 Jan 2016 - 17:23:55,319 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.dto.DTOAssembler" NOT found at /deusto/ingenieria/sd.jdo
+20 Jan 2016 - 17:23:55,320 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.dto.DTOAssembler" NOT found at /deusto/ingenieria/sd/tralala/package.jdo
+20 Jan 2016 - 17:23:55,320 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.dto.DTOAssembler" NOT found at /deusto/ingenieria/sd/tralala.jdo
+20 Jan 2016 - 17:23:55,321 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.dto.DTOAssembler" NOT found at /deusto/ingenieria/sd/tralala/tralalaserver/package.jdo
+20 Jan 2016 - 17:23:55,321 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.dto.DTOAssembler" NOT found at /deusto/ingenieria/sd/tralala/tralalaserver.jdo
+20 Jan 2016 - 17:23:55,322 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.dto.DTOAssembler" NOT found at /deusto/ingenieria/sd/tralala/tralalaserver/dto/package.jdo
+20 Jan 2016 - 17:23:55,322 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.dto.DTOAssembler" NOT found at /deusto/ingenieria/sd/tralala/tralalaserver/dto.jdo
+20 Jan 2016 - 17:23:55,323 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.dto.DTOAssembler" NOT found at /deusto/ingenieria/sd/tralala/tralalaserver/dto/DTOAssembler.jdo
+20 Jan 2016 - 17:23:55,323 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.dto.DTOAssembler" not found
+20 Jan 2016 - 17:23:55,323 (main) DEBUG [DataNucleus.MetaData] - Registering class "deusto.ingenieria.sd.tralala.tralalaserver.dto.DTOAssembler" as not having MetaData.
+20 Jan 2016 - 17:23:55,323 (main) DEBUG [DataNucleus.MetaData] - Class "deusto.ingenieria.sd.tralala.tralalaserver.dto.DTOAssembler" has no MetaData or annotations.
+20 Jan 2016 - 17:23:55,324 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.dto.SongDTO" NOT found at /META-INF/package.jdo
+20 Jan 2016 - 17:23:55,325 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.dto.SongDTO" NOT found at /WEB-INF/package.jdo
+20 Jan 2016 - 17:23:55,325 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.dto.SongDTO" NOT found at /package.jdo
+20 Jan 2016 - 17:23:55,326 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.dto.SongDTO" NOT found at /deusto/package.jdo
+20 Jan 2016 - 17:23:55,326 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.dto.SongDTO" NOT found at /deusto.jdo
+20 Jan 2016 - 17:23:55,326 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.dto.SongDTO" NOT found at /deusto/ingenieria/package.jdo
+20 Jan 2016 - 17:23:55,327 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.dto.SongDTO" NOT found at /deusto/ingenieria.jdo
+20 Jan 2016 - 17:23:55,327 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.dto.SongDTO" NOT found at /deusto/ingenieria/sd/package.jdo
+20 Jan 2016 - 17:23:55,328 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.dto.SongDTO" NOT found at /deusto/ingenieria/sd.jdo
+20 Jan 2016 - 17:23:55,328 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.dto.SongDTO" NOT found at /deusto/ingenieria/sd/tralala/package.jdo
+20 Jan 2016 - 17:23:55,329 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.dto.SongDTO" NOT found at /deusto/ingenieria/sd/tralala.jdo
+20 Jan 2016 - 17:23:55,329 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.dto.SongDTO" NOT found at /deusto/ingenieria/sd/tralala/tralalaserver/package.jdo
+20 Jan 2016 - 17:23:55,330 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.dto.SongDTO" NOT found at /deusto/ingenieria/sd/tralala/tralalaserver.jdo
+20 Jan 2016 - 17:23:55,330 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.dto.SongDTO" NOT found at /deusto/ingenieria/sd/tralala/tralalaserver/dto/package.jdo
+20 Jan 2016 - 17:23:55,331 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.dto.SongDTO" NOT found at /deusto/ingenieria/sd/tralala/tralalaserver/dto.jdo
+20 Jan 2016 - 17:23:55,331 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.dto.SongDTO" NOT found at /deusto/ingenieria/sd/tralala/tralalaserver/dto/SongDTO.jdo
+20 Jan 2016 - 17:23:55,331 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.dto.SongDTO" not found
+20 Jan 2016 - 17:23:55,331 (main) DEBUG [DataNucleus.MetaData] - Registering class "deusto.ingenieria.sd.tralala.tralalaserver.dto.SongDTO" as not having MetaData.
+20 Jan 2016 - 17:23:55,331 (main) DEBUG [DataNucleus.MetaData] - Class "deusto.ingenieria.sd.tralala.tralalaserver.dto.SongDTO" has no MetaData or annotations.
+20 Jan 2016 - 17:23:55,333 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.payment.BankPaymentDelegate" NOT found at /META-INF/package.jdo
+20 Jan 2016 - 17:23:55,333 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.payment.BankPaymentDelegate" NOT found at /WEB-INF/package.jdo
+20 Jan 2016 - 17:23:55,334 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.payment.BankPaymentDelegate" NOT found at /package.jdo
+20 Jan 2016 - 17:23:55,334 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.payment.BankPaymentDelegate" NOT found at /deusto/package.jdo
+20 Jan 2016 - 17:23:55,335 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.payment.BankPaymentDelegate" NOT found at /deusto.jdo
+20 Jan 2016 - 17:23:55,335 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.payment.BankPaymentDelegate" NOT found at /deusto/ingenieria/package.jdo
+20 Jan 2016 - 17:23:55,336 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.payment.BankPaymentDelegate" NOT found at /deusto/ingenieria.jdo
+20 Jan 2016 - 17:23:55,336 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.payment.BankPaymentDelegate" NOT found at /deusto/ingenieria/sd/package.jdo
+20 Jan 2016 - 17:23:55,337 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.payment.BankPaymentDelegate" NOT found at /deusto/ingenieria/sd.jdo
+20 Jan 2016 - 17:23:55,337 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.payment.BankPaymentDelegate" NOT found at /deusto/ingenieria/sd/tralala/package.jdo
+20 Jan 2016 - 17:23:55,337 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.payment.BankPaymentDelegate" NOT found at /deusto/ingenieria/sd/tralala.jdo
+20 Jan 2016 - 17:23:55,338 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.payment.BankPaymentDelegate" NOT found at /deusto/ingenieria/sd/tralala/tralalaserver/package.jdo
+20 Jan 2016 - 17:23:55,338 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.payment.BankPaymentDelegate" NOT found at /deusto/ingenieria/sd/tralala/tralalaserver.jdo
+20 Jan 2016 - 17:23:55,339 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.payment.BankPaymentDelegate" NOT found at /deusto/ingenieria/sd/tralala/tralalaserver/payment/package.jdo
+20 Jan 2016 - 17:23:55,339 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.payment.BankPaymentDelegate" NOT found at /deusto/ingenieria/sd/tralala/tralalaserver/payment.jdo
+20 Jan 2016 - 17:23:55,340 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.payment.BankPaymentDelegate" NOT found at /deusto/ingenieria/sd/tralala/tralalaserver/payment/BankPaymentDelegate.jdo
+20 Jan 2016 - 17:23:55,340 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.payment.BankPaymentDelegate" not found
+20 Jan 2016 - 17:23:55,340 (main) DEBUG [DataNucleus.MetaData] - Registering class "deusto.ingenieria.sd.tralala.tralalaserver.payment.BankPaymentDelegate" as not having MetaData.
+20 Jan 2016 - 17:23:55,340 (main) DEBUG [DataNucleus.MetaData] - Class "deusto.ingenieria.sd.tralala.tralalaserver.payment.BankPaymentDelegate" has no MetaData or annotations.
+20 Jan 2016 - 17:23:55,341 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.payment.PayPalPaymentDelegate" NOT found at /META-INF/package.jdo
+20 Jan 2016 - 17:23:55,341 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.payment.PayPalPaymentDelegate" NOT found at /WEB-INF/package.jdo
+20 Jan 2016 - 17:23:55,342 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.payment.PayPalPaymentDelegate" NOT found at /package.jdo
+20 Jan 2016 - 17:23:55,342 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.payment.PayPalPaymentDelegate" NOT found at /deusto/package.jdo
+20 Jan 2016 - 17:23:55,342 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.payment.PayPalPaymentDelegate" NOT found at /deusto.jdo
+20 Jan 2016 - 17:23:55,343 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.payment.PayPalPaymentDelegate" NOT found at /deusto/ingenieria/package.jdo
+20 Jan 2016 - 17:23:55,343 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.payment.PayPalPaymentDelegate" NOT found at /deusto/ingenieria.jdo
+20 Jan 2016 - 17:23:55,344 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.payment.PayPalPaymentDelegate" NOT found at /deusto/ingenieria/sd/package.jdo
+20 Jan 2016 - 17:23:55,344 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.payment.PayPalPaymentDelegate" NOT found at /deusto/ingenieria/sd.jdo
+20 Jan 2016 - 17:23:55,344 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.payment.PayPalPaymentDelegate" NOT found at /deusto/ingenieria/sd/tralala/package.jdo
+20 Jan 2016 - 17:23:55,345 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.payment.PayPalPaymentDelegate" NOT found at /deusto/ingenieria/sd/tralala.jdo
+20 Jan 2016 - 17:23:55,345 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.payment.PayPalPaymentDelegate" NOT found at /deusto/ingenieria/sd/tralala/tralalaserver/package.jdo
+20 Jan 2016 - 17:23:55,346 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.payment.PayPalPaymentDelegate" NOT found at /deusto/ingenieria/sd/tralala/tralalaserver.jdo
+20 Jan 2016 - 17:23:55,346 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.payment.PayPalPaymentDelegate" NOT found at /deusto/ingenieria/sd/tralala/tralalaserver/payment/package.jdo
+20 Jan 2016 - 17:23:55,346 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.payment.PayPalPaymentDelegate" NOT found at /deusto/ingenieria/sd/tralala/tralalaserver/payment.jdo
+20 Jan 2016 - 17:23:55,347 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.payment.PayPalPaymentDelegate" NOT found at /deusto/ingenieria/sd/tralala/tralalaserver/payment/PayPalPaymentDelegate.jdo
+20 Jan 2016 - 17:23:55,347 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.payment.PayPalPaymentDelegate" not found
+20 Jan 2016 - 17:23:55,347 (main) DEBUG [DataNucleus.MetaData] - Registering class "deusto.ingenieria.sd.tralala.tralalaserver.payment.PayPalPaymentDelegate" as not having MetaData.
+20 Jan 2016 - 17:23:55,347 (main) DEBUG [DataNucleus.MetaData] - Class "deusto.ingenieria.sd.tralala.tralalaserver.payment.PayPalPaymentDelegate" has no MetaData or annotations.
+20 Jan 2016 - 17:23:55,347 (main) DEBUG [DataNucleus.MetaData] - Class "deusto.ingenieria.sd.tralala.tralalaserver.payment.PaymentGW" has no MetaData or annotations.
+20 Jan 2016 - 17:23:55,348 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.payment.PaymentGWFactory" NOT found at /META-INF/package.jdo
+20 Jan 2016 - 17:23:55,349 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.payment.PaymentGWFactory" NOT found at /WEB-INF/package.jdo
+20 Jan 2016 - 17:23:55,349 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.payment.PaymentGWFactory" NOT found at /package.jdo
+20 Jan 2016 - 17:23:55,350 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.payment.PaymentGWFactory" NOT found at /deusto/package.jdo
+20 Jan 2016 - 17:23:55,350 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.payment.PaymentGWFactory" NOT found at /deusto.jdo
+20 Jan 2016 - 17:23:55,350 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.payment.PaymentGWFactory" NOT found at /deusto/ingenieria/package.jdo
+20 Jan 2016 - 17:23:55,351 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.payment.PaymentGWFactory" NOT found at /deusto/ingenieria.jdo
+20 Jan 2016 - 17:23:55,351 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.payment.PaymentGWFactory" NOT found at /deusto/ingenieria/sd/package.jdo
+20 Jan 2016 - 17:23:55,351 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.payment.PaymentGWFactory" NOT found at /deusto/ingenieria/sd.jdo
+20 Jan 2016 - 17:23:55,352 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.payment.PaymentGWFactory" NOT found at /deusto/ingenieria/sd/tralala/package.jdo
+20 Jan 2016 - 17:23:55,352 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.payment.PaymentGWFactory" NOT found at /deusto/ingenieria/sd/tralala.jdo
+20 Jan 2016 - 17:23:55,353 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.payment.PaymentGWFactory" NOT found at /deusto/ingenieria/sd/tralala/tralalaserver/package.jdo
+20 Jan 2016 - 17:23:55,353 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.payment.PaymentGWFactory" NOT found at /deusto/ingenieria/sd/tralala/tralalaserver.jdo
+20 Jan 2016 - 17:23:55,353 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.payment.PaymentGWFactory" NOT found at /deusto/ingenieria/sd/tralala/tralalaserver/payment/package.jdo
+20 Jan 2016 - 17:23:55,354 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.payment.PaymentGWFactory" NOT found at /deusto/ingenieria/sd/tralala/tralalaserver/payment.jdo
+20 Jan 2016 - 17:23:55,354 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.payment.PaymentGWFactory" NOT found at /deusto/ingenieria/sd/tralala/tralalaserver/payment/PaymentGWFactory.jdo
+20 Jan 2016 - 17:23:55,354 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.payment.PaymentGWFactory" not found
+20 Jan 2016 - 17:23:55,354 (main) DEBUG [DataNucleus.MetaData] - Registering class "deusto.ingenieria.sd.tralala.tralalaserver.payment.PaymentGWFactory" as not having MetaData.
+20 Jan 2016 - 17:23:55,355 (main) DEBUG [DataNucleus.MetaData] - Class "deusto.ingenieria.sd.tralala.tralalaserver.payment.PaymentGWFactory" has no MetaData or annotations.
+20 Jan 2016 - 17:23:55,357 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.remote.facade.LoginFacade" NOT found at /META-INF/package.jdo
+20 Jan 2016 - 17:23:55,357 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.remote.facade.LoginFacade" NOT found at /WEB-INF/package.jdo
+20 Jan 2016 - 17:23:55,358 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.remote.facade.LoginFacade" NOT found at /package.jdo
+20 Jan 2016 - 17:23:55,358 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.remote.facade.LoginFacade" NOT found at /deusto/package.jdo
+20 Jan 2016 - 17:23:55,358 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.remote.facade.LoginFacade" NOT found at /deusto.jdo
+20 Jan 2016 - 17:23:55,359 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.remote.facade.LoginFacade" NOT found at /deusto/ingenieria/package.jdo
+20 Jan 2016 - 17:23:55,359 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.remote.facade.LoginFacade" NOT found at /deusto/ingenieria.jdo
+20 Jan 2016 - 17:23:55,360 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.remote.facade.LoginFacade" NOT found at /deusto/ingenieria/sd/package.jdo
+20 Jan 2016 - 17:23:55,360 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.remote.facade.LoginFacade" NOT found at /deusto/ingenieria/sd.jdo
+20 Jan 2016 - 17:23:55,360 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.remote.facade.LoginFacade" NOT found at /deusto/ingenieria/sd/tralala/package.jdo
+20 Jan 2016 - 17:23:55,361 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.remote.facade.LoginFacade" NOT found at /deusto/ingenieria/sd/tralala.jdo
+20 Jan 2016 - 17:23:55,361 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.remote.facade.LoginFacade" NOT found at /deusto/ingenieria/sd/tralala/tralalaserver/package.jdo
+20 Jan 2016 - 17:23:55,362 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.remote.facade.LoginFacade" NOT found at /deusto/ingenieria/sd/tralala/tralalaserver.jdo
+20 Jan 2016 - 17:23:55,362 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.remote.facade.LoginFacade" NOT found at /deusto/ingenieria/sd/tralala/tralalaserver/remote/package.jdo
+20 Jan 2016 - 17:23:55,362 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.remote.facade.LoginFacade" NOT found at /deusto/ingenieria/sd/tralala/tralalaserver/remote.jdo
+20 Jan 2016 - 17:23:55,363 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.remote.facade.LoginFacade" NOT found at /deusto/ingenieria/sd/tralala/tralalaserver/remote/facade/package.jdo
+20 Jan 2016 - 17:23:55,363 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.remote.facade.LoginFacade" NOT found at /deusto/ingenieria/sd/tralala/tralalaserver/remote/facade.jdo
+20 Jan 2016 - 17:23:55,363 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.remote.facade.LoginFacade" NOT found at /deusto/ingenieria/sd/tralala/tralalaserver/remote/facade/LoginFacade.jdo
+20 Jan 2016 - 17:23:55,364 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.remote.facade.LoginFacade" not found
+20 Jan 2016 - 17:23:55,364 (main) DEBUG [DataNucleus.MetaData] - Registering class "deusto.ingenieria.sd.tralala.tralalaserver.remote.facade.LoginFacade" as not having MetaData.
+20 Jan 2016 - 17:23:55,364 (main) DEBUG [DataNucleus.MetaData] - Class "deusto.ingenieria.sd.tralala.tralalaserver.remote.facade.LoginFacade" has no MetaData or annotations.
+20 Jan 2016 - 17:23:55,365 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.remote.facade.PaymentFacade" NOT found at /META-INF/package.jdo
+20 Jan 2016 - 17:23:55,366 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.remote.facade.PaymentFacade" NOT found at /WEB-INF/package.jdo
+20 Jan 2016 - 17:23:55,366 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.remote.facade.PaymentFacade" NOT found at /package.jdo
+20 Jan 2016 - 17:23:55,367 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.remote.facade.PaymentFacade" NOT found at /deusto/package.jdo
+20 Jan 2016 - 17:23:55,367 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.remote.facade.PaymentFacade" NOT found at /deusto.jdo
+20 Jan 2016 - 17:23:55,368 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.remote.facade.PaymentFacade" NOT found at /deusto/ingenieria/package.jdo
+20 Jan 2016 - 17:23:55,368 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.remote.facade.PaymentFacade" NOT found at /deusto/ingenieria.jdo
+20 Jan 2016 - 17:23:55,369 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.remote.facade.PaymentFacade" NOT found at /deusto/ingenieria/sd/package.jdo
+20 Jan 2016 - 17:23:55,369 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.remote.facade.PaymentFacade" NOT found at /deusto/ingenieria/sd.jdo
+20 Jan 2016 - 17:23:55,370 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.remote.facade.PaymentFacade" NOT found at /deusto/ingenieria/sd/tralala/package.jdo
+20 Jan 2016 - 17:23:55,370 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.remote.facade.PaymentFacade" NOT found at /deusto/ingenieria/sd/tralala.jdo
+20 Jan 2016 - 17:23:55,370 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.remote.facade.PaymentFacade" NOT found at /deusto/ingenieria/sd/tralala/tralalaserver/package.jdo
+20 Jan 2016 - 17:23:55,371 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.remote.facade.PaymentFacade" NOT found at /deusto/ingenieria/sd/tralala/tralalaserver.jdo
+20 Jan 2016 - 17:23:55,371 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.remote.facade.PaymentFacade" NOT found at /deusto/ingenieria/sd/tralala/tralalaserver/remote/package.jdo
+20 Jan 2016 - 17:23:55,371 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.remote.facade.PaymentFacade" NOT found at /deusto/ingenieria/sd/tralala/tralalaserver/remote.jdo
+20 Jan 2016 - 17:23:55,372 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.remote.facade.PaymentFacade" NOT found at /deusto/ingenieria/sd/tralala/tralalaserver/remote/facade/package.jdo
+20 Jan 2016 - 17:23:55,372 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.remote.facade.PaymentFacade" NOT found at /deusto/ingenieria/sd/tralala/tralalaserver/remote/facade.jdo
+20 Jan 2016 - 17:23:55,373 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.remote.facade.PaymentFacade" NOT found at /deusto/ingenieria/sd/tralala/tralalaserver/remote/facade/PaymentFacade.jdo
+20 Jan 2016 - 17:23:55,373 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.remote.facade.PaymentFacade" not found
+20 Jan 2016 - 17:23:55,373 (main) DEBUG [DataNucleus.MetaData] - Registering class "deusto.ingenieria.sd.tralala.tralalaserver.remote.facade.PaymentFacade" as not having MetaData.
+20 Jan 2016 - 17:23:55,373 (main) DEBUG [DataNucleus.MetaData] - Class "deusto.ingenieria.sd.tralala.tralalaserver.remote.facade.PaymentFacade" has no MetaData or annotations.
+20 Jan 2016 - 17:23:55,374 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.remote.facade.TralalaFacade" NOT found at /META-INF/package.jdo
+20 Jan 2016 - 17:23:55,375 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.remote.facade.TralalaFacade" NOT found at /WEB-INF/package.jdo
+20 Jan 2016 - 17:23:55,375 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.remote.facade.TralalaFacade" NOT found at /package.jdo
+20 Jan 2016 - 17:23:55,375 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.remote.facade.TralalaFacade" NOT found at /deusto/package.jdo
+20 Jan 2016 - 17:23:55,376 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.remote.facade.TralalaFacade" NOT found at /deusto.jdo
+20 Jan 2016 - 17:23:55,376 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.remote.facade.TralalaFacade" NOT found at /deusto/ingenieria/package.jdo
+20 Jan 2016 - 17:23:55,376 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.remote.facade.TralalaFacade" NOT found at /deusto/ingenieria.jdo
+20 Jan 2016 - 17:23:55,377 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.remote.facade.TralalaFacade" NOT found at /deusto/ingenieria/sd/package.jdo
+20 Jan 2016 - 17:23:55,377 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.remote.facade.TralalaFacade" NOT found at /deusto/ingenieria/sd.jdo
+20 Jan 2016 - 17:23:55,378 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.remote.facade.TralalaFacade" NOT found at /deusto/ingenieria/sd/tralala/package.jdo
+20 Jan 2016 - 17:23:55,378 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.remote.facade.TralalaFacade" NOT found at /deusto/ingenieria/sd/tralala.jdo
+20 Jan 2016 - 17:23:55,378 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.remote.facade.TralalaFacade" NOT found at /deusto/ingenieria/sd/tralala/tralalaserver/package.jdo
+20 Jan 2016 - 17:23:55,379 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.remote.facade.TralalaFacade" NOT found at /deusto/ingenieria/sd/tralala/tralalaserver.jdo
+20 Jan 2016 - 17:23:55,379 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.remote.facade.TralalaFacade" NOT found at /deusto/ingenieria/sd/tralala/tralalaserver/remote/package.jdo
+20 Jan 2016 - 17:23:55,379 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.remote.facade.TralalaFacade" NOT found at /deusto/ingenieria/sd/tralala/tralalaserver/remote.jdo
+20 Jan 2016 - 17:23:55,380 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.remote.facade.TralalaFacade" NOT found at /deusto/ingenieria/sd/tralala/tralalaserver/remote/facade/package.jdo
+20 Jan 2016 - 17:23:55,380 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.remote.facade.TralalaFacade" NOT found at /deusto/ingenieria/sd/tralala/tralalaserver/remote/facade.jdo
+20 Jan 2016 - 17:23:55,381 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.remote.facade.TralalaFacade" NOT found at /deusto/ingenieria/sd/tralala/tralalaserver/remote/facade/TralalaFacade.jdo
+20 Jan 2016 - 17:23:55,381 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.remote.facade.TralalaFacade" not found
+20 Jan 2016 - 17:23:55,381 (main) DEBUG [DataNucleus.MetaData] - Registering class "deusto.ingenieria.sd.tralala.tralalaserver.remote.facade.TralalaFacade" as not having MetaData.
+20 Jan 2016 - 17:23:55,381 (main) DEBUG [DataNucleus.MetaData] - Class "deusto.ingenieria.sd.tralala.tralalaserver.remote.facade.TralalaFacade" has no MetaData or annotations.
+20 Jan 2016 - 17:23:55,381 (main) DEBUG [DataNucleus.MetaData] - Class "deusto.ingenieria.sd.tralala.tralalaserver.remote.interfaces.ILoginManager" has no MetaData or annotations.
+20 Jan 2016 - 17:23:55,381 (main) DEBUG [DataNucleus.MetaData] - Class "deusto.ingenieria.sd.tralala.tralalaserver.remote.interfaces.IPaymentManager" has no MetaData or annotations.
+20 Jan 2016 - 17:23:55,381 (main) DEBUG [DataNucleus.MetaData] - Class "deusto.ingenieria.sd.tralala.tralalaserver.remote.interfaces.ITralalaManager" has no MetaData or annotations.
+20 Jan 2016 - 17:23:55,382 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.server.TralalaService" NOT found at /META-INF/package.jdo
+20 Jan 2016 - 17:23:55,383 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.server.TralalaService" NOT found at /WEB-INF/package.jdo
+20 Jan 2016 - 17:23:55,383 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.server.TralalaService" NOT found at /package.jdo
+20 Jan 2016 - 17:23:55,383 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.server.TralalaService" NOT found at /deusto/package.jdo
+20 Jan 2016 - 17:23:55,384 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.server.TralalaService" NOT found at /deusto.jdo
+20 Jan 2016 - 17:23:55,384 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.server.TralalaService" NOT found at /deusto/ingenieria/package.jdo
+20 Jan 2016 - 17:23:55,385 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.server.TralalaService" NOT found at /deusto/ingenieria.jdo
+20 Jan 2016 - 17:23:55,385 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.server.TralalaService" NOT found at /deusto/ingenieria/sd/package.jdo
+20 Jan 2016 - 17:23:55,385 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.server.TralalaService" NOT found at /deusto/ingenieria/sd.jdo
+20 Jan 2016 - 17:23:55,386 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.server.TralalaService" NOT found at /deusto/ingenieria/sd/tralala/package.jdo
+20 Jan 2016 - 17:23:55,386 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.server.TralalaService" NOT found at /deusto/ingenieria/sd/tralala.jdo
+20 Jan 2016 - 17:23:55,386 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.server.TralalaService" NOT found at /deusto/ingenieria/sd/tralala/tralalaserver/package.jdo
+20 Jan 2016 - 17:23:55,387 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.server.TralalaService" NOT found at /deusto/ingenieria/sd/tralala/tralalaserver.jdo
+20 Jan 2016 - 17:23:55,387 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.server.TralalaService" NOT found at /deusto/ingenieria/sd/tralala/tralalaserver/server/package.jdo
+20 Jan 2016 - 17:23:55,388 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.server.TralalaService" NOT found at /deusto/ingenieria/sd/tralala/tralalaserver/server.jdo
+20 Jan 2016 - 17:23:55,388 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.server.TralalaService" NOT found at /deusto/ingenieria/sd/tralala/tralalaserver/server/TralalaService.jdo
+20 Jan 2016 - 17:23:55,388 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "deusto.ingenieria.sd.tralala.tralalaserver.server.TralalaService" not found
+20 Jan 2016 - 17:23:55,388 (main) DEBUG [DataNucleus.MetaData] - Registering class "deusto.ingenieria.sd.tralala.tralalaserver.server.TralalaService" as not having MetaData.
+20 Jan 2016 - 17:23:55,388 (main) DEBUG [DataNucleus.MetaData] - Class "deusto.ingenieria.sd.tralala.tralalaserver.server.TralalaService" has no MetaData or annotations.
+20 Jan 2016 - 17:23:55,388 (main) DEBUG [DataNucleus.MetaData] - Populating all MetaData ...
+20 Jan 2016 - 17:23:55,389 (main) DEBUG [DataNucleus.MetaData] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Member" : Populating Meta-Data
+20 Jan 2016 - 17:23:55,390 (main) DEBUG [DataNucleus.MetaData] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Member" field "name" : Adding Meta-Data for field since it didnt appear in the Meta-Data definition.
+20 Jan 2016 - 17:23:55,390 (main) DEBUG [DataNucleus.MetaData] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Member" field "email" : Adding Meta-Data for field since it didnt appear in the Meta-Data definition.
+20 Jan 2016 - 17:23:55,390 (main) DEBUG [DataNucleus.MetaData] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Member" field "birthdate" : Adding Meta-Data for field since it didnt appear in the Meta-Data definition.
+20 Jan 2016 - 17:23:55,390 (main) DEBUG [DataNucleus.MetaData] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Member" field "address" : Adding Meta-Data for field since it didnt appear in the Meta-Data definition.
+20 Jan 2016 - 17:23:55,390 (main) DEBUG [DataNucleus.MetaData] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Member" field "country" : Adding Meta-Data for field since it didnt appear in the Meta-Data definition.
+20 Jan 2016 - 17:23:55,391 (main) DEBUG [DataNucleus.MetaData] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Member" field "billingInfo" : Adding Meta-Data for field since it didnt appear in the Meta-Data definition.
+20 Jan 2016 - 17:23:55,391 (main) DEBUG [DataNucleus.MetaData] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Member" field "paymentMethod" : Adding Meta-Data for field since it didnt appear in the Meta-Data definition.
+20 Jan 2016 - 17:23:55,391 (main) DEBUG [DataNucleus.MetaData] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Member" field "paymentModel" : Adding Meta-Data for field since it didnt appear in the Meta-Data definition.
+20 Jan 2016 - 17:23:55,394 (main) DEBUG [DataNucleus.MetaData] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Play" : Populating Meta-Data
+20 Jan 2016 - 17:23:55,395 (main) DEBUG [DataNucleus.MetaData] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Play" field "time" : Adding Meta-Data for field since it didnt appear in the Meta-Data definition.
+20 Jan 2016 - 17:23:55,396 (main) DEBUG [DataNucleus.MetaData] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Song" : Populating Meta-Data
+20 Jan 2016 - 17:23:55,396 (main) DEBUG [DataNucleus.MetaData] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Song" field "price" : Adding Meta-Data for field since it didnt appear in the Meta-Data definition.
+20 Jan 2016 - 17:23:55,397 (main) DEBUG [DataNucleus.MetaData] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Song" field "lyrics" : Adding Meta-Data for field since it didnt appear in the Meta-Data definition.
+20 Jan 2016 - 17:23:55,397 (main) DEBUG [DataNucleus.MetaData] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Song" field "duration" : Adding Meta-Data for field since it didnt appear in the Meta-Data definition.
+20 Jan 2016 - 17:23:55,397 (main) DEBUG [DataNucleus.MetaData] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Song" field "reldate" : Adding Meta-Data for field since it didnt appear in the Meta-Data definition.
+20 Jan 2016 - 17:23:55,397 (main) DEBUG [DataNucleus.MetaData] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Song" field "album" : Adding Meta-Data for field since it didnt appear in the Meta-Data definition.
+20 Jan 2016 - 17:23:55,397 (main) DEBUG [DataNucleus.MetaData] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Song" field "song" : Adding Meta-Data for field since it didnt appear in the Meta-Data definition.
+20 Jan 2016 - 17:23:55,397 (main) WARN  [DataNucleus.MetaData] - Class deusto.ingenieria.sd.tralala.tralalaserver.data.Song has application-identity and no objectid-class specified yet has 2 primary key fields. Unable to use SingleFieldIdentity.
+20 Jan 2016 - 17:23:55,399 (main) DEBUG [DataNucleus.MetaData] - Initialising all MetaData ...
+20 Jan 2016 - 17:23:55,399 (main) DEBUG [DataNucleus.MetaData] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Member" : Initialising Meta-Data
+20 Jan 2016 - 17:23:55,402 (main) DEBUG [DataNucleus.MetaData] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Play" : Initialising Meta-Data
+20 Jan 2016 - 17:23:55,402 (main) DEBUG [DataNucleus.MetaData] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Song" : Initialising Meta-Data
+20 Jan 2016 - 17:23:55,402 (main) DEBUG [DataNucleus.MetaData] - MetaData Management : Load of Metadata complete
+20 Jan 2016 - 17:23:55,405 (main) DEBUG [DataNucleus.Enhancer] - Enhance of class "deusto.ingenieria.sd.tralala.tralalaserver.data.Member" starting ...
+20 Jan 2016 - 17:23:55,422 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Member" doesnt implement the interface "org.datanucleus.enhancement.Persistable" but is required
+20 Jan 2016 - 17:23:55,422 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Member" doesnt have field "dnFieldFlags" but is required
+20 Jan 2016 - 17:23:55,422 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Member" doesnt have field "dnInheritedFieldCount" but is required
+20 Jan 2016 - 17:23:55,422 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Member" doesnt have field "dnFlags" but is required
+20 Jan 2016 - 17:23:55,423 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Member" doesnt have field "dnStateManager" but is required
+20 Jan 2016 - 17:23:55,423 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Member" doesnt have field "dnPersistableSuperclass" but is required
+20 Jan 2016 - 17:23:55,423 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Member" doesnt have field "dnFieldNames" but is required
+20 Jan 2016 - 17:23:55,423 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Member" doesnt have field "dnFieldTypes" but is required
+20 Jan 2016 - 17:23:55,423 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Member" doesnt have method "__dnFieldTypesInit" but is required
+20 Jan 2016 - 17:23:55,423 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Member" doesnt have method "__dnPersistableSuperclassInit" but is required
+20 Jan 2016 - 17:23:55,423 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Member" doesnt have method "dnProvideField" but is required
+20 Jan 2016 - 17:23:55,423 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Member" doesnt have method "dnReplaceField" but is required
+20 Jan 2016 - 17:23:55,423 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Member" doesnt have method "dnCopyFields" but is required
+20 Jan 2016 - 17:23:55,423 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Member" doesnt have method "dnIsNew" but is required
+20 Jan 2016 - 17:23:55,423 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Member" doesnt have method "dnGetObjectId" but is required
+20 Jan 2016 - 17:23:55,424 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Member" doesnt have method "dnCopyField" but is required
+20 Jan 2016 - 17:23:55,424 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Member" doesnt have method "dnReplaceStateManager" but is required
+20 Jan 2016 - 17:23:55,424 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Member" doesnt have method "dnReplaceFields" but is required
+20 Jan 2016 - 17:23:55,424 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Member" doesnt have method "dnCopyKeyFieldsToObjectId" but is required
+20 Jan 2016 - 17:23:55,424 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Member" doesnt have method "dnCopyKeyFieldsToObjectId" but is required
+20 Jan 2016 - 17:23:55,424 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Member" doesnt have method "dnGetExecutionContext" but is required
+20 Jan 2016 - 17:23:55,424 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Member" doesnt have method "dnCopyKeyFieldsFromObjectId" but is required
+20 Jan 2016 - 17:23:55,424 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Member" doesnt have method "dnCopyKeyFieldsFromObjectId" but is required
+20 Jan 2016 - 17:23:55,424 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Member" doesnt have method "dnIsPersistent" but is required
+20 Jan 2016 - 17:23:55,424 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Member" doesnt have method "__dnGetInheritedFieldCount" but is required
+20 Jan 2016 - 17:23:55,424 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Member" doesnt have method "dnNewInstance" but is required
+20 Jan 2016 - 17:23:55,424 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Member" doesnt have method "dnNewInstance" but is required
+20 Jan 2016 - 17:23:55,424 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Member" doesnt have method "dnNewObjectIdInstance" but is required
+20 Jan 2016 - 17:23:55,425 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Member" doesnt have method "dnNewObjectIdInstance" but is required
+20 Jan 2016 - 17:23:55,425 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Member" doesnt have method "dnProvideFields" but is required
+20 Jan 2016 - 17:23:55,425 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Member" doesnt have method "dnGetManagedFieldCount" but is required
+20 Jan 2016 - 17:23:55,425 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Member" doesnt have method "__dnFieldNamesInit" but is required
+20 Jan 2016 - 17:23:55,425 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Member" doesnt have method "__dnFieldFlagsInit" but is required
+20 Jan 2016 - 17:23:55,425 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Member" doesnt have method "dnPreSerialize" but is required
+20 Jan 2016 - 17:23:55,425 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Member" doesnt have method "dnMakeDirty" but is required
+20 Jan 2016 - 17:23:55,425 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Member" doesnt have method "dnIsDirty" but is required
+20 Jan 2016 - 17:23:55,425 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Member" doesnt have method "___dn$loadClass" but is required
+20 Jan 2016 - 17:23:55,425 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Member" doesnt have method "dnGetTransactionalObjectId" but is required
+20 Jan 2016 - 17:23:55,425 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Member" doesnt have method "dnIsDetached" but is required
+20 Jan 2016 - 17:23:55,426 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Member" doesnt have method "dnIsTransactional" but is required
+20 Jan 2016 - 17:23:55,426 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Member" doesnt have method "dnIsDeleted" but is required
+20 Jan 2016 - 17:23:55,426 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Member" doesnt have method "dnGetVersion" but is required
+20 Jan 2016 - 17:23:55,426 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Member" doesnt have method "dnReplaceFlags" but is required
+20 Jan 2016 - 17:23:55,426 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Member" doesnt have method "dnSuperClone" but is required
+20 Jan 2016 - 17:23:55,434 (main) DEBUG [DataNucleus.Enhancer] - Adding interface: org.datanucleus.enhancement.Persistable
+20 Jan 2016 - 17:23:55,437 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method deusto.ingenieria.sd.tralala.tralalaserver.data.Member.<init> : omitting enhance of set of field "deusto.ingenieria.sd.tralala.tralalaserver.data.Member.username"
+20 Jan 2016 - 17:23:55,437 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method deusto.ingenieria.sd.tralala.tralalaserver.data.Member.<init> : omitting enhance of set of field "deusto.ingenieria.sd.tralala.tralalaserver.data.Member.name"
+20 Jan 2016 - 17:23:55,437 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method deusto.ingenieria.sd.tralala.tralalaserver.data.Member.<init> : omitting enhance of set of field "deusto.ingenieria.sd.tralala.tralalaserver.data.Member.email"
+20 Jan 2016 - 17:23:55,438 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method deusto.ingenieria.sd.tralala.tralalaserver.data.Member.<init> : omitting enhance of set of field "deusto.ingenieria.sd.tralala.tralalaserver.data.Member.birthdate"
+20 Jan 2016 - 17:23:55,438 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method deusto.ingenieria.sd.tralala.tralalaserver.data.Member.<init> : omitting enhance of set of field "deusto.ingenieria.sd.tralala.tralalaserver.data.Member.address"
+20 Jan 2016 - 17:23:55,438 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method deusto.ingenieria.sd.tralala.tralalaserver.data.Member.<init> : omitting enhance of set of field "deusto.ingenieria.sd.tralala.tralalaserver.data.Member.country"
+20 Jan 2016 - 17:23:55,438 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method deusto.ingenieria.sd.tralala.tralalaserver.data.Member.<init> : omitting enhance of set of field "deusto.ingenieria.sd.tralala.tralalaserver.data.Member.billingInfo"
+20 Jan 2016 - 17:23:55,438 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method deusto.ingenieria.sd.tralala.tralalaserver.data.Member.<init> : omitting enhance of set of field "deusto.ingenieria.sd.tralala.tralalaserver.data.Member.paymentMethod"
+20 Jan 2016 - 17:23:55,438 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method deusto.ingenieria.sd.tralala.tralalaserver.data.Member.<init> : omitting enhance of set of field "deusto.ingenieria.sd.tralala.tralalaserver.data.Member.paymentModel"
+20 Jan 2016 - 17:23:55,438 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method deusto.ingenieria.sd.tralala.tralalaserver.data.Member.toString changing field "deusto.ingenieria.sd.tralala.tralalaserver.data.Member.username" for call to "dnGetusername()"
+20 Jan 2016 - 17:23:55,438 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method deusto.ingenieria.sd.tralala.tralalaserver.data.Member.toString changing field "deusto.ingenieria.sd.tralala.tralalaserver.data.Member.name" for call to "dnGetname()"
+20 Jan 2016 - 17:23:55,438 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method deusto.ingenieria.sd.tralala.tralalaserver.data.Member.toString changing field "deusto.ingenieria.sd.tralala.tralalaserver.data.Member.email" for call to "dnGetemail()"
+20 Jan 2016 - 17:23:55,439 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method deusto.ingenieria.sd.tralala.tralalaserver.data.Member.toString changing field "deusto.ingenieria.sd.tralala.tralalaserver.data.Member.birthdate" for call to "dnGetbirthdate()"
+20 Jan 2016 - 17:23:55,439 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method deusto.ingenieria.sd.tralala.tralalaserver.data.Member.toString changing field "deusto.ingenieria.sd.tralala.tralalaserver.data.Member.address" for call to "dnGetaddress()"
+20 Jan 2016 - 17:23:55,439 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method deusto.ingenieria.sd.tralala.tralalaserver.data.Member.toString changing field "deusto.ingenieria.sd.tralala.tralalaserver.data.Member.country" for call to "dnGetcountry()"
+20 Jan 2016 - 17:23:55,439 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method deusto.ingenieria.sd.tralala.tralalaserver.data.Member.toString changing field "deusto.ingenieria.sd.tralala.tralalaserver.data.Member.billingInfo" for call to "dnGetbillingInfo()"
+20 Jan 2016 - 17:23:55,439 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method deusto.ingenieria.sd.tralala.tralalaserver.data.Member.toString changing field "deusto.ingenieria.sd.tralala.tralalaserver.data.Member.paymentMethod" for call to "dnGetpaymentMethod()"
+20 Jan 2016 - 17:23:55,439 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method deusto.ingenieria.sd.tralala.tralalaserver.data.Member.setName changing field "deusto.ingenieria.sd.tralala.tralalaserver.data.Member.name" for call to "dnSetname()"
+20 Jan 2016 - 17:23:55,439 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method deusto.ingenieria.sd.tralala.tralalaserver.data.Member.setEmail changing field "deusto.ingenieria.sd.tralala.tralalaserver.data.Member.email" for call to "dnSetemail()"
+20 Jan 2016 - 17:23:55,439 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method deusto.ingenieria.sd.tralala.tralalaserver.data.Member.setBirthdate changing field "deusto.ingenieria.sd.tralala.tralalaserver.data.Member.birthdate" for call to "dnSetbirthdate()"
+20 Jan 2016 - 17:23:55,439 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method deusto.ingenieria.sd.tralala.tralalaserver.data.Member.setAddress changing field "deusto.ingenieria.sd.tralala.tralalaserver.data.Member.address" for call to "dnSetaddress()"
+20 Jan 2016 - 17:23:55,439 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method deusto.ingenieria.sd.tralala.tralalaserver.data.Member.setCountry changing field "deusto.ingenieria.sd.tralala.tralalaserver.data.Member.country" for call to "dnSetcountry()"
+20 Jan 2016 - 17:23:55,440 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method deusto.ingenieria.sd.tralala.tralalaserver.data.Member.setPaymentInfo changing field "deusto.ingenieria.sd.tralala.tralalaserver.data.Member.billingInfo" for call to "dnSetbillingInfo()"
+20 Jan 2016 - 17:23:55,440 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method deusto.ingenieria.sd.tralala.tralalaserver.data.Member.setPaymentMethod changing field "deusto.ingenieria.sd.tralala.tralalaserver.data.Member.paymentMethod" for call to "dnSetpaymentMethod()"
+20 Jan 2016 - 17:23:55,440 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method deusto.ingenieria.sd.tralala.tralalaserver.data.Member.getUsername changing field "deusto.ingenieria.sd.tralala.tralalaserver.data.Member.username" for call to "dnGetusername()"
+20 Jan 2016 - 17:23:55,440 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method deusto.ingenieria.sd.tralala.tralalaserver.data.Member.getName changing field "deusto.ingenieria.sd.tralala.tralalaserver.data.Member.name" for call to "dnGetname()"
+20 Jan 2016 - 17:23:55,440 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method deusto.ingenieria.sd.tralala.tralalaserver.data.Member.getEmail changing field "deusto.ingenieria.sd.tralala.tralalaserver.data.Member.email" for call to "dnGetemail()"
+20 Jan 2016 - 17:23:55,440 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method deusto.ingenieria.sd.tralala.tralalaserver.data.Member.getAddress changing field "deusto.ingenieria.sd.tralala.tralalaserver.data.Member.address" for call to "dnGetaddress()"
+20 Jan 2016 - 17:23:55,440 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method deusto.ingenieria.sd.tralala.tralalaserver.data.Member.getCountry changing field "deusto.ingenieria.sd.tralala.tralalaserver.data.Member.country" for call to "dnGetcountry()"
+20 Jan 2016 - 17:23:55,440 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method deusto.ingenieria.sd.tralala.tralalaserver.data.Member.getBillingInfo changing field "deusto.ingenieria.sd.tralala.tralalaserver.data.Member.billingInfo" for call to "dnGetbillingInfo()"
+20 Jan 2016 - 17:23:55,440 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method deusto.ingenieria.sd.tralala.tralalaserver.data.Member.getPaymentMethod changing field "deusto.ingenieria.sd.tralala.tralalaserver.data.Member.paymentMethod" for call to "dnGetpaymentMethod()"
+20 Jan 2016 - 17:23:55,441 (main) DEBUG [DataNucleus.Enhancer] - Adding field "org.datanucleus.enhancement.StateManager dnStateManager"
+20 Jan 2016 - 17:23:55,441 (main) DEBUG [DataNucleus.Enhancer] - Adding field "byte dnFlags"
+20 Jan 2016 - 17:23:55,441 (main) DEBUG [DataNucleus.Enhancer] - Adding field "[B dnFieldFlags"
+20 Jan 2016 - 17:23:55,441 (main) DEBUG [DataNucleus.Enhancer] - Adding field "java.lang.Class dnPersistableSuperclass"
+20 Jan 2016 - 17:23:55,441 (main) DEBUG [DataNucleus.Enhancer] - Adding field "[Ljava.lang.Class; dnFieldTypes"
+20 Jan 2016 - 17:23:55,441 (main) DEBUG [DataNucleus.Enhancer] - Adding field "[Ljava.lang.String; dnFieldNames"
+20 Jan 2016 - 17:23:55,441 (main) DEBUG [DataNucleus.Enhancer] - Adding field "int dnInheritedFieldCount"
+20 Jan 2016 - 17:23:55,442 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void <clinit>()"
+20 Jan 2016 - 17:23:55,442 (main) DEBUG [DataNucleus.Enhancer] - Adding constructor "deusto.ingenieria.sd.tralala.tralalaserver.data.Member()"
+20 Jan 2016 - 17:23:55,443 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void dnCopyKeyFieldsFromObjectId(interface org.datanucleus.enhancement.Persistable$ObjectIdFieldConsumer fc, class java.lang.Object oid)"
+20 Jan 2016 - 17:23:55,443 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void dnCopyKeyFieldsFromObjectId(class java.lang.Object oid)"
+20 Jan 2016 - 17:23:55,444 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void dnCopyKeyFieldsToObjectId(class java.lang.Object oid)"
+20 Jan 2016 - 17:23:55,444 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void dnCopyKeyFieldsToObjectId(interface org.datanucleus.enhancement.Persistable$ObjectIdFieldSupplier fs, class java.lang.Object oid)"
+20 Jan 2016 - 17:23:55,444 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.lang.Object dnGetObjectId()"
+20 Jan 2016 - 17:23:55,444 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.lang.Object dnGetVersion()"
+20 Jan 2016 - 17:23:55,444 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void dnPreSerialize()"
+20 Jan 2016 - 17:23:55,444 (main) DEBUG [DataNucleus.Enhancer] - Adding method "org.datanucleus.enhancement.ExecutionContextReference dnGetExecutionContext()"
+20 Jan 2016 - 17:23:55,444 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.lang.Object dnGetTransactionalObjectId()"
+20 Jan 2016 - 17:23:55,445 (main) DEBUG [DataNucleus.Enhancer] - Adding method "boolean dnIsDeleted()"
+20 Jan 2016 - 17:23:55,445 (main) DEBUG [DataNucleus.Enhancer] - Adding method "boolean dnIsDirty()"
+20 Jan 2016 - 17:23:55,445 (main) DEBUG [DataNucleus.Enhancer] - Adding method "boolean dnIsNew()"
+20 Jan 2016 - 17:23:55,445 (main) DEBUG [DataNucleus.Enhancer] - Adding method "boolean dnIsPersistent()"
+20 Jan 2016 - 17:23:55,445 (main) DEBUG [DataNucleus.Enhancer] - Adding method "boolean dnIsTransactional()"
+20 Jan 2016 - 17:23:55,446 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void dnMakeDirty(class java.lang.String fieldName)"
+20 Jan 2016 - 17:23:55,446 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.lang.Object dnNewObjectIdInstance()"
+20 Jan 2016 - 17:23:55,446 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.lang.Object dnNewObjectIdInstance(class java.lang.Object key)"
+20 Jan 2016 - 17:23:55,446 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void dnProvideFields(class [I indices)"
+20 Jan 2016 - 17:23:55,446 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void dnReplaceFields(class [I indices)"
+20 Jan 2016 - 17:23:55,447 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void dnReplaceFlags()"
+20 Jan 2016 - 17:23:55,447 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void dnReplaceStateManager(interface org.datanucleus.enhancement.StateManager sm)"
+20 Jan 2016 - 17:23:55,447 (main) DEBUG [DataNucleus.Enhancer] - Adding method "boolean dnIsDetached()"
+20 Jan 2016 - 17:23:55,447 (main) DEBUG [DataNucleus.Enhancer] - Adding method "org.datanucleus.enhancement.Persistable dnNewInstance(interface org.datanucleus.enhancement.StateManager sm)"
+20 Jan 2016 - 17:23:55,447 (main) DEBUG [DataNucleus.Enhancer] - Adding method "org.datanucleus.enhancement.Persistable dnNewInstance(interface org.datanucleus.enhancement.StateManager sm, class java.lang.Object obj)"
+20 Jan 2016 - 17:23:55,448 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void dnReplaceField(int index)"
+20 Jan 2016 - 17:23:55,448 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void dnProvideField(int index)"
+20 Jan 2016 - 17:23:55,448 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void dnCopyField(class deusto.ingenieria.sd.tralala.tralalaserver.data.Member obj, int index)"
+20 Jan 2016 - 17:23:55,449 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void dnCopyFields(class java.lang.Object obj, class [I indices)"
+20 Jan 2016 - 17:23:55,449 (main) DEBUG [DataNucleus.Enhancer] - Adding method "[Ljava.lang.String; __dnFieldNamesInit()"
+20 Jan 2016 - 17:23:55,449 (main) DEBUG [DataNucleus.Enhancer] - Adding method "[Ljava.lang.Class; __dnFieldTypesInit()"
+20 Jan 2016 - 17:23:55,449 (main) DEBUG [DataNucleus.Enhancer] - Adding method "[B __dnFieldFlagsInit()"
+20 Jan 2016 - 17:23:55,449 (main) DEBUG [DataNucleus.Enhancer] - Adding method "int __dnGetInheritedFieldCount()"
+20 Jan 2016 - 17:23:55,449 (main) DEBUG [DataNucleus.Enhancer] - Adding method "int dnGetManagedFieldCount()"
+20 Jan 2016 - 17:23:55,449 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.lang.Class __dnPersistableSuperclassInit()"
+20 Jan 2016 - 17:23:55,450 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.lang.Class ___dn$loadClass(class java.lang.String className)"
+20 Jan 2016 - 17:23:55,450 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.lang.Object dnSuperClone()"
+20 Jan 2016 - 17:23:55,450 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.lang.String dnGetaddress(class deusto.ingenieria.sd.tralala.tralalaserver.data.Member objPC)"
+20 Jan 2016 - 17:23:55,451 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void dnSetaddress(class deusto.ingenieria.sd.tralala.tralalaserver.data.Member objPC, class java.lang.String val)"
+20 Jan 2016 - 17:23:55,451 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.lang.String dnGetbillingInfo(class deusto.ingenieria.sd.tralala.tralalaserver.data.Member objPC)"
+20 Jan 2016 - 17:23:55,451 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void dnSetbillingInfo(class deusto.ingenieria.sd.tralala.tralalaserver.data.Member objPC, class java.lang.String val)"
+20 Jan 2016 - 17:23:55,451 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.util.Date dnGetbirthdate(class deusto.ingenieria.sd.tralala.tralalaserver.data.Member objPC)"
+20 Jan 2016 - 17:23:55,451 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void dnSetbirthdate(class deusto.ingenieria.sd.tralala.tralalaserver.data.Member objPC, class java.util.Date val)"
+20 Jan 2016 - 17:23:55,451 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.lang.String dnGetcountry(class deusto.ingenieria.sd.tralala.tralalaserver.data.Member objPC)"
+20 Jan 2016 - 17:23:55,452 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void dnSetcountry(class deusto.ingenieria.sd.tralala.tralalaserver.data.Member objPC, class java.lang.String val)"
+20 Jan 2016 - 17:23:55,452 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.lang.String dnGetemail(class deusto.ingenieria.sd.tralala.tralalaserver.data.Member objPC)"
+20 Jan 2016 - 17:23:55,452 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void dnSetemail(class deusto.ingenieria.sd.tralala.tralalaserver.data.Member objPC, class java.lang.String val)"
+20 Jan 2016 - 17:23:55,452 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.lang.String dnGetname(class deusto.ingenieria.sd.tralala.tralalaserver.data.Member objPC)"
+20 Jan 2016 - 17:23:55,452 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void dnSetname(class deusto.ingenieria.sd.tralala.tralalaserver.data.Member objPC, class java.lang.String val)"
+20 Jan 2016 - 17:23:55,453 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.lang.String dnGetpaymentMethod(class deusto.ingenieria.sd.tralala.tralalaserver.data.Member objPC)"
+20 Jan 2016 - 17:23:55,453 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void dnSetpaymentMethod(class deusto.ingenieria.sd.tralala.tralalaserver.data.Member objPC, class java.lang.String val)"
+20 Jan 2016 - 17:23:55,453 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.lang.String dnGetusername(class deusto.ingenieria.sd.tralala.tralalaserver.data.Member objPC)"
+20 Jan 2016 - 17:23:55,454 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void dnSetusername(class deusto.ingenieria.sd.tralala.tralalaserver.data.Member objPC, class java.lang.String val)"
+20 Jan 2016 - 17:23:55,455 (main) INFO  [DataNucleus.Enhancer] - Writing class file "/tmp/TralalaServer/bin/deusto/ingenieria/sd/tralala/tralalaserver/data/Member.class" with enhanced definition
+20 Jan 2016 - 17:23:55,455 (main) DEBUG [DataNucleus.Enhancer] - Enhance of class "deusto.ingenieria.sd.tralala.tralalaserver.data.Member" completed
+20 Jan 2016 - 17:23:55,455 (main) DEBUG [DataNucleus.Enhancer] - Enhance of class "deusto.ingenieria.sd.tralala.tralalaserver.data.Play" starting ...
+20 Jan 2016 - 17:23:55,456 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Play" doesnt implement the interface "org.datanucleus.enhancement.Persistable" but is required
+20 Jan 2016 - 17:23:55,456 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Play" doesnt have field "dnFieldFlags" but is required
+20 Jan 2016 - 17:23:55,456 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Play" doesnt have field "dnInheritedFieldCount" but is required
+20 Jan 2016 - 17:23:55,456 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Play" doesnt have field "dnFlags" but is required
+20 Jan 2016 - 17:23:55,456 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Play" doesnt have field "dnStateManager" but is required
+20 Jan 2016 - 17:23:55,457 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Play" doesnt have field "dnPersistableSuperclass" but is required
+20 Jan 2016 - 17:23:55,457 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Play" doesnt have field "dnFieldNames" but is required
+20 Jan 2016 - 17:23:55,457 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Play" doesnt have field "dnFieldTypes" but is required
+20 Jan 2016 - 17:23:55,457 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Play" doesnt have method "__dnFieldTypesInit" but is required
+20 Jan 2016 - 17:23:55,457 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Play" doesnt have method "__dnPersistableSuperclassInit" but is required
+20 Jan 2016 - 17:23:55,457 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Play" doesnt have method "dnProvideField" but is required
+20 Jan 2016 - 17:23:55,457 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Play" doesnt have method "dnReplaceField" but is required
+20 Jan 2016 - 17:23:55,457 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Play" doesnt have method "dnCopyFields" but is required
+20 Jan 2016 - 17:23:55,457 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Play" doesnt have method "dnIsNew" but is required
+20 Jan 2016 - 17:23:55,457 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Play" doesnt have method "dnGetObjectId" but is required
+20 Jan 2016 - 17:23:55,457 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Play" doesnt have method "dnCopyField" but is required
+20 Jan 2016 - 17:23:55,458 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Play" doesnt have method "dnReplaceStateManager" but is required
+20 Jan 2016 - 17:23:55,458 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Play" doesnt have method "dnReplaceFields" but is required
+20 Jan 2016 - 17:23:55,458 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Play" doesnt have method "dnCopyKeyFieldsToObjectId" but is required
+20 Jan 2016 - 17:23:55,458 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Play" doesnt have method "dnCopyKeyFieldsToObjectId" but is required
+20 Jan 2016 - 17:23:55,458 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Play" doesnt have method "dnGetExecutionContext" but is required
+20 Jan 2016 - 17:23:55,458 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Play" doesnt have method "dnCopyKeyFieldsFromObjectId" but is required
+20 Jan 2016 - 17:23:55,458 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Play" doesnt have method "dnCopyKeyFieldsFromObjectId" but is required
+20 Jan 2016 - 17:23:55,458 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Play" doesnt have method "dnIsPersistent" but is required
+20 Jan 2016 - 17:23:55,458 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Play" doesnt have method "__dnGetInheritedFieldCount" but is required
+20 Jan 2016 - 17:23:55,458 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Play" doesnt have method "dnNewInstance" but is required
+20 Jan 2016 - 17:23:55,458 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Play" doesnt have method "dnNewInstance" but is required
+20 Jan 2016 - 17:23:55,458 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Play" doesnt have method "dnNewObjectIdInstance" but is required
+20 Jan 2016 - 17:23:55,459 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Play" doesnt have method "dnNewObjectIdInstance" but is required
+20 Jan 2016 - 17:23:55,459 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Play" doesnt have method "dnProvideFields" but is required
+20 Jan 2016 - 17:23:55,459 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Play" doesnt have method "dnGetManagedFieldCount" but is required
+20 Jan 2016 - 17:23:55,459 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Play" doesnt have method "__dnFieldNamesInit" but is required
+20 Jan 2016 - 17:23:55,459 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Play" doesnt have method "__dnFieldFlagsInit" but is required
+20 Jan 2016 - 17:23:55,459 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Play" doesnt have method "dnPreSerialize" but is required
+20 Jan 2016 - 17:23:55,459 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Play" doesnt have method "dnMakeDirty" but is required
+20 Jan 2016 - 17:23:55,459 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Play" doesnt have method "dnIsDirty" but is required
+20 Jan 2016 - 17:23:55,459 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Play" doesnt have method "___dn$loadClass" but is required
+20 Jan 2016 - 17:23:55,459 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Play" doesnt have method "dnGetTransactionalObjectId" but is required
+20 Jan 2016 - 17:23:55,459 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Play" doesnt have method "dnIsDetached" but is required
+20 Jan 2016 - 17:23:55,459 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Play" doesnt have method "dnIsTransactional" but is required
+20 Jan 2016 - 17:23:55,459 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Play" doesnt have method "dnIsDeleted" but is required
+20 Jan 2016 - 17:23:55,460 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Play" doesnt have method "dnGetVersion" but is required
+20 Jan 2016 - 17:23:55,460 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Play" doesnt have method "dnReplaceFlags" but is required
+20 Jan 2016 - 17:23:55,460 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Play" doesnt have method "dnSuperClone" but is required
+20 Jan 2016 - 17:23:55,460 (main) DEBUG [DataNucleus.Enhancer] - Adding interface: org.datanucleus.enhancement.Persistable
+20 Jan 2016 - 17:23:55,460 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method deusto.ingenieria.sd.tralala.tralalaserver.data.Play.<init> : omitting enhance of set of field "deusto.ingenieria.sd.tralala.tralalaserver.data.Play.player"
+20 Jan 2016 - 17:23:55,460 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method deusto.ingenieria.sd.tralala.tralalaserver.data.Play.<init> : omitting enhance of set of field "deusto.ingenieria.sd.tralala.tralalaserver.data.Play.played"
+20 Jan 2016 - 17:23:55,461 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method deusto.ingenieria.sd.tralala.tralalaserver.data.Play.<init> : omitting enhance of set of field "deusto.ingenieria.sd.tralala.tralalaserver.data.Play.date"
+20 Jan 2016 - 17:23:55,461 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method deusto.ingenieria.sd.tralala.tralalaserver.data.Play.<init> : omitting enhance of set of field "deusto.ingenieria.sd.tralala.tralalaserver.data.Play.time"
+20 Jan 2016 - 17:23:55,461 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method deusto.ingenieria.sd.tralala.tralalaserver.data.Play.getMember changing field "deusto.ingenieria.sd.tralala.tralalaserver.data.Play.player" for call to "dnGetplayer()"
+20 Jan 2016 - 17:23:55,461 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method deusto.ingenieria.sd.tralala.tralalaserver.data.Play.getTime changing field "deusto.ingenieria.sd.tralala.tralalaserver.data.Play.time" for call to "dnGettime()"
+20 Jan 2016 - 17:23:55,461 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method deusto.ingenieria.sd.tralala.tralalaserver.data.Play.getDate changing field "deusto.ingenieria.sd.tralala.tralalaserver.data.Play.date" for call to "dnGetdate()"
+20 Jan 2016 - 17:23:55,461 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method deusto.ingenieria.sd.tralala.tralalaserver.data.Play.getPlayedSong changing field "deusto.ingenieria.sd.tralala.tralalaserver.data.Play.played" for call to "dnGetplayed()"
+20 Jan 2016 - 17:23:55,461 (main) DEBUG [DataNucleus.Enhancer] - Adding field "org.datanucleus.enhancement.StateManager dnStateManager"
+20 Jan 2016 - 17:23:55,462 (main) DEBUG [DataNucleus.Enhancer] - Adding field "byte dnFlags"
+20 Jan 2016 - 17:23:55,462 (main) DEBUG [DataNucleus.Enhancer] - Adding field "[B dnFieldFlags"
+20 Jan 2016 - 17:23:55,462 (main) DEBUG [DataNucleus.Enhancer] - Adding field "java.lang.Class dnPersistableSuperclass"
+20 Jan 2016 - 17:23:55,462 (main) DEBUG [DataNucleus.Enhancer] - Adding field "[Ljava.lang.Class; dnFieldTypes"
+20 Jan 2016 - 17:23:55,462 (main) DEBUG [DataNucleus.Enhancer] - Adding field "[Ljava.lang.String; dnFieldNames"
+20 Jan 2016 - 17:23:55,462 (main) DEBUG [DataNucleus.Enhancer] - Adding field "int dnInheritedFieldCount"
+20 Jan 2016 - 17:23:55,462 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void <clinit>()"
+20 Jan 2016 - 17:23:55,462 (main) DEBUG [DataNucleus.Enhancer] - Adding constructor "deusto.ingenieria.sd.tralala.tralalaserver.data.Play()"
+20 Jan 2016 - 17:23:55,463 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void dnCopyKeyFieldsFromObjectId(interface org.datanucleus.enhancement.Persistable$ObjectIdFieldConsumer fc, class java.lang.Object oid)"
+20 Jan 2016 - 17:23:55,463 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void dnCopyKeyFieldsFromObjectId(class java.lang.Object oid)"
+20 Jan 2016 - 17:23:55,463 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void dnCopyKeyFieldsToObjectId(class java.lang.Object oid)"
+20 Jan 2016 - 17:23:55,463 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void dnCopyKeyFieldsToObjectId(interface org.datanucleus.enhancement.Persistable$ObjectIdFieldSupplier fs, class java.lang.Object oid)"
+20 Jan 2016 - 17:23:55,463 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.lang.Object dnGetObjectId()"
+20 Jan 2016 - 17:23:55,464 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.lang.Object dnGetVersion()"
+20 Jan 2016 - 17:23:55,464 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void dnPreSerialize()"
+20 Jan 2016 - 17:23:55,464 (main) DEBUG [DataNucleus.Enhancer] - Adding method "org.datanucleus.enhancement.ExecutionContextReference dnGetExecutionContext()"
+20 Jan 2016 - 17:23:55,464 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.lang.Object dnGetTransactionalObjectId()"
+20 Jan 2016 - 17:23:55,464 (main) DEBUG [DataNucleus.Enhancer] - Adding method "boolean dnIsDeleted()"
+20 Jan 2016 - 17:23:55,464 (main) DEBUG [DataNucleus.Enhancer] - Adding method "boolean dnIsDirty()"
+20 Jan 2016 - 17:23:55,464 (main) DEBUG [DataNucleus.Enhancer] - Adding method "boolean dnIsNew()"
+20 Jan 2016 - 17:23:55,465 (main) DEBUG [DataNucleus.Enhancer] - Adding method "boolean dnIsPersistent()"
+20 Jan 2016 - 17:23:55,465 (main) DEBUG [DataNucleus.Enhancer] - Adding method "boolean dnIsTransactional()"
+20 Jan 2016 - 17:23:55,465 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void dnMakeDirty(class java.lang.String fieldName)"
+20 Jan 2016 - 17:23:55,465 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.lang.Object dnNewObjectIdInstance()"
+20 Jan 2016 - 17:23:55,465 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.lang.Object dnNewObjectIdInstance(class java.lang.Object key)"
+20 Jan 2016 - 17:23:55,465 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void dnProvideFields(class [I indices)"
+20 Jan 2016 - 17:23:55,465 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void dnReplaceFields(class [I indices)"
+20 Jan 2016 - 17:23:55,466 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void dnReplaceFlags()"
+20 Jan 2016 - 17:23:55,466 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void dnReplaceStateManager(interface org.datanucleus.enhancement.StateManager sm)"
+20 Jan 2016 - 17:23:55,466 (main) DEBUG [DataNucleus.Enhancer] - Adding method "boolean dnIsDetached()"
+20 Jan 2016 - 17:23:55,466 (main) DEBUG [DataNucleus.Enhancer] - Adding method "org.datanucleus.enhancement.Persistable dnNewInstance(interface org.datanucleus.enhancement.StateManager sm)"
+20 Jan 2016 - 17:23:55,466 (main) DEBUG [DataNucleus.Enhancer] - Adding method "org.datanucleus.enhancement.Persistable dnNewInstance(interface org.datanucleus.enhancement.StateManager sm, class java.lang.Object obj)"
+20 Jan 2016 - 17:23:55,467 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void dnReplaceField(int index)"
+20 Jan 2016 - 17:23:55,467 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void dnProvideField(int index)"
+20 Jan 2016 - 17:23:55,467 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void dnCopyField(class deusto.ingenieria.sd.tralala.tralalaserver.data.Play obj, int index)"
+20 Jan 2016 - 17:23:55,468 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void dnCopyFields(class java.lang.Object obj, class [I indices)"
+20 Jan 2016 - 17:23:55,468 (main) DEBUG [DataNucleus.Enhancer] - Adding method "[Ljava.lang.String; __dnFieldNamesInit()"
+20 Jan 2016 - 17:23:55,468 (main) DEBUG [DataNucleus.Enhancer] - Adding method "[Ljava.lang.Class; __dnFieldTypesInit()"
+20 Jan 2016 - 17:23:55,468 (main) DEBUG [DataNucleus.Enhancer] - Adding method "[B __dnFieldFlagsInit()"
+20 Jan 2016 - 17:23:55,468 (main) DEBUG [DataNucleus.Enhancer] - Adding method "int __dnGetInheritedFieldCount()"
+20 Jan 2016 - 17:23:55,468 (main) DEBUG [DataNucleus.Enhancer] - Adding method "int dnGetManagedFieldCount()"
+20 Jan 2016 - 17:23:55,468 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.lang.Class __dnPersistableSuperclassInit()"
+20 Jan 2016 - 17:23:55,468 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.lang.Class ___dn$loadClass(class java.lang.String className)"
+20 Jan 2016 - 17:23:55,469 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.lang.Object dnSuperClone()"
+20 Jan 2016 - 17:23:55,469 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.util.Date dnGetdate(class deusto.ingenieria.sd.tralala.tralalaserver.data.Play objPC)"
+20 Jan 2016 - 17:23:55,469 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void dnSetdate(class deusto.ingenieria.sd.tralala.tralalaserver.data.Play objPC, class java.util.Date val)"
+20 Jan 2016 - 17:23:55,469 (main) DEBUG [DataNucleus.Enhancer] - Adding method "deusto.ingenieria.sd.tralala.tralalaserver.data.Song dnGetplayed(class deusto.ingenieria.sd.tralala.tralalaserver.data.Play objPC)"
+20 Jan 2016 - 17:23:55,470 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void dnSetplayed(class deusto.ingenieria.sd.tralala.tralalaserver.data.Play objPC, class deusto.ingenieria.sd.tralala.tralalaserver.data.Song val)"
+20 Jan 2016 - 17:23:55,470 (main) DEBUG [DataNucleus.Enhancer] - Adding method "deusto.ingenieria.sd.tralala.tralalaserver.data.Member dnGetplayer(class deusto.ingenieria.sd.tralala.tralalaserver.data.Play objPC)"
+20 Jan 2016 - 17:23:55,470 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void dnSetplayer(class deusto.ingenieria.sd.tralala.tralalaserver.data.Play objPC, class deusto.ingenieria.sd.tralala.tralalaserver.data.Member val)"
+20 Jan 2016 - 17:23:55,470 (main) DEBUG [DataNucleus.Enhancer] - Adding method "int dnGettime(class deusto.ingenieria.sd.tralala.tralalaserver.data.Play objPC)"
+20 Jan 2016 - 17:23:55,470 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void dnSettime(class deusto.ingenieria.sd.tralala.tralalaserver.data.Play objPC, int val)"
+20 Jan 2016 - 17:23:55,471 (main) INFO  [DataNucleus.Enhancer] - Writing class file "/tmp/TralalaServer/bin/deusto/ingenieria/sd/tralala/tralalaserver/data/Play.class" with enhanced definition
+20 Jan 2016 - 17:23:55,471 (main) DEBUG [DataNucleus.Enhancer] - Enhance of class "deusto.ingenieria.sd.tralala.tralalaserver.data.Play" completed
+20 Jan 2016 - 17:23:55,471 (main) DEBUG [DataNucleus.Enhancer] - Enhance of class "deusto.ingenieria.sd.tralala.tralalaserver.data.Song" starting ...
+20 Jan 2016 - 17:23:55,471 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Song" doesnt implement the interface "org.datanucleus.enhancement.Persistable" but is required
+20 Jan 2016 - 17:23:55,472 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Song" doesnt have field "dnFieldFlags" but is required
+20 Jan 2016 - 17:23:55,472 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Song" doesnt have field "dnInheritedFieldCount" but is required
+20 Jan 2016 - 17:23:55,472 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Song" doesnt have field "dnFlags" but is required
+20 Jan 2016 - 17:23:55,472 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Song" doesnt have field "dnStateManager" but is required
+20 Jan 2016 - 17:23:55,472 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Song" doesnt have field "dnPersistableSuperclass" but is required
+20 Jan 2016 - 17:23:55,472 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Song" doesnt have field "dnFieldNames" but is required
+20 Jan 2016 - 17:23:55,472 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Song" doesnt have field "dnFieldTypes" but is required
+20 Jan 2016 - 17:23:55,472 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Song" doesnt have method "__dnFieldTypesInit" but is required
+20 Jan 2016 - 17:23:55,472 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Song" doesnt have method "__dnPersistableSuperclassInit" but is required
+20 Jan 2016 - 17:23:55,472 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Song" doesnt have method "dnProvideField" but is required
+20 Jan 2016 - 17:23:55,472 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Song" doesnt have method "dnReplaceField" but is required
+20 Jan 2016 - 17:23:55,472 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Song" doesnt have method "dnCopyFields" but is required
+20 Jan 2016 - 17:23:55,472 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Song" doesnt have method "dnIsNew" but is required
+20 Jan 2016 - 17:23:55,472 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Song" doesnt have method "dnGetObjectId" but is required
+20 Jan 2016 - 17:23:55,472 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Song" doesnt have method "dnCopyField" but is required
+20 Jan 2016 - 17:23:55,473 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Song" doesnt have method "dnReplaceStateManager" but is required
+20 Jan 2016 - 17:23:55,473 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Song" doesnt have method "dnReplaceFields" but is required
+20 Jan 2016 - 17:23:55,473 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Song" doesnt have method "dnCopyKeyFieldsToObjectId" but is required
+20 Jan 2016 - 17:23:55,473 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Song" doesnt have method "dnCopyKeyFieldsToObjectId" but is required
+20 Jan 2016 - 17:23:55,473 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Song" doesnt have method "dnGetExecutionContext" but is required
+20 Jan 2016 - 17:23:55,473 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Song" doesnt have method "dnCopyKeyFieldsFromObjectId" but is required
+20 Jan 2016 - 17:23:55,473 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Song" doesnt have method "dnCopyKeyFieldsFromObjectId" but is required
+20 Jan 2016 - 17:23:55,473 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Song" doesnt have method "dnIsPersistent" but is required
+20 Jan 2016 - 17:23:55,473 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Song" doesnt have method "__dnGetInheritedFieldCount" but is required
+20 Jan 2016 - 17:23:55,473 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Song" doesnt have method "dnNewInstance" but is required
+20 Jan 2016 - 17:23:55,473 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Song" doesnt have method "dnNewInstance" but is required
+20 Jan 2016 - 17:23:55,473 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Song" doesnt have method "dnNewObjectIdInstance" but is required
+20 Jan 2016 - 17:23:55,473 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Song" doesnt have method "dnNewObjectIdInstance" but is required
+20 Jan 2016 - 17:23:55,473 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Song" doesnt have method "dnProvideFields" but is required
+20 Jan 2016 - 17:23:55,473 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Song" doesnt have method "dnGetManagedFieldCount" but is required
+20 Jan 2016 - 17:23:55,473 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Song" doesnt have method "__dnFieldNamesInit" but is required
+20 Jan 2016 - 17:23:55,473 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Song" doesnt have method "__dnFieldFlagsInit" but is required
+20 Jan 2016 - 17:23:55,473 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Song" doesnt have method "dnPreSerialize" but is required
+20 Jan 2016 - 17:23:55,473 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Song" doesnt have method "dnMakeDirty" but is required
+20 Jan 2016 - 17:23:55,474 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Song" doesnt have method "dnIsDirty" but is required
+20 Jan 2016 - 17:23:55,474 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Song" doesnt have method "___dn$loadClass" but is required
+20 Jan 2016 - 17:23:55,474 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Song" doesnt have method "dnGetTransactionalObjectId" but is required
+20 Jan 2016 - 17:23:55,474 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Song" doesnt have method "dnIsDetached" but is required
+20 Jan 2016 - 17:23:55,474 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Song" doesnt have method "dnIsTransactional" but is required
+20 Jan 2016 - 17:23:55,474 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Song" doesnt have method "dnIsDeleted" but is required
+20 Jan 2016 - 17:23:55,474 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Song" doesnt have method "dnGetVersion" but is required
+20 Jan 2016 - 17:23:55,474 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Song" doesnt have method "dnReplaceFlags" but is required
+20 Jan 2016 - 17:23:55,474 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Song" doesnt have method "dnSuperClone" but is required
+20 Jan 2016 - 17:23:55,474 (main) DEBUG [DataNucleus.Enhancer] - Class "deusto.ingenieria.sd.tralala.tralalaserver.data.Song" needs a primary-key class generating, of name deusto.ingenieria.sd.tralala.tralalaserver.data.Song_PK
+20 Jan 2016 - 17:23:55,475 (main) DEBUG [DataNucleus.Enhancer] - Adding field "java.lang.String deusto.ingenieria.sd.tralala.tralalaserver.data.Song_PK artist"
+20 Jan 2016 - 17:23:55,475 (main) DEBUG [DataNucleus.Enhancer] - Adding field "java.lang.String deusto.ingenieria.sd.tralala.tralalaserver.data.Song_PK name"
+20 Jan 2016 - 17:23:55,475 (main) DEBUG [DataNucleus.Enhancer] - Adding constructor "deusto.ingenieria.sd.tralala.tralalaserver.data.Song_PK()"
+20 Jan 2016 - 17:23:55,475 (main) DEBUG [DataNucleus.Enhancer] - Adding constructor "deusto.ingenieria.sd.tralala.tralalaserver.data.Song_PK(String str)"
+20 Jan 2016 - 17:23:55,475 (main) DEBUG [DataNucleus.Enhancer] - Adding method "String deusto.ingenieria.sd.tralala.tralalaserver.data.Song_PK.toString()"
+20 Jan 2016 - 17:23:55,476 (main) DEBUG [DataNucleus.Enhancer] - Adding method "boolean deusto.ingenieria.sd.tralala.tralalaserver.data.Song_PK.equals(Object obj)"
+20 Jan 2016 - 17:23:55,476 (main) DEBUG [DataNucleus.Enhancer] - Adding method "int deusto.ingenieria.sd.tralala.tralalaserver.data.Song_PK.hashCode()"
+20 Jan 2016 - 17:23:55,476 (main) DEBUG [DataNucleus.Enhancer] - Adding interface: org.datanucleus.enhancement.Persistable
+20 Jan 2016 - 17:23:55,476 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method deusto.ingenieria.sd.tralala.tralalaserver.data.Song.<init> : omitting enhance of set of field "deusto.ingenieria.sd.tralala.tralalaserver.data.Song.name"
+20 Jan 2016 - 17:23:55,476 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method deusto.ingenieria.sd.tralala.tralalaserver.data.Song.<init> : omitting enhance of set of field "deusto.ingenieria.sd.tralala.tralalaserver.data.Song.price"
+20 Jan 2016 - 17:23:55,476 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method deusto.ingenieria.sd.tralala.tralalaserver.data.Song.<init> : omitting enhance of set of field "deusto.ingenieria.sd.tralala.tralalaserver.data.Song.lyrics"
+20 Jan 2016 - 17:23:55,476 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method deusto.ingenieria.sd.tralala.tralalaserver.data.Song.<init> : omitting enhance of set of field "deusto.ingenieria.sd.tralala.tralalaserver.data.Song.duration"
+20 Jan 2016 - 17:23:55,477 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method deusto.ingenieria.sd.tralala.tralalaserver.data.Song.<init> : omitting enhance of set of field "deusto.ingenieria.sd.tralala.tralalaserver.data.Song.reldate"
+20 Jan 2016 - 17:23:55,477 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method deusto.ingenieria.sd.tralala.tralalaserver.data.Song.<init> : omitting enhance of set of field "deusto.ingenieria.sd.tralala.tralalaserver.data.Song.album"
+20 Jan 2016 - 17:23:55,477 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method deusto.ingenieria.sd.tralala.tralalaserver.data.Song.<init> : omitting enhance of set of field "deusto.ingenieria.sd.tralala.tralalaserver.data.Song.artist"
+20 Jan 2016 - 17:23:55,477 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method deusto.ingenieria.sd.tralala.tralalaserver.data.Song.<init> : omitting enhance of set of field "deusto.ingenieria.sd.tralala.tralalaserver.data.Song.song"
+20 Jan 2016 - 17:23:55,477 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method deusto.ingenieria.sd.tralala.tralalaserver.data.Song.<init> : omitting enhance of set of field "deusto.ingenieria.sd.tralala.tralalaserver.data.Song.name"
+20 Jan 2016 - 17:23:55,477 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method deusto.ingenieria.sd.tralala.tralalaserver.data.Song.<init> : omitting enhance of set of field "deusto.ingenieria.sd.tralala.tralalaserver.data.Song.price"
+20 Jan 2016 - 17:23:55,477 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method deusto.ingenieria.sd.tralala.tralalaserver.data.Song.<init> : omitting enhance of set of field "deusto.ingenieria.sd.tralala.tralalaserver.data.Song.lyrics"
+20 Jan 2016 - 17:23:55,477 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method deusto.ingenieria.sd.tralala.tralalaserver.data.Song.<init> : omitting enhance of set of field "deusto.ingenieria.sd.tralala.tralalaserver.data.Song.duration"
+20 Jan 2016 - 17:23:55,477 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method deusto.ingenieria.sd.tralala.tralalaserver.data.Song.<init> : omitting enhance of set of field "deusto.ingenieria.sd.tralala.tralalaserver.data.Song.reldate"
+20 Jan 2016 - 17:23:55,477 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method deusto.ingenieria.sd.tralala.tralalaserver.data.Song.<init> : omitting enhance of set of field "deusto.ingenieria.sd.tralala.tralalaserver.data.Song.album"
+20 Jan 2016 - 17:23:55,477 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method deusto.ingenieria.sd.tralala.tralalaserver.data.Song.<init> : omitting enhance of set of field "deusto.ingenieria.sd.tralala.tralalaserver.data.Song.artist"
+20 Jan 2016 - 17:23:55,477 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method deusto.ingenieria.sd.tralala.tralalaserver.data.Song.<init> : omitting enhance of set of field "deusto.ingenieria.sd.tralala.tralalaserver.data.Song.song"
+20 Jan 2016 - 17:23:55,477 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method deusto.ingenieria.sd.tralala.tralalaserver.data.Song.toString changing field "deusto.ingenieria.sd.tralala.tralalaserver.data.Song.name" for call to "dnGetname()"
+20 Jan 2016 - 17:23:55,477 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method deusto.ingenieria.sd.tralala.tralalaserver.data.Song.toString changing field "deusto.ingenieria.sd.tralala.tralalaserver.data.Song.price" for call to "dnGetprice()"
+20 Jan 2016 - 17:23:55,478 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method deusto.ingenieria.sd.tralala.tralalaserver.data.Song.toString changing field "deusto.ingenieria.sd.tralala.tralalaserver.data.Song.duration" for call to "dnGetduration()"
+20 Jan 2016 - 17:23:55,478 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method deusto.ingenieria.sd.tralala.tralalaserver.data.Song.toString changing field "deusto.ingenieria.sd.tralala.tralalaserver.data.Song.reldate" for call to "dnGetreldate()"
+20 Jan 2016 - 17:23:55,478 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method deusto.ingenieria.sd.tralala.tralalaserver.data.Song.toString changing field "deusto.ingenieria.sd.tralala.tralalaserver.data.Song.album" for call to "dnGetalbum()"
+20 Jan 2016 - 17:23:55,478 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method deusto.ingenieria.sd.tralala.tralalaserver.data.Song.toString changing field "deusto.ingenieria.sd.tralala.tralalaserver.data.Song.artist" for call to "dnGetartist()"
+20 Jan 2016 - 17:23:55,478 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method deusto.ingenieria.sd.tralala.tralalaserver.data.Song.getName changing field "deusto.ingenieria.sd.tralala.tralalaserver.data.Song.name" for call to "dnGetname()"
+20 Jan 2016 - 17:23:55,478 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method deusto.ingenieria.sd.tralala.tralalaserver.data.Song.getPrice changing field "deusto.ingenieria.sd.tralala.tralalaserver.data.Song.price" for call to "dnGetprice()"
+20 Jan 2016 - 17:23:55,478 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method deusto.ingenieria.sd.tralala.tralalaserver.data.Song.getLyrics changing field "deusto.ingenieria.sd.tralala.tralalaserver.data.Song.lyrics" for call to "dnGetlyrics()"
+20 Jan 2016 - 17:23:55,478 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method deusto.ingenieria.sd.tralala.tralalaserver.data.Song.getDuration changing field "deusto.ingenieria.sd.tralala.tralalaserver.data.Song.duration" for call to "dnGetduration()"
+20 Jan 2016 - 17:23:55,478 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method deusto.ingenieria.sd.tralala.tralalaserver.data.Song.getReleaseDate changing field "deusto.ingenieria.sd.tralala.tralalaserver.data.Song.reldate" for call to "dnGetreldate()"
+20 Jan 2016 - 17:23:55,478 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method deusto.ingenieria.sd.tralala.tralalaserver.data.Song.getAlbum changing field "deusto.ingenieria.sd.tralala.tralalaserver.data.Song.album" for call to "dnGetalbum()"
+20 Jan 2016 - 17:23:55,479 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method deusto.ingenieria.sd.tralala.tralalaserver.data.Song.getArtist changing field "deusto.ingenieria.sd.tralala.tralalaserver.data.Song.artist" for call to "dnGetartist()"
+20 Jan 2016 - 17:23:55,479 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method deusto.ingenieria.sd.tralala.tralalaserver.data.Song.getSongData changing field "deusto.ingenieria.sd.tralala.tralalaserver.data.Song.song" for call to "dnGetsong()"
+20 Jan 2016 - 17:23:55,479 (main) DEBUG [DataNucleus.Enhancer] - Adding field "org.datanucleus.enhancement.StateManager dnStateManager"
+20 Jan 2016 - 17:23:55,479 (main) DEBUG [DataNucleus.Enhancer] - Adding field "byte dnFlags"
+20 Jan 2016 - 17:23:55,479 (main) DEBUG [DataNucleus.Enhancer] - Adding field "[B dnFieldFlags"
+20 Jan 2016 - 17:23:55,479 (main) DEBUG [DataNucleus.Enhancer] - Adding field "java.lang.Class dnPersistableSuperclass"
+20 Jan 2016 - 17:23:55,479 (main) DEBUG [DataNucleus.Enhancer] - Adding field "[Ljava.lang.Class; dnFieldTypes"
+20 Jan 2016 - 17:23:55,479 (main) DEBUG [DataNucleus.Enhancer] - Adding field "[Ljava.lang.String; dnFieldNames"
+20 Jan 2016 - 17:23:55,479 (main) DEBUG [DataNucleus.Enhancer] - Adding field "int dnInheritedFieldCount"
+20 Jan 2016 - 17:23:55,479 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void <clinit>()"
+20 Jan 2016 - 17:23:55,479 (main) DEBUG [DataNucleus.Enhancer] - Adding constructor "deusto.ingenieria.sd.tralala.tralalaserver.data.Song()"
+20 Jan 2016 - 17:23:55,480 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void dnCopyKeyFieldsFromObjectId(interface org.datanucleus.enhancement.Persistable$ObjectIdFieldConsumer fc, class java.lang.Object oid)"
+20 Jan 2016 - 17:23:55,481 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void dnCopyKeyFieldsFromObjectId(class java.lang.Object oid)"
+20 Jan 2016 - 17:23:55,481 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void dnCopyKeyFieldsToObjectId(class java.lang.Object oid)"
+20 Jan 2016 - 17:23:55,482 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void dnCopyKeyFieldsToObjectId(interface org.datanucleus.enhancement.Persistable$ObjectIdFieldSupplier fs, class java.lang.Object oid)"
+20 Jan 2016 - 17:23:55,482 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.lang.Object dnGetObjectId()"
+20 Jan 2016 - 17:23:55,482 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.lang.Object dnGetVersion()"
+20 Jan 2016 - 17:23:55,482 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void dnPreSerialize()"
+20 Jan 2016 - 17:23:55,482 (main) DEBUG [DataNucleus.Enhancer] - Adding method "org.datanucleus.enhancement.ExecutionContextReference dnGetExecutionContext()"
+20 Jan 2016 - 17:23:55,482 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.lang.Object dnGetTransactionalObjectId()"
+20 Jan 2016 - 17:23:55,482 (main) DEBUG [DataNucleus.Enhancer] - Adding method "boolean dnIsDeleted()"
+20 Jan 2016 - 17:23:55,482 (main) DEBUG [DataNucleus.Enhancer] - Adding method "boolean dnIsDirty()"
+20 Jan 2016 - 17:23:55,482 (main) DEBUG [DataNucleus.Enhancer] - Adding method "boolean dnIsNew()"
+20 Jan 2016 - 17:23:55,483 (main) DEBUG [DataNucleus.Enhancer] - Adding method "boolean dnIsPersistent()"
+20 Jan 2016 - 17:23:55,483 (main) DEBUG [DataNucleus.Enhancer] - Adding method "boolean dnIsTransactional()"
+20 Jan 2016 - 17:23:55,483 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void dnMakeDirty(class java.lang.String fieldName)"
+20 Jan 2016 - 17:23:55,483 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.lang.Object dnNewObjectIdInstance()"
+20 Jan 2016 - 17:23:55,483 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.lang.Object dnNewObjectIdInstance(class java.lang.Object key)"
+20 Jan 2016 - 17:23:55,483 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void dnProvideFields(class [I indices)"
+20 Jan 2016 - 17:23:55,483 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void dnReplaceFields(class [I indices)"
+20 Jan 2016 - 17:23:55,483 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void dnReplaceFlags()"
+20 Jan 2016 - 17:23:55,483 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void dnReplaceStateManager(interface org.datanucleus.enhancement.StateManager sm)"
+20 Jan 2016 - 17:23:55,483 (main) DEBUG [DataNucleus.Enhancer] - Adding method "boolean dnIsDetached()"
+20 Jan 2016 - 17:23:55,484 (main) DEBUG [DataNucleus.Enhancer] - Adding method "org.datanucleus.enhancement.Persistable dnNewInstance(interface org.datanucleus.enhancement.StateManager sm)"
+20 Jan 2016 - 17:23:55,484 (main) DEBUG [DataNucleus.Enhancer] - Adding method "org.datanucleus.enhancement.Persistable dnNewInstance(interface org.datanucleus.enhancement.StateManager sm, class java.lang.Object obj)"
+20 Jan 2016 - 17:23:55,484 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void dnReplaceField(int index)"
+20 Jan 2016 - 17:23:55,484 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void dnProvideField(int index)"
+20 Jan 2016 - 17:23:55,485 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void dnCopyField(class deusto.ingenieria.sd.tralala.tralalaserver.data.Song obj, int index)"
+20 Jan 2016 - 17:23:55,485 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void dnCopyFields(class java.lang.Object obj, class [I indices)"
+20 Jan 2016 - 17:23:55,485 (main) DEBUG [DataNucleus.Enhancer] - Adding method "[Ljava.lang.String; __dnFieldNamesInit()"
+20 Jan 2016 - 17:23:55,485 (main) DEBUG [DataNucleus.Enhancer] - Adding method "[Ljava.lang.Class; __dnFieldTypesInit()"
+20 Jan 2016 - 17:23:55,485 (main) DEBUG [DataNucleus.Enhancer] - Adding method "[B __dnFieldFlagsInit()"
+20 Jan 2016 - 17:23:55,485 (main) DEBUG [DataNucleus.Enhancer] - Adding method "int __dnGetInheritedFieldCount()"
+20 Jan 2016 - 17:23:55,485 (main) DEBUG [DataNucleus.Enhancer] - Adding method "int dnGetManagedFieldCount()"
+20 Jan 2016 - 17:23:55,485 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.lang.Class __dnPersistableSuperclassInit()"
+20 Jan 2016 - 17:23:55,485 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.lang.Class ___dn$loadClass(class java.lang.String className)"
+20 Jan 2016 - 17:23:55,485 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.lang.Object dnSuperClone()"
+20 Jan 2016 - 17:23:55,486 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.lang.String dnGetalbum(class deusto.ingenieria.sd.tralala.tralalaserver.data.Song objPC)"
+20 Jan 2016 - 17:23:55,486 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void dnSetalbum(class deusto.ingenieria.sd.tralala.tralalaserver.data.Song objPC, class java.lang.String val)"
+20 Jan 2016 - 17:23:55,486 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.lang.String dnGetartist(class deusto.ingenieria.sd.tralala.tralalaserver.data.Song objPC)"
+20 Jan 2016 - 17:23:55,486 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void dnSetartist(class deusto.ingenieria.sd.tralala.tralalaserver.data.Song objPC, class java.lang.String val)"
+20 Jan 2016 - 17:23:55,486 (main) DEBUG [DataNucleus.Enhancer] - Adding method "float dnGetduration(class deusto.ingenieria.sd.tralala.tralalaserver.data.Song objPC)"
+20 Jan 2016 - 17:23:55,486 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void dnSetduration(class deusto.ingenieria.sd.tralala.tralalaserver.data.Song objPC, float val)"
+20 Jan 2016 - 17:23:55,486 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.lang.String dnGetlyrics(class deusto.ingenieria.sd.tralala.tralalaserver.data.Song objPC)"
+20 Jan 2016 - 17:23:55,487 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void dnSetlyrics(class deusto.ingenieria.sd.tralala.tralalaserver.data.Song objPC, class java.lang.String val)"
+20 Jan 2016 - 17:23:55,487 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.lang.String dnGetname(class deusto.ingenieria.sd.tralala.tralalaserver.data.Song objPC)"
+20 Jan 2016 - 17:23:55,487 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void dnSetname(class deusto.ingenieria.sd.tralala.tralalaserver.data.Song objPC, class java.lang.String val)"
+20 Jan 2016 - 17:23:55,487 (main) DEBUG [DataNucleus.Enhancer] - Adding method "float dnGetprice(class deusto.ingenieria.sd.tralala.tralalaserver.data.Song objPC)"
+20 Jan 2016 - 17:23:55,487 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void dnSetprice(class deusto.ingenieria.sd.tralala.tralalaserver.data.Song objPC, float val)"
+20 Jan 2016 - 17:23:55,487 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.util.Date dnGetreldate(class deusto.ingenieria.sd.tralala.tralalaserver.data.Song objPC)"
+20 Jan 2016 - 17:23:55,487 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void dnSetreldate(class deusto.ingenieria.sd.tralala.tralalaserver.data.Song objPC, class java.util.Date val)"
+20 Jan 2016 - 17:23:55,487 (main) DEBUG [DataNucleus.Enhancer] - Adding method "[B dnGetsong(class deusto.ingenieria.sd.tralala.tralalaserver.data.Song objPC)"
+20 Jan 2016 - 17:23:55,487 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void dnSetsong(class deusto.ingenieria.sd.tralala.tralalaserver.data.Song objPC, class [B val)"
+20 Jan 2016 - 17:23:55,488 (main) INFO  [DataNucleus.Enhancer] - Writing class file "/tmp/TralalaServer/bin/deusto/ingenieria/sd/tralala/tralalaserver/data/Song.class" with enhanced definition
+20 Jan 2016 - 17:23:55,488 (main) INFO  [DataNucleus.Enhancer] - Writing primary-key class file "/tmp/TralalaServer/bin/deusto/ingenieria/sd/tralala/tralalaserver/data/Song_PK.class"
+20 Jan 2016 - 17:23:55,488 (main) DEBUG [DataNucleus.Enhancer] - Enhance of class "deusto.ingenieria.sd.tralala.tralalaserver.data.Song" completed
+20 Jan 2016 - 17:23:55,489 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer completed with success for 3 classes.
