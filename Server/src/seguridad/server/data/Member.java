@@ -10,6 +10,7 @@ public class Member {
 	
 	@PrimaryKey
 	private String username;
+	private boolean admin;
 	private String password;
 	private String name;
 	private String email;
@@ -19,7 +20,8 @@ public class Member {
 
  
 
-	public Member(String username,String password, String name, String email, Date birthdate, String address, String country,String billingInfo, String paymentMethod) {
+	public Member(boolean admin, String username,String password, String name, String email, Date birthdate, String address, String country,String billingInfo, String paymentMethod) {
+		this.admin = admin;
 		this.username = username;
 		this.password = password;
 		this.name = name;
@@ -36,6 +38,10 @@ public class Member {
 
 	public void setName(String name){
 		this.name = name;
+	}
+	
+	public void setAdmin(boolean admin){
+		this.admin = admin;
 	}
 	
 	public void setPassword(String password){
@@ -60,6 +66,10 @@ public class Member {
 
 	public String getUsername(){
 		return this.username;
+	}
+	
+	public boolean getAdmin(){
+		return this.admin;
 	}
 	
 	public String getPassword(){
