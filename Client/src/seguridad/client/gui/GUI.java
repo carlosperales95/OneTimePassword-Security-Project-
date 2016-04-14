@@ -20,7 +20,6 @@ import javax.swing.SwingConstants;
 import java.awt.Font;
 import javax.swing.JPasswordField;
 import javax.swing.JButton;
-import org.eclipse.wb.swing.FocusTraversalOnArray;
 import java.awt.Component;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
@@ -31,6 +30,8 @@ import javax.swing.JList;
 import javax.swing.border.BevelBorder;
 import javax.swing.border.CompoundBorder;
 import javax.swing.border.LineBorder;
+import javax.swing.border.EtchedBorder;
+import javax.swing.border.SoftBevelBorder;
 
 public class GUI {
 
@@ -76,51 +77,14 @@ public class GUI {
 		desktopPane.setBounds(3, 431, 667, -432);
 		frame.getContentPane().add(desktopPane);
 		
-		JPanel adminpanel = new JPanel();
-		adminpanel.setBackground(new Color(176, 224, 230));
-		adminpanel.setBounds(6, 6, 658, 417);
-		frame.getContentPane().add(adminpanel);
-		GridBagLayout gbl_adminpanel = new GridBagLayout();
-		gbl_adminpanel.columnWidths = new int[]{0, 149, 51, 51, 43, 151, 0};
-		gbl_adminpanel.rowHeights = new int[]{0, 0, 0};
-		gbl_adminpanel.columnWeights = new double[]{0.0, 0.0, 0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE};
-		gbl_adminpanel.rowWeights = new double[]{0.0, 1.0, Double.MIN_VALUE};
-		adminpanel.setLayout(gbl_adminpanel);
+		loginFrame();
 		
-		JLabel lblUserList = new JLabel("USER LIST");
-		lblUserList.setFont(new Font("SansSerif", Font.BOLD, 18));
-		GridBagConstraints gbc_lblUserList = new GridBagConstraints();
-		gbc_lblUserList.insets = new Insets(0, 0, 5, 5);
-		gbc_lblUserList.gridx = 1;
-		gbc_lblUserList.gridy = 0;
-		adminpanel.add(lblUserList, gbc_lblUserList);
 		
-		JLabel lblAdminList = new JLabel("ADMIN LIST");
-		lblAdminList.setFont(new Font("SansSerif", Font.BOLD, 18));
-		GridBagConstraints gbc_lblAdminList = new GridBagConstraints();
-		gbc_lblAdminList.insets = new Insets(0, 0, 5, 0);
-		gbc_lblAdminList.gridx = 5;
-		gbc_lblAdminList.gridy = 0;
-		adminpanel.add(lblAdminList, gbc_lblAdminList);
 		
-		JList list = new JList();
-		list.setBorder(new LineBorder(new Color(0, 0, 0)));
-		GridBagConstraints gbc_list = new GridBagConstraints();
-		gbc_list.insets = new Insets(0, 0, 0, 5);
-		gbc_list.fill = GridBagConstraints.BOTH;
-		gbc_list.gridx = 1;
-		gbc_list.gridy = 1;
-		adminpanel.add(list, gbc_list);
-		
-		JList list_1 = new JList();
-		list_1.setBorder(new LineBorder(new Color(0, 0, 0)));
-		GridBagConstraints gbc_list_1 = new GridBagConstraints();
-		gbc_list_1.fill = GridBagConstraints.BOTH;
-		gbc_list_1.gridx = 5;
-		gbc_list_1.gridy = 1;
-		adminpanel.add(list_1, gbc_list_1);
-		
-	/**	JInternalFrame LoginFrame = new JInternalFrame("Log In");
+
+	}
+	public void loginFrame(){
+		/**JInternalFrame LoginFrame = new JInternalFrame("Log In");
 		LoginFrame.setBounds(163, 70, 381, 231);
 		frame.getContentPane().add(LoginFrame);
 		LoginFrame.setBackground(new Color(204, 204, 255));
@@ -153,6 +117,8 @@ public class GUI {
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
 				LoginFrame.dispose();
+				adminPanel();
+				frame.repaint();
 			}
 		});
 		btnDone.setBounds(146, 167, 89, 23);
@@ -168,7 +134,69 @@ public class GUI {
 		textField_1.setBounds(109, 130, 196, 20);
 		LoginFrame.getContentPane().add(textField_1);
 		textField_1.setColumns(10);
-		desktopPane.setFocusTraversalPolicy(new FocusTraversalOnArray(new Component[]{LoginFrame, LoginFrame.getContentPane(), lblUser, textField, lblPassword, passwordField, btnDone, lblOtp, textField_1}));
-		LoginFrame.setVisible(true);**/
+		LoginFrame.setVisible(true);
+		
+		frame.repaint();**/
+	}
+	public void adminPanel(){
+		
+		/**JPanel listspanel = new JPanel();
+		listspanel.setBackground(new Color(176, 224, 230));
+		listspanel.setBounds(6, 6, 658, 417);
+		frame.getContentPane().add(listspanel);
+		GridBagLayout gbl_listspanel = new GridBagLayout();
+		gbl_listspanel.columnWidths = new int[]{40, 149, 51, 43, 151, 71, 135, 0};
+		gbl_listspanel.rowHeights = new int[]{0, 358, 0};
+		gbl_listspanel.columnWeights = new double[]{0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE};
+		gbl_listspanel.rowWeights = new double[]{0.0, 0.0, Double.MIN_VALUE};
+		listspanel.setLayout(gbl_listspanel);
+		
+		JLabel lblUserList = new JLabel("USER LIST");
+		lblUserList.setFont(new Font("SansSerif", Font.BOLD, 18));
+		GridBagConstraints gbc_lblUserList = new GridBagConstraints();
+		gbc_lblUserList.insets = new Insets(0, 0, 5, 5);
+		gbc_lblUserList.gridx = 1;
+		gbc_lblUserList.gridy = 0;
+		listspanel.add(lblUserList, gbc_lblUserList);
+		
+		JLabel lblAdminList = new JLabel("ADMIN LIST");
+		lblAdminList.setFont(new Font("SansSerif", Font.BOLD, 18));
+		GridBagConstraints gbc_lblAdminList = new GridBagConstraints();
+		gbc_lblAdminList.insets = new Insets(0, 0, 5, 5);
+		gbc_lblAdminList.gridx = 4;
+		gbc_lblAdminList.gridy = 0;
+		listspanel.add(lblAdminList, gbc_lblAdminList);
+		
+		@SuppressWarnings("rawtypes")
+		JList userList = new JList();
+		userList.setBorder(new LineBorder(new Color(0, 0, 0)));
+		GridBagConstraints gbc_userList = new GridBagConstraints();
+		gbc_userList.insets = new Insets(0, 0, 0, 5);
+		gbc_userList.fill = GridBagConstraints.BOTH;
+		gbc_userList.gridx = 1;
+		gbc_userList.gridy = 1;
+		listspanel.add(userList, gbc_userList);
+		
+		@SuppressWarnings("rawtypes")
+		JList adminList = new JList();
+		adminList.setBorder(new LineBorder(new Color(0, 0, 0)));
+		GridBagConstraints gbc_adminList = new GridBagConstraints();
+		gbc_adminList.insets = new Insets(0, 0, 0, 5);
+		gbc_adminList.fill = GridBagConstraints.BOTH;
+		gbc_adminList.gridx = 4;
+		gbc_adminList.gridy = 1;
+		listspanel.add(adminList, gbc_adminList);
+		
+		JPanel utilitiesPanel = new JPanel();
+		utilitiesPanel.setBorder(new SoftBevelBorder(BevelBorder.LOWERED, null, null, null, null));
+		GridBagConstraints gbc_utilitiesPanel = new GridBagConstraints();
+		gbc_utilitiesPanel.fill = GridBagConstraints.BOTH;
+		gbc_utilitiesPanel.gridx = 6;
+		gbc_utilitiesPanel.gridy = 1;
+		listspanel.add(utilitiesPanel, gbc_utilitiesPanel);
+		
+		frame.repaint();**/
+		
+		
 	}
 }

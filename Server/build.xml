@@ -9,11 +9,7 @@
 	<property name="export.file" value="ServerAPI.jar"/>
 	<property name="rmiregistry.port" value="1099"/>
 	<property name="rmiregistry.IP" value="127.0.0.1"/> 
-	<property name="server.Name1" value="AuthServer"/>
-	<property name="server.Name2" value="ApplicationServer"/>
-	<property name="server.Name3" value="LoginServer"/>
-	<property name="server.Name4" value="PaymentServer"/>
-	<property name="server.persType" value="database"/>
+	<property name="server.persType" value="databases"/>
 	<property name="policy.file" location="security/java.policy"/>	
 
 	<path id="classpath">

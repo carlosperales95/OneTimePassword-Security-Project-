@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="var" path="JRE_LIB" rootpath="JRE_SRCROOT" sourcepath="JRE_SRC"/>
-	<classpathentry kind="lib" path="C:/Users/Carlos Perales/Documents/Eclipse Workspaces/javaworkspace/SeguridadOTP/TralalaServer/lib/AuthServer.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Carlos Perales/Documents/Eclipse Workspaces/javaworkspace/SeguridadOTP/TralalaServer/lib/datanucleus-api-jdo-4.1.0-m4.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Carlos Perales/Documents/Eclipse Workspaces/javaworkspace/SeguridadOTP/TralalaServer/lib/datanucleus-core-4.1.0-m4.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Carlos Perales/Documents/Eclipse Workspaces/javaworkspace/SeguridadOTP/TralalaServer/lib/datanucleus-rdbms-4.1.0-m4.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Carlos Perales/Documents/Eclipse Workspaces/javaworkspace/SeguridadOTP/TralalaServer/lib/jdo-api-3.1.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Carlos Perales/Documents/Eclipse Workspaces/javaworkspace/SeguridadOTP/TralalaServer/lib/log4j-1.2.17.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Carlos Perales/Documents/Eclipse Workspaces/javaworkspace/SeguridadOTP/TralalaServer/lib/mysql-connector-java-5.1.35.jar"/>
-	<classpathentry kind="con" path="C:/Users/Carlos Perales/Documents/Eclipse Workspaces/javaworkspace/SeguridadOTP/TralalaServer/bin"/>
-	<classpathentry kind="con" path="C:/Users/Carlos Perales/Documents/Eclipse Workspaces/javaworkspace/SeguridadOTP/TralalaServer/resources"/>
+	<classpathentry kind="lib" path="lib/datanucleus-api-jdo-4.1.0-m4.jar"/>
+	<classpathentry kind="lib" path="lib/datanucleus-core-4.1.0-m4.jar"/>
+	<classpathentry kind="lib" path="lib/datanucleus-rdbms-4.1.0-m4.jar"/>
+	<classpathentry kind="lib" path="lib/jdo-api-3.1.jar"/>
+	<classpathentry kind="lib" path="lib/log4j-1.2.17.jar"/>
+	<classpathentry kind="lib" path="lib/mysql-connector-java-5.1.35.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="var" path="JRE_LIB" sourcepath="JRE_SRC"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
