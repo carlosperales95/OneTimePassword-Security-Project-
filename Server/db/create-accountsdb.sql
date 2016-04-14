@@ -1,0 +1,11 @@
+CREATE DATABASE OTPDB;
+
+GRANT ALTER, SELECT,INSERT,UPDATE,DELETE,CREATE,DROP, INDEX 
+           ON OTPDB.*
+           TO root@'%'
+           IDENTIFIED BY '';
+
+GRANT ALTER, SELECT,INSERT,UPDATE,DELETE,CREATE,DROP, INDEX
+           ON OTPDB.*
+           TO root@localhost
+           IDENTIFIED BY '';
