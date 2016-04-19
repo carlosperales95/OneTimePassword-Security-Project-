@@ -6,8 +6,6 @@
 	<property name="lib.dir" location="lib"/>
 	<property name="rmiregistry.port" value="1099"/>
 	<property name="rmiregistry.IP" value="127.0.0.1"/> 
-	<property name="client.targetLogin" value="LoginServer"/>
-	<property name="client.targetPayment" value="PaymentServer"/>
 	<property name="client.targetMain" value="ApplicationServer"/>
 	<property name="policy.file" location="security/java.policy"/>	
 
@@ -34,8 +32,6 @@
         	<arg value="${rmiregistry.IP}"/> 
 		<arg value="${rmiregistry.port}"/> 
 		<arg value="${client.targetMain}"/>
-		<arg value="${client.targetLogin}"/>
-		<arg value="${client.targetPayment}"/>
         </java>
     </target>
 </project>

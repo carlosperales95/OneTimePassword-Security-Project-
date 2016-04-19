@@ -33,10 +33,10 @@ public class ServerDAO implements IServerDAO {
 		 * @param username
 		 */
 		@SuppressWarnings("finally")
-		public Member getUser(String username) {
+		public Member getMember(String username) {
 			Member remember = null;
 			try{
-				System.out.println("INFO: Getting the user from the db: ");
+				System.out.println("INFO: Getting the member from the db: ");
 				pm = pmf.getPersistenceManager();
 				//Obtain the current transaction
 				tx = pm.currentTransaction();		
@@ -73,11 +73,11 @@ public class ServerDAO implements IServerDAO {
 		 * @param email
 		 */
 		@SuppressWarnings("finally")
-		public Member[] searchUser(String name, String email) {
+		public Member[] getallMembers() {
 			Member[] remember = new Member[100];
 			int i = 0;
 			try{
-				System.out.println("INFO: Getting all the users from the db: ");
+				System.out.println("INFO: Getting all the members from the db: ");
 				pm = pmf.getPersistenceManager();
 				//Obtain the current transaction
 				tx = pm.currentTransaction();		
@@ -89,14 +89,9 @@ public class ServerDAO implements IServerDAO {
 				
 				
 			for(Member m: extent){
-				
-				if(name.equals(m.getName()) || email.equals(m.getEmail())){
 					remember[i] = m;
-				}
-				
-					System.err.println(m);
 					i++;
-				}
+					}	
 					
 			}catch(Exception e){
 				e.printStackTrace();

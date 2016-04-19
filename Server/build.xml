@@ -9,7 +9,8 @@
 	<property name="export.file" value="ServerAPI.jar"/>
 	<property name="rmiregistry.port" value="1099"/>
 	<property name="rmiregistry.IP" value="127.0.0.1"/> 
-	<property name="server.persType" value="databases"/>
+	<property name="server.persType" value="db"/>
+	<property name="server.Name1" value="ApplicationServer"/>
 	<property name="policy.file" location="security/java.policy"/>	
 
 	<path id="classpath">
@@ -42,9 +43,6 @@
         	<arg value="${rmiregistry.IP}"/> 
 	 		<arg value="${rmiregistry.port}"/> 
 			<arg value="${server.Name1}"/>
-			<arg value="${server.Name2}"/> 
-			<arg value="${server.Name3}"/>
-			<arg value="${server.Name4}"/>
 			<arg value="${server.persType}"/>
         </java>
     </target>

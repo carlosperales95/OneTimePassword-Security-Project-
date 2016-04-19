@@ -3,12 +3,15 @@ package seguridad.server.remote.facade;
 import java.rmi.Naming;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
+import java.util.ArrayList;
 
+import seguridad.server.data.Member;
 import seguridad.server.remote.interfaces.IServerManager;
 import seguridad.server.service.ServerService;
 
 
 
+@SuppressWarnings("serial")
 public class ServerFacade extends UnicastRemoteObject implements IServerManager  {
 	private ServerService myAssociatedService;
 	
@@ -27,6 +30,24 @@ public class ServerFacade extends UnicastRemoteObject implements IServerManager 
                         System.err.println("- Exception running the server: " + e.getMessage());
                         e.printStackTrace();
                 }
+	}
+
+	@Override
+	public void SignIn(String username, String password) throws RemoteException {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void SignOut(String username) throws RemoteException {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public boolean getallMembers() {
+		// TODO Auto-generated method stub
+		return false;
 	}
 
 }

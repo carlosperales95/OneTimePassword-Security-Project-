@@ -1,11 +1,12 @@
 package seguridad.client.remote;
 
+import seguridad.server.remote.interfaces.IServerManager;
 
 public class RMIServiceLocator {
 
 	//a little cache
 
-	static IServerManager bankM;
+	static IServerManager servermanager;
 
 
 	/**
@@ -17,7 +18,7 @@ public class RMIServiceLocator {
 	 * @param paymentName
 	 */
 	public RMIServiceLocator(String ip, String port, String serverName) {
-		//this.setServerService(ip,port,serverName);
+		this.setServerService(ip,port,serverName);
 
 	}
 
@@ -30,7 +31,7 @@ public class RMIServiceLocator {
 	public void setServerService(String ip, String port, String serviceName) {
 		String qname = "//"+ip+":"+port+"/"+serviceName;
 		try{
-			this.bankM = (IServerManager)java.rmi.Naming.lookup(qname);
+			this.servermanager = (IServerManager)java.rmi.Naming.lookup(qname);
 		}catch(Exception e){
 			e.printStackTrace();
 		}
@@ -38,8 +39,8 @@ public class RMIServiceLocator {
 
 
 
-	public IServerManager getTralalaService() {
-		return this.bankM;
+	public IServerManager getServerService() {
+		return this.servermanager;
 	}
 
 

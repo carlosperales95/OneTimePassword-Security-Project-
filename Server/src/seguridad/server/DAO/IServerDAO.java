@@ -7,7 +7,7 @@ public interface IServerDAO {
 	 * 
 	 * @param username
 	 */
-	public Member getUser(String username);
+	public Member getMember(String username);
 
 	/**
 	 * 
@@ -15,6 +15,6 @@ public interface IServerDAO {
 	 * @param name
 	 * @param email
 	 */
-	public Member[] searchUser(String name, String email);
+	public Member[] getallMembers();
 
 }

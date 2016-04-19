@@ -5,9 +5,9 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import java.awt.GridBagLayout;
-import com.jgoodies.forms.layout.FormLayout;
-import com.jgoodies.forms.layout.ColumnSpec;
-import com.jgoodies.forms.layout.RowSpec;
+
+import seguridad.client.controller.ClientController;
+
 import javax.swing.BoxLayout;
 import javax.swing.JDesktopPane;
 import javax.swing.JLayeredPane;
@@ -36,34 +36,27 @@ import javax.swing.JTextPane;
 
 public class GUI {
 
+	private ClientController myClientController;
+	
 	private JFrame frame;
 	private JTextField textField;
 	private JPasswordField passwordField;
 	private JTextField textField_1;
 
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					GUI window = new GUI();
-					window.frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
+
 
 	/**
 	 * Create the application.
 	 */
-	public GUI() {
+	public GUI(ClientController tc) {
+		this.registerClientController(tc);
 		initialize();
 	}
 
+	private void registerClientController(ClientController tc) {
+		this.myClientController = tc;
+	}
+	
 	/**
 	 * Initialize the contents of the frame.
 	 */
@@ -78,10 +71,11 @@ public class GUI {
 		JDesktopPane desktopPane = new JDesktopPane();
 		desktopPane.setBounds(0, 0, 0, 0);
 		frame.getContentPane().add(desktopPane);
+		frame.setVisible(true);
 		
 		
 
-		loginFrame();
+		adminPanel();
 
 		
 		
@@ -216,172 +210,188 @@ public class GUI {
 		gbl_panel.rowWeights = new double[]{0.0, 0.0, 0.0, Double.MIN_VALUE};
 		panel.setLayout(gbl_panel);
 		
-		JPanel panel_3 = new JPanel();
-		panel_3.setBackground(new Color(176, 224, 230));
-		panel_3.setLayout(null);
-		GridBagConstraints gbc_panel_3 = new GridBagConstraints();
-		gbc_panel_3.insets = new Insets(0, 0, 5, 5);
-		gbc_panel_3.fill = GridBagConstraints.BOTH;
-		gbc_panel_3.gridx = 1;
-		gbc_panel_3.gridy = 0;
-		panel.add(panel_3, gbc_panel_3);
+		JPanel headpanel = new JPanel();
+		headpanel.setBackground(new Color(176, 224, 230));
+		headpanel.setLayout(null);
+		GridBagConstraints gbc_headpanel = new GridBagConstraints();
+		gbc_headpanel.insets = new Insets(0, 0, 5, 5);
+		gbc_headpanel.fill = GridBagConstraints.BOTH;
+		gbc_headpanel.gridx = 1;
+		gbc_headpanel.gridy = 0;
+		panel.add(headpanel, gbc_headpanel);
 		
 		JLabel lblNewLabel = new JLabel("USER'S ACCOUNT DATA");
 		lblNewLabel.setBounds(28, 6, 579, 59);
 		lblNewLabel.setFont(new Font("SansSerif", Font.BOLD, 18));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.LEFT);
-		panel_3.add(lblNewLabel);
+		headpanel.add(lblNewLabel);
 		
-		JPanel panel_1 = new JPanel();
-		panel_1.setBackground(new Color(211, 211, 211));
-		GridBagConstraints gbc_panel_1 = new GridBagConstraints();
-		gbc_panel_1.insets = new Insets(0, 0, 5, 5);
-		gbc_panel_1.fill = GridBagConstraints.BOTH;
-		gbc_panel_1.gridx = 1;
-		gbc_panel_1.gridy = 1;
-		panel.add(panel_1, gbc_panel_1);
-		GridBagLayout gbl_panel_1 = new GridBagLayout();
-		gbl_panel_1.columnWidths = new int[]{24, 77, 15, 327, 40, 0};
-		gbl_panel_1.rowHeights = new int[]{25, 47, 43, 46, 46, 44, 42, 48, 15, 0};
-		gbl_panel_1.columnWeights = new double[]{0.0, 0.0, 0.0, 1.0, 0.0, Double.MIN_VALUE};
-		gbl_panel_1.rowWeights = new double[]{0.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.0, 1.0, Double.MIN_VALUE};
-		panel_1.setLayout(gbl_panel_1);
+		JPanel datapanel = new JPanel();
+		datapanel.setBorder(new EtchedBorder(EtchedBorder.LOWERED, null, null));
+		datapanel.setBackground(new Color(211, 211, 211));
+		GridBagConstraints gbc_datapanel = new GridBagConstraints();
+		gbc_datapanel.insets = new Insets(0, 0, 5, 5);
+		gbc_datapanel.fill = GridBagConstraints.BOTH;
+		gbc_datapanel.gridx = 1;
+		gbc_datapanel.gridy = 1;
+		panel.add(datapanel, gbc_datapanel);
+		GridBagLayout gbl_datapanel = new GridBagLayout();
+		gbl_datapanel.columnWidths = new int[]{24, 77, 15, 327, 40, 0};
+		gbl_datapanel.rowHeights = new int[]{25, 47, 43, 46, 46, 44, 42, 48, 15, 0};
+		gbl_datapanel.columnWeights = new double[]{0.0, 0.0, 0.0, 1.0, 0.0, Double.MIN_VALUE};
+		gbl_datapanel.rowWeights = new double[]{0.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.0, 1.0, Double.MIN_VALUE};
+		datapanel.setLayout(gbl_datapanel);
 		
-		JLabel lblNewLabel_1 = new JLabel("Username: ");
-		GridBagConstraints gbc_lblNewLabel_1 = new GridBagConstraints();
-		gbc_lblNewLabel_1.anchor = GridBagConstraints.WEST;
-		gbc_lblNewLabel_1.insets = new Insets(0, 0, 5, 5);
-		gbc_lblNewLabel_1.gridx = 1;
-		gbc_lblNewLabel_1.gridy = 1;
-		panel_1.add(lblNewLabel_1, gbc_lblNewLabel_1);
-		lblNewLabel_1.setBackground(new Color(211, 211, 211));
-		lblNewLabel_1.setFont(new Font("SansSerif", Font.BOLD, 13));
+		JLabel lblUsername = new JLabel("Username: ");
+		GridBagConstraints gbc_lblUsername = new GridBagConstraints();
+		gbc_lblUsername.anchor = GridBagConstraints.WEST;
+		gbc_lblUsername.insets = new Insets(0, 0, 5, 5);
+		gbc_lblUsername.gridx = 1;
+		gbc_lblUsername.gridy = 1;
+		datapanel.add(lblUsername, gbc_lblUsername);
+		lblUsername.setBackground(new Color(211, 211, 211));
+		lblUsername.setFont(new Font("SansSerif", Font.BOLD, 13));
 		
-		JPanel panel_2 = new JPanel();
-		panel_2.setBackground(new Color(211, 211, 211));
-		panel_2.setBorder(new LineBorder(new Color(0, 0, 0), 2, true));
-		GridBagConstraints gbc_panel_2 = new GridBagConstraints();
-		gbc_panel_2.gridheight = 7;
-		gbc_panel_2.insets = new Insets(0, 0, 5, 5);
-		gbc_panel_2.fill = GridBagConstraints.BOTH;
-		gbc_panel_2.gridx = 3;
-		gbc_panel_2.gridy = 1;
-		panel_1.add(panel_2, gbc_panel_2);
-		GridBagLayout gbl_panel_2 = new GridBagLayout();
-		gbl_panel_2.columnWidths = new int[]{32, 364, 0, 0};
-		gbl_panel_2.rowHeights = new int[]{43, 47, 47, 48, 45, 44, 36, 0};
-		gbl_panel_2.columnWeights = new double[]{0.0, 0.0, 0.0, Double.MIN_VALUE};
-		gbl_panel_2.rowWeights = new double[]{0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE};
-		panel_2.setLayout(gbl_panel_2);
+		JPanel valuespanel = new JPanel();
+		valuespanel.setBackground(new Color(211, 211, 211));
+		valuespanel.setBorder(new LineBorder(new Color(0, 0, 0), 2, true));
+		GridBagConstraints gbc_valuespanel = new GridBagConstraints();
+		gbc_valuespanel.gridheight = 7;
+		gbc_valuespanel.insets = new Insets(0, 0, 5, 5);
+		gbc_valuespanel.fill = GridBagConstraints.BOTH;
+		gbc_valuespanel.gridx = 3;
+		gbc_valuespanel.gridy = 1;
+		datapanel.add(valuespanel, gbc_valuespanel);
+		GridBagLayout gbl_valuespanel = new GridBagLayout();
+		gbl_valuespanel.columnWidths = new int[]{32, 364, 0, 0};
+		gbl_valuespanel.rowHeights = new int[]{43, 47, 47, 48, 45, 44, 36, 0};
+		gbl_valuespanel.columnWeights = new double[]{0.0, 0.0, 0.0, Double.MIN_VALUE};
+		gbl_valuespanel.rowWeights = new double[]{0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE};
+		valuespanel.setLayout(gbl_valuespanel);
 		
-		JLabel textPane = new JLabel();
-		GridBagConstraints gbc_textPane = new GridBagConstraints();
-		gbc_textPane.insets = new Insets(0, 0, 5, 5);
-		gbc_textPane.gridx = 1;
-		gbc_textPane.gridy = 0;
-		panel_2.add(textPane, gbc_textPane);
-		textPane.setBackground(new Color(211, 211, 211));
+		JLabel usernameValue = new JLabel();
+		GridBagConstraints gbc_usernameValue = new GridBagConstraints();
+		gbc_usernameValue.insets = new Insets(0, 0, 5, 5);
+		gbc_usernameValue.gridx = 1;
+		gbc_usernameValue.gridy = 0;
+		valuespanel.add(usernameValue, gbc_usernameValue);
+		usernameValue.setBackground(new Color(211, 211, 211));
 		
-		JLabel textPane_1 = new JLabel();
-		GridBagConstraints gbc_textPane_1 = new GridBagConstraints();
-		gbc_textPane_1.insets = new Insets(0, 0, 5, 5);
-		gbc_textPane_1.gridx = 1;
-		gbc_textPane_1.gridy = 1;
-		panel_2.add(textPane_1, gbc_textPane_1);
-		textPane_1.setBackground(new Color(211, 211, 211));
+		JLabel nameValue = new JLabel();
+		GridBagConstraints gbc_nameValue = new GridBagConstraints();
+		gbc_nameValue.insets = new Insets(0, 0, 5, 5);
+		gbc_nameValue.gridx = 1;
+		gbc_nameValue.gridy = 1;
+		valuespanel.add(nameValue, gbc_nameValue);
+		nameValue.setBackground(new Color(211, 211, 211));
 		
-		JLabel textPane_2 = new JLabel();
-		GridBagConstraints gbc_textPane_2 = new GridBagConstraints();
-		gbc_textPane_2.insets = new Insets(0, 0, 5, 5);
-		gbc_textPane_2.gridx = 1;
-		gbc_textPane_2.gridy = 2;
-		panel_2.add(textPane_2, gbc_textPane_2);
-		textPane_2.setBackground(new Color(211, 211, 211));
+		JLabel mailValue = new JLabel();
+		GridBagConstraints gbc_mailValue = new GridBagConstraints();
+		gbc_mailValue.insets = new Insets(0, 0, 5, 5);
+		gbc_mailValue.gridx = 1;
+		gbc_mailValue.gridy = 2;
+		valuespanel.add(mailValue, gbc_mailValue);
+		mailValue.setBackground(new Color(211, 211, 211));
 		
-		JLabel textPane_3 = new JLabel();
-		GridBagConstraints gbc_textPane_3 = new GridBagConstraints();
-		gbc_textPane_3.insets = new Insets(0, 0, 5, 5);
-		gbc_textPane_3.gridx = 1;
-		gbc_textPane_3.gridy = 3;
-		panel_2.add(textPane_3, gbc_textPane_3);
-		textPane_3.setBackground(new Color(211, 211, 211));
+		JLabel passValue = new JLabel();
+		GridBagConstraints gbc_passValue = new GridBagConstraints();
+		gbc_passValue.insets = new Insets(0, 0, 5, 5);
+		gbc_passValue.gridx = 1;
+		gbc_passValue.gridy = 3;
+		valuespanel.add(passValue, gbc_passValue);
+		passValue.setBackground(new Color(211, 211, 211));
 		
-		JLabel textPane_4 = new JLabel();
-		GridBagConstraints gbc_textPane_4 = new GridBagConstraints();
-		gbc_textPane_4.insets = new Insets(0, 0, 5, 5);
-		gbc_textPane_4.gridx = 1;
-		gbc_textPane_4.gridy = 4;
-		panel_2.add(textPane_4, gbc_textPane_4);
-		textPane_4.setBackground(new Color(211, 211, 211));
+		JLabel bdayValue = new JLabel();
+		GridBagConstraints gbc_bdayValue = new GridBagConstraints();
+		gbc_bdayValue.insets = new Insets(0, 0, 5, 5);
+		gbc_bdayValue.gridx = 1;
+		gbc_bdayValue.gridy = 4;
+		valuespanel.add(bdayValue, gbc_bdayValue);
+		bdayValue.setBackground(new Color(211, 211, 211));
 		
-		JLabel textPane_5 = new JLabel();
-		GridBagConstraints gbc_textPane_5 = new GridBagConstraints();
-		gbc_textPane_5.insets = new Insets(0, 0, 5, 5);
-		gbc_textPane_5.gridx = 1;
-		gbc_textPane_5.gridy = 5;
-		panel_2.add(textPane_5, gbc_textPane_5);
-		textPane_5.setBackground(new Color(211, 211, 211));
+		JLabel countryValue = new JLabel();
+		GridBagConstraints gbc_countryValue = new GridBagConstraints();
+		gbc_countryValue.insets = new Insets(0, 0, 5, 5);
+		gbc_countryValue.gridx = 1;
+		gbc_countryValue.gridy = 5;
+		valuespanel.add(countryValue, gbc_countryValue);
+		countryValue.setBackground(new Color(211, 211, 211));
 		
-		JLabel textPane_6 = new JLabel();
-		GridBagConstraints gbc_textPane_6 = new GridBagConstraints();
-		gbc_textPane_6.insets = new Insets(0, 0, 0, 5);
-		gbc_textPane_6.gridx = 1;
-		gbc_textPane_6.gridy = 6;
-		panel_2.add(textPane_6, gbc_textPane_6);
-		textPane_6.setBackground(new Color(211, 211, 211));
+		JLabel addressValue = new JLabel();
+		GridBagConstraints gbc_addressValue = new GridBagConstraints();
+		gbc_addressValue.insets = new Insets(0, 0, 0, 5);
+		gbc_addressValue.gridx = 1;
+		gbc_addressValue.gridy = 6;
+		valuespanel.add(addressValue, gbc_addressValue);
+		addressValue.setBackground(new Color(211, 211, 211));
 		
-		JLabel lblNewLabel_2 = new JLabel("Real name: ");
-		GridBagConstraints gbc_lblNewLabel_2 = new GridBagConstraints();
-		gbc_lblNewLabel_2.anchor = GridBagConstraints.WEST;
-		gbc_lblNewLabel_2.insets = new Insets(0, 0, 5, 5);
-		gbc_lblNewLabel_2.gridx = 1;
-		gbc_lblNewLabel_2.gridy = 2;
-		panel_1.add(lblNewLabel_2, gbc_lblNewLabel_2);
-		lblNewLabel_2.setFont(new Font("SansSerif", Font.BOLD, 13));
+		JLabel lblName = new JLabel("Real name: ");
+		GridBagConstraints gbc_lblName = new GridBagConstraints();
+		gbc_lblName.anchor = GridBagConstraints.WEST;
+		gbc_lblName.insets = new Insets(0, 0, 5, 5);
+		gbc_lblName.gridx = 1;
+		gbc_lblName.gridy = 2;
+		datapanel.add(lblName, gbc_lblName);
+		lblName.setFont(new Font("SansSerif", Font.BOLD, 13));
 		
-		JLabel lblNewLabel_3 = new JLabel("Email: ");
-		GridBagConstraints gbc_lblNewLabel_3 = new GridBagConstraints();
-		gbc_lblNewLabel_3.anchor = GridBagConstraints.WEST;
-		gbc_lblNewLabel_3.insets = new Insets(0, 0, 5, 5);
-		gbc_lblNewLabel_3.gridx = 1;
-		gbc_lblNewLabel_3.gridy = 3;
-		panel_1.add(lblNewLabel_3, gbc_lblNewLabel_3);
-		lblNewLabel_3.setFont(new Font("SansSerif", Font.BOLD, 13));
+		JLabel lblMail = new JLabel("Email: ");
+		GridBagConstraints gbc_lblMail = new GridBagConstraints();
+		gbc_lblMail.anchor = GridBagConstraints.WEST;
+		gbc_lblMail.insets = new Insets(0, 0, 5, 5);
+		gbc_lblMail.gridx = 1;
+		gbc_lblMail.gridy = 3;
+		datapanel.add(lblMail, gbc_lblMail);
+		lblMail.setFont(new Font("SansSerif", Font.BOLD, 13));
 		
-		JLabel lblNewLabel_4 = new JLabel("Password: ");
-		GridBagConstraints gbc_lblNewLabel_4 = new GridBagConstraints();
-		gbc_lblNewLabel_4.anchor = GridBagConstraints.WEST;
-		gbc_lblNewLabel_4.insets = new Insets(0, 0, 5, 5);
-		gbc_lblNewLabel_4.gridx = 1;
-		gbc_lblNewLabel_4.gridy = 4;
-		panel_1.add(lblNewLabel_4, gbc_lblNewLabel_4);
-		lblNewLabel_4.setFont(new Font("SansSerif", Font.BOLD, 13));
+		JLabel lblPass = new JLabel("Password: ");
+		GridBagConstraints gbc_lblPass = new GridBagConstraints();
+		gbc_lblPass.anchor = GridBagConstraints.WEST;
+		gbc_lblPass.insets = new Insets(0, 0, 5, 5);
+		gbc_lblPass.gridx = 1;
+		gbc_lblPass.gridy = 4;
+		datapanel.add(lblPass, gbc_lblPass);
+		lblPass.setFont(new Font("SansSerif", Font.BOLD, 13));
 		
-		JLabel lblNewLabel_5 = new JLabel("Birthdate: ");
-		GridBagConstraints gbc_lblNewLabel_5 = new GridBagConstraints();
-		gbc_lblNewLabel_5.anchor = GridBagConstraints.WEST;
-		gbc_lblNewLabel_5.insets = new Insets(0, 0, 5, 5);
-		gbc_lblNewLabel_5.gridx = 1;
-		gbc_lblNewLabel_5.gridy = 5;
-		panel_1.add(lblNewLabel_5, gbc_lblNewLabel_5);
-		lblNewLabel_5.setFont(new Font("SansSerif", Font.BOLD, 13));
+		JLabel lblBday = new JLabel("Birthdate: ");
+		GridBagConstraints gbc_lblBday = new GridBagConstraints();
+		gbc_lblBday.anchor = GridBagConstraints.WEST;
+		gbc_lblBday.insets = new Insets(0, 0, 5, 5);
+		gbc_lblBday.gridx = 1;
+		gbc_lblBday.gridy = 5;
+		datapanel.add(lblBday, gbc_lblBday);
+		lblBday.setFont(new Font("SansSerif", Font.BOLD, 13));
 		
-		JLabel lblNewLabel_6 = new JLabel("Country: ");
-		GridBagConstraints gbc_lblNewLabel_6 = new GridBagConstraints();
-		gbc_lblNewLabel_6.anchor = GridBagConstraints.WEST;
-		gbc_lblNewLabel_6.insets = new Insets(0, 0, 5, 5);
-		gbc_lblNewLabel_6.gridx = 1;
-		gbc_lblNewLabel_6.gridy = 6;
-		panel_1.add(lblNewLabel_6, gbc_lblNewLabel_6);
-		lblNewLabel_6.setFont(new Font("SansSerif", Font.BOLD, 13));
+		JLabel lblCountry = new JLabel("Country: ");
+		GridBagConstraints gbc_lblCountry = new GridBagConstraints();
+		gbc_lblCountry.anchor = GridBagConstraints.WEST;
+		gbc_lblCountry.insets = new Insets(0, 0, 5, 5);
+		gbc_lblCountry.gridx = 1;
+		gbc_lblCountry.gridy = 6;
+		datapanel.add(lblCountry, gbc_lblCountry);
+		lblCountry.setFont(new Font("SansSerif", Font.BOLD, 13));
 		
-		JLabel lblNewLabel_7 = new JLabel("Address: ");
-		GridBagConstraints gbc_lblNewLabel_7 = new GridBagConstraints();
-		gbc_lblNewLabel_7.insets = new Insets(0, 0, 5, 5);
-		gbc_lblNewLabel_7.anchor = GridBagConstraints.WEST;
-		gbc_lblNewLabel_7.gridx = 1;
-		gbc_lblNewLabel_7.gridy = 7;
-		panel_1.add(lblNewLabel_7, gbc_lblNewLabel_7);
-		lblNewLabel_7.setFont(new Font("SansSerif", Font.BOLD, 13));
+		JLabel lblAddress = new JLabel("Address: ");
+		GridBagConstraints gbc_lblAddress = new GridBagConstraints();
+		gbc_lblAddress.insets = new Insets(0, 0, 5, 5);
+		gbc_lblAddress.anchor = GridBagConstraints.WEST;
+		gbc_lblAddress.gridx = 1;
+		gbc_lblAddress.gridy = 7;
+		datapanel.add(lblAddress, gbc_lblAddress);
+		lblAddress.setFont(new Font("SansSerif", Font.BOLD, 13));
+	}
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+				//	GUI window = new GUI(myClientController);
+				//		window.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
 	}
 }
