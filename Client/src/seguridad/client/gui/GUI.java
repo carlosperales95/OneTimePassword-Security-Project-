@@ -39,7 +39,7 @@ public class GUI {
 	private ClientController myClientController;
 	
 	private JFrame frame;
-	private JTextField textField;
+	private JTextField userField;
 	private JPasswordField passwordField;
 	private JTextField textField_1;
 
@@ -73,9 +73,7 @@ public class GUI {
 		frame.getContentPane().add(desktopPane);
 		frame.setVisible(true);
 		
-		
-
-		adminPanel();
+		loginFrame();
 
 		
 		
@@ -95,10 +93,10 @@ public class GUI {
 		lblUser.setBounds(22, 29, 77, 35);
 		LoginFrame.getContentPane().add(lblUser);
 		
-		textField = new JTextField();
-		textField.setBounds(109, 38, 196, 20);
-		LoginFrame.getContentPane().add(textField);
-		textField.setColumns(10);
+		userField = new JTextField();
+		userField.setBounds(109, 38, 196, 20);
+		LoginFrame.getContentPane().add(userField);
+		userField.setColumns(10);
 		
 		JLabel lblPassword = new JLabel("Password");
 		lblPassword.setHorizontalAlignment(SwingConstants.CENTER);
@@ -114,6 +112,12 @@ public class GUI {
 		btnDone.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
+				try {
+					myClientController.SignIn(userField.getText(),passwordField.getText());
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 				LoginFrame.dispose();
 				adminPanel();
 				frame.repaint();
