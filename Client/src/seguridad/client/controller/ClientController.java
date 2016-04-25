@@ -19,7 +19,7 @@ public class ClientController {
 	 * @param username
 	 */
 	public void SignOut(String username) throws Exception{
-		myLocator.getServerService().SignOut(username);
+		this.myLocator.getServerService().SignOut(username);
 	}
 
 	/**
@@ -27,12 +27,13 @@ public class ClientController {
 	 * @param username
 	 * @param password
 	 */
-	public void SignIn(String username, String password)  throws Exception{
-		myLocator.getServerService().SignIn(username,password);
+	public boolean SignIn(String username, String password)  throws Exception{
+		return this.myLocator.getServerService().SignIn(username,password);
+		
 	}
 	
-	public void getAllMembers()  throws Exception{
-		myLocator.getServerService().getallMembers();
+	public ArrayList<String> getAllMembers()  throws Exception{
+		return this.myLocator.getServerService().getallMembers();
 	}
 	
 

@@ -1,5 +1,7 @@
 package seguridad.server.DAO;
 
+import java.util.List;
+
 import seguridad.server.data.Member;
 
 public interface IServerDAO {
@@ -15,6 +17,8 @@ public interface IServerDAO {
 	 * @param name
 	 * @param email
 	 */
-	public Member[] getallMembers();
+	public List<Member> getallMembers();
+	
+	public void registerMember(Member member);
 
 }

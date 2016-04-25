@@ -10,6 +10,7 @@ public class Member {
 	
 	@PrimaryKey
 	private String username;
+	
 	private boolean admin;
 	private String password;
 	private String name;
@@ -20,7 +21,7 @@ public class Member {
 
  
 
-	public Member(boolean admin, String username,String password, String name, String email, Date birthdate, String address, String country,String billingInfo, String paymentMethod) {
+	public Member(boolean admin, String username,String password, String name, String email, Date birthdate, String address, String country) {
 		this.admin = admin;
 		this.username = username;
 		this.password = password;

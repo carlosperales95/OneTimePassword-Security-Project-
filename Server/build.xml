@@ -44,7 +44,6 @@
 			<arg value="${rmiregistry.port}" />
 			<arg value="${server.persType}" />
 			<arg value="${server.Name1}" />
-
 		</java>
 	</target>
 

@@ -7,10 +7,13 @@ package seguridad.server.remote.interfaces;
 
 	public interface IServerManager extends Remote{
 
-	  public void SignIn(String username, String password) throws RemoteException;
+	  public boolean SignIn(String username, String password) throws RemoteException;
 
 	  public void SignOut(String username) throws RemoteException;
 	  
-	  public boolean getallMembers()throws RemoteException;;
+	  public ArrayList<String> getallMembers()throws RemoteException;
+	  
+	  public void register (boolean admin, String username,String password, String name, String email, Date birthdate, String address, String country)throws RemoteException;
+
 
 }

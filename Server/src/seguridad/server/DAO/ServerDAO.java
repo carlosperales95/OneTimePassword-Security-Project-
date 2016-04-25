@@ -1,10 +1,7 @@
 package seguridad.server.DAO;
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Collection;
-import java.util.Date;
 
-import javax.jdo.Extent;
+
 import javax.jdo.JDOHelper;
 import javax.jdo.PersistenceManager;
 import javax.jdo.PersistenceManagerFactory;
@@ -32,7 +29,7 @@ public class ServerDAO implements IServerDAO {
 		 * 
 		 * @param username
 		 */
-		@SuppressWarnings("finally")
+		@SuppressWarnings({ "finally", "unchecked" })
 		public Member getMember(String username) {
 			Member remember = null;
 			try{
@@ -42,11 +39,13 @@ public class ServerDAO implements IServerDAO {
 				tx = pm.currentTransaction();		
 				//Start the transaction
 				tx.begin();
+				System.out.println("begin");
 				
 				Query q = pm.newQuery(Member.class);
 				q.setFilter("username == user_name");
 				q.declareParameters("String user_name");
-				List<Member> result = (List<Member>)q.execute(username);			
+				List<Member> result = (List<Member>)q.execute(username);	
+				System.out.println(result.get(0).getUsername());	
 				
 				if(!result.isEmpty())remember = result.get(0);
 					
@@ -72,10 +71,10 @@ public class ServerDAO implements IServerDAO {
 		 * @param name
 		 * @param email
 		 */
-		@SuppressWarnings("finally")
-		public Member[] getallMembers() {
-			Member[] remember = new Member[100];
-			int i = 0;
+		@SuppressWarnings({ "finally", "unchecked" })
+		public List<Member> getallMembers() {
+			List<Member> remember = null;
+//			int i = 0;
 			try{
 				System.out.println("INFO: Getting all the members from the db: ");
 				pm = pmf.getPersistenceManager();
@@ -85,13 +84,16 @@ public class ServerDAO implements IServerDAO {
 				tx.begin();
 				
 				
-				Extent<Member> extent = pm.getExtent(Member.class, true);
+				Query q = pm.newQuery(Member.class);
+			//	q.setFilter("username == user_name");
+				q.declareParameters("String user_name");
+				remember = (List<Member>)q.execute("");	
 				
 				
-			for(Member m: extent){
+			/**for(Member m: extent){
 					remember[i] = m;
 					i++;
-					}	
+					}**/	
 					
 			}catch(Exception e){
 				e.printStackTrace();
@@ -104,9 +106,41 @@ public class ServerDAO implements IServerDAO {
 				if (pm != null && !pm.isClosed()) {
 					pm.close();
 				}
+
 				return remember;
 			}
 			
+		}
+		public void registerMember(Member member){
+			
+			try {
+				System.out.println("- Store objects in the DB");
+
+				//Get the Persistence Manager
+				pm = pmf.getPersistenceManager();
+				//Obtain the current transaction
+				tx = pm.currentTransaction();		
+				//Start the transaction
+				tx.begin();
+				
+				pm.makePersistent(member);
+				
+
+				//End the transaction
+				tx.commit();	
+			} catch (Exception ex) {
+				System.err.println(" $ Error storing objects in the DB: " + ex.getMessage());
+				ex.printStackTrace();
+			} finally {
+
+				if (tx != null && tx.isActive()) {
+					tx.rollback();
+				}
+				
+				if (pm != null && !pm.isClosed()) {
+					pm.close();
+				}
+			}
 		}
 
 	

@@ -6,7 +6,7 @@ public class RMIServiceLocator {
 
 	//a little cache
 
-	static IServerManager servermanager;
+	IServerManager servermanager;
 
 
 	/**
@@ -40,6 +40,7 @@ public class RMIServiceLocator {
 
 
 	public IServerManager getServerService() {
+		System.out.println(servermanager.toString());
 		return this.servermanager;
 	}
 
