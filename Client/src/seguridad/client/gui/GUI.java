@@ -113,16 +113,15 @@ public class GUI {
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
 				try {
-				boolean b =	myClientController.SignIn(userField.getText(),passwordField.getPassword().toString());
+					String pass="";
+					for(int i=0;i<passwordField.getPassword().length;i++){
+						pass=pass+passwordField.getPassword()[i];
+					}	
+					System.out.println("pass");
+				myClientController.SignIn(userField.getText(),pass);
 				System.out.println(userField.getText());
-				System.out.println(passwordField.getPassword());
-				if(b){
-					System.out.println("Bien logeado");
-					adminPanel();
-					
-				}else{
-					System.out.println("Datos mal, no entras");
-				}
+				System.out.println("Bien logeado");
+				adminPanel();
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();

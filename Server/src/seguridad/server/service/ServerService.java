@@ -21,7 +21,7 @@ public class ServerService implements IServerManager {
 	private IServerDAO myPersistenceProvider;
 	
 	public ServerService() throws RemoteException{
-		new DAOFactory();
+
 		this.myPersistenceProvider = DAOFactory.getInstance("db");	
 		}
 
@@ -41,19 +41,21 @@ public class ServerService implements IServerManager {
 	
 	public boolean checkCombination(String username, String password){
 		String value = 	myPersistenceProvider.getMember(username).getPassword();
+
 //registered.get(username);
-		System.out.println("getting passw");
 		if(value!=null){
 			if(value.equals(password)){
 				System.out.println("Member/pw " + username+"/"+password+" found. Returning true");
 				return true;
 			}
 			else{
-				 System.out.println("Bad credentials");			
+				 System.out.println("Bad credentials");	
+
 				 return false;
 			}
 		}else{
-				 System.out.println("Bad credentials");			
+				 System.out.println("Bad credentials");		
+
 				 return false;
 		}
 	}
@@ -67,30 +69,17 @@ public class ServerService implements IServerManager {
 	}
 
 
-	/**
-	 * 
-	 * @param username
-	 */
-	/**public MemberDTO streamSong(String username) {
-		Member selected = this.myPersistenceProvider.getMember(username);
-		Date now = Calendar.getInstance().getTime();
-		if(selected!=null){
-			MemberDTO ret = DTOAssembler.assemble(selected);
+	public ArrayList<String> getallMembers(String admin)throws RemoteException {
 
-			return ret;
-		}
-		else{
-			 return null;			
-		}	
-	}
-**/
-
-	public ArrayList<String> getallMembers()throws RemoteException {
-		List<Member> hits = this.myPersistenceProvider.getallMembers();
+		List<Member> hits = this.myPersistenceProvider.getallMembers(admin);
+		System.out.println("los hits");
+		System.out.println(hits);
 		ArrayList<String> retUserNames = new ArrayList<String>();
 		for(int i = 0; i<hits.size(); i++){
 			retUserNames.add(hits.get(i).getUsername());
 		}
+		System.out.println("strings finales");
+		System.out.println(retUserNames);
 		return retUserNames;
 	}
 	

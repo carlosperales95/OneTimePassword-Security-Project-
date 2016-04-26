@@ -17,7 +17,7 @@ public interface IServerDAO {
 	 * @param name
 	 * @param email
 	 */
-	public List<Member> getallMembers();
+	public List<Member> getallMembers(String admin);
 	
 	public void registerMember(Member member);
 

@@ -15,15 +15,18 @@ public class ClientLauncher{
 		System.out.println("Llamar a "+ args[0]);
 		try {
 			ClientController tc = new ClientController(rsl);
-			GUI g = new GUI(tc);
+			rsl.getServerService();
+		//	tc.SignIn("astrain25", "astrain25");
+			String admin = "user";
+			tc.getAllMembers(admin);
+			tc.getAllMembers("admin");
+			//GUI g = new GUI(tc);
 			
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-
-
-		
+	
 	}
 
 }

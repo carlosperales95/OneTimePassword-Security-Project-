@@ -29,18 +29,22 @@ public class RMIServiceLocator {
 	 * @param serviceName
 	 */
 	public void setServerService(String ip, String port, String serviceName) {
+		System.out.println("Called setservice");	
+		System.out.println("Server: //"+ip+":"+port+"/"+ serviceName );
 		String qname = "//"+ip+":"+port+"/"+serviceName;
+		System.out.println(qname);
 		try{
 			this.servermanager = (IServerManager)java.rmi.Naming.lookup(qname);
 		}catch(Exception e){
 			e.printStackTrace();
 		}
 	}
-
+	
 
 
 	public IServerManager getServerService() {
-		System.out.println(servermanager.toString());
+		if(servermanager==null)System.out.println("Null main");
+		//else System.out.println(servermanager.toString());
 		return this.servermanager;
 	}
 

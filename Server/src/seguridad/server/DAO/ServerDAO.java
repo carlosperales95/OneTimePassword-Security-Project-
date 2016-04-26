@@ -45,7 +45,7 @@ public class ServerDAO implements IServerDAO {
 				q.setFilter("username == user_name");
 				q.declareParameters("String user_name");
 				List<Member> result = (List<Member>)q.execute(username);	
-				System.out.println(result.get(0).getUsername());	
+				System.out.println(result.get(0).getUsername());
 				
 				if(!result.isEmpty())remember = result.get(0);
 					
@@ -71,30 +71,32 @@ public class ServerDAO implements IServerDAO {
 		 * @param name
 		 * @param email
 		 */
-		@SuppressWarnings({ "finally", "unchecked" })
-		public List<Member> getallMembers() {
+		@SuppressWarnings("unchecked")
+		public List<Member> getallMembers(String admin) {
 			List<Member> remember = null;
-//			int i = 0;
+			System.out.println("es admin?");
+			System.out.println(admin == "admin");
+			System.out.println(admin);
+			System.out.println("es user?");
+			System.out.println(admin == "admin");
+			System.out.println(admin);
+
+			if(admin=="admin"){
 			try{
-				System.out.println("INFO: Getting all the members from the db: ");
+				System.out.println("INFO: Getting all the admins from the db: ");
 				pm = pmf.getPersistenceManager();
 				//Obtain the current transaction
 				tx = pm.currentTransaction();		
 				//Start the transaction
 				tx.begin();
-				
-				
+							
 				Query q = pm.newQuery(Member.class);
-			//	q.setFilter("username == user_name");
+				q.setFilter("admin == true");
 				q.declareParameters("String user_name");
 				remember = (List<Member>)q.execute("");	
+				System.out.println("lista en get");
+				System.out.println(remember);
 				
-				
-			/**for(Member m: extent){
-					remember[i] = m;
-					i++;
-					}**/	
-					
 			}catch(Exception e){
 				e.printStackTrace();
 				System.out.println("WARN: Exception when retrieving from database");
@@ -106,10 +108,40 @@ public class ServerDAO implements IServerDAO {
 				if (pm != null && !pm.isClosed()) {
 					pm.close();
 				}
-
-				return remember;
 			}
+}else if(admin=="user"){
+	try{
+		System.out.println("INFO: Getting all the admins from the db: ");
+		pm = pmf.getPersistenceManager();
+		//Obtain the current transaction
+		tx = pm.currentTransaction();		
+		//Start the transaction
+		tx.begin();
+		
+		
+		Query q = pm.newQuery(Member.class);
+		q.setFilter("admin == false");
+		q.declareParameters("String user_name");
+		remember = (List<Member>)q.execute("");	
+		System.out.println("lista en get");
+		System.out.println(remember);
+		
 			
+	}catch(Exception e){
+		e.printStackTrace();
+		System.out.println("WARN: Exception when retrieving from database");
+	}finally{
+		if (tx != null && tx.isActive()) {
+			tx.rollback();
+		}
+		
+		if (pm != null && !pm.isClosed()) {
+			pm.close();
+		}
+	}
+
+}
+			return remember;		
 		}
 		public void registerMember(Member member){
 			

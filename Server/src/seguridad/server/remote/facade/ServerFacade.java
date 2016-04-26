@@ -3,10 +3,11 @@ package seguridad.server.remote.facade;
 import java.rmi.Naming;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
-import java.util.ArrayList;
-import java.util.Date;
 
-import seguridad.server.data.Member;
+import java.util.*;
+
+
+
 import seguridad.server.remote.interfaces.IServerManager;
 import seguridad.server.service.ServerService;
 
@@ -35,7 +36,7 @@ public class ServerFacade extends UnicastRemoteObject implements IServerManager 
 
 	@Override
 	public boolean SignIn(String username, String password) throws RemoteException {
-		return false;
+		return this.myAssociatedService.SignIn(username, password);
 		// TODO Auto-generated method stub
 		
 	}
@@ -43,20 +44,20 @@ public class ServerFacade extends UnicastRemoteObject implements IServerManager 
 	@Override
 	public void SignOut(String username) throws RemoteException {
 		// TODO Auto-generated method stub
-		
+		this.myAssociatedService.SignOut(username);
 	}
 
 	@Override
-	public ArrayList<String>  getallMembers() {
-		return null;
+	public ArrayList<String>  getallMembers(String admin) throws RemoteException {
+		return this.myAssociatedService.getallMembers(admin);
 		// TODO Auto-generated method stub
 	}
 
 	@Override
 	public void register(boolean admin, String username, String password, String name, String email, Date birthdate,
-			String address, String country) {
+			String address, String country) throws RemoteException {
 		// TODO Auto-generated method stub
-		
+		this.myAssociatedService.register(admin, username, password, name, email, birthdate, address, country);
 	}
 
 }

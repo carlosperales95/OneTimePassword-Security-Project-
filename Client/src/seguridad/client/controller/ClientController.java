@@ -32,8 +32,8 @@ public class ClientController {
 		
 	}
 	
-	public ArrayList<String> getAllMembers()  throws Exception{
-		return this.myLocator.getServerService().getallMembers();
+	public ArrayList<String> getAllMembers(String admin)  throws Exception{
+		return this.myLocator.getServerService().getallMembers(admin);
 	}
 	
 

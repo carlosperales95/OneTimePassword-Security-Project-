@@ -15,7 +15,8 @@ public class ServerLauncher_populate{
 		try{
 			ts1 = new ServerService();
 			ts1.register(true, "astrain25", "astrain25", "Jon Bilbao", "jon.bilbao@opendeusto.com", new Date(), "calle de jonbi", "Basque Country");
-	
+			ts1.register(false, "carlos95", "1234", "CARLOS PERALES", "jon.bilbao@opendeusto.com", new Date(), "calle de jonbi", "Basque Country");
+
 			
 		}catch(Exception e){
 			e.printStackTrace();
