@@ -1,5 +1,6 @@
-package seguridad.server.service;
+package seguridad.otpg.main;
 
+import seguridad.otpg.gui.*;
 import java.sql.Date;
 import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
@@ -13,6 +14,7 @@ public class OTPmaker extends TimerTask {
 
 	private boolean isTimedOut = false;
 	private static boolean conectadoServerClient = true;
+
 
 	private static int otp = 0;
 
@@ -42,7 +44,7 @@ public class OTPmaker extends TimerTask {
 		// Se muestra en pantalla la diferencia de tiempo obtenido
 		System.out.println("Has tardado: " + diferencia + " milisegundos");
 		System.out.printf("Equivale a: %.3f segundos", (double) diferencia / 1000);*/
-
+		
 		if (conectadoServerClient) {
 			otp = geneterateOTPTime(9999);
 			System.out.println(otp);
