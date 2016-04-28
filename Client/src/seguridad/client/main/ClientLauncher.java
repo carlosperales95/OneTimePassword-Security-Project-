@@ -17,10 +17,10 @@ public class ClientLauncher{
 			ClientController tc = new ClientController(rsl);
 			rsl.getServerService();
 		//	tc.SignIn("astrain25", "astrain25");
-			String admin = "user";
-			tc.getAllMembers(admin);
-			tc.getAllMembers("admin");
-			//GUI g = new GUI(tc);
+		//	String admin = "user";
+		//	tc.getAllMembers(admin);
+		//	tc.getAllMembers("admin");
+			GUI g = new GUI(tc);
 			
 		} catch (Exception e) {
 			// TODO Auto-generated catch block

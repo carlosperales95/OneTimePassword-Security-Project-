@@ -1,7 +1,10 @@
 package seguridad.server.remote.interfaces;
 
 	import java.util.*;
-	import java.rmi.Remote;
+
+import seguridad.server.data.Member;
+
+import java.rmi.Remote;
 	import java.rmi.RemoteException;
 
 
@@ -14,6 +17,7 @@ package seguridad.server.remote.interfaces;
 	  public ArrayList<String> getallMembers(String admin)throws RemoteException;
 	  
 	  public void register (boolean admin, String username,String password, String name, String email, Date birthdate, String address, String country)throws RemoteException;
-
+	  
+		public List<String> getmem(String user)throws RemoteException ;
 
 }

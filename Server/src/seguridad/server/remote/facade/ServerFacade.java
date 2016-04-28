@@ -6,8 +6,7 @@ import java.rmi.server.UnicastRemoteObject;
 
 import java.util.*;
 
-
-
+import seguridad.server.data.Member;
 import seguridad.server.remote.interfaces.IServerManager;
 import seguridad.server.service.ServerService;
 
@@ -58,6 +57,12 @@ public class ServerFacade extends UnicastRemoteObject implements IServerManager 
 			String address, String country) throws RemoteException {
 		// TODO Auto-generated method stub
 		this.myAssociatedService.register(admin, username, password, name, email, birthdate, address, country);
+	}
+
+	@Override
+	public List<String> getmem(String user) throws RemoteException {
+		// TODO Auto-generated method stub
+		return this.myAssociatedService.getmem(user);
 	}
 
 }

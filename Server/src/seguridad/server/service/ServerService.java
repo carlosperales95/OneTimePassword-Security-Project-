@@ -88,5 +88,17 @@ public class ServerService implements IServerManager {
 		myPersistenceProvider.registerMember(memb);
 	}
 
-
+	public List<String> getmem(String user)throws RemoteException {
+		Member memb = this.myPersistenceProvider.getMember(user);
+		List<String> ls = new ArrayList<String>();
+		ls.add(memb.getUsername());
+		ls.add(memb.getName());
+		ls.add(memb.getEmail());
+		ls.add(memb.getPassword());
+		ls.add(memb.getCountry());
+		ls.add(memb.getAddress());
+		
+		return ls;
+	}
+	
 }

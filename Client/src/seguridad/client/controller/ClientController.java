@@ -1,5 +1,6 @@
 package seguridad.client.controller;
 import seguridad.client.remote.RMIServiceLocator;
+import seguridad.server.data.Member;
 
 import java.util.*;
 
@@ -36,7 +37,9 @@ public class ClientController {
 		return this.myLocator.getServerService().getallMembers(admin);
 	}
 	
-
+	public List<String> getmem(String user) throws Exception{
+		return this.myLocator.getServerService().getmem(user);
+	}
 	
 	
 }

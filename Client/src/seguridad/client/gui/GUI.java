@@ -7,6 +7,7 @@ import javax.swing.JPanel;
 import java.awt.GridBagLayout;
 
 import seguridad.client.controller.ClientController;
+import seguridad.server.data.Member;
 
 import javax.swing.BoxLayout;
 import javax.swing.JDesktopPane;
@@ -23,6 +24,8 @@ import javax.swing.JButton;
 import java.awt.Component;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.util.ArrayList;
+import java.util.List;
 import java.awt.GridLayout;
 import java.awt.GridBagConstraints;
 import java.awt.Insets;
@@ -33,6 +36,10 @@ import javax.swing.border.LineBorder;
 import javax.swing.border.EtchedBorder;
 import javax.swing.border.SoftBevelBorder;
 import javax.swing.JTextPane;
+import javax.swing.ListModel;
+import javax.swing.AbstractListModel;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class GUI {
 
@@ -42,13 +49,15 @@ public class GUI {
 	private JTextField userField;
 	private JPasswordField passwordField;
 	private JTextField textField_1;
+	public List<String>sl;
 
 
 
 	/**
 	 * Create the application.
+	 * @throws Exception 
 	 */
-	public GUI(ClientController tc) {
+	public GUI(ClientController tc) throws Exception {
 		this.registerClientController(tc);
 		initialize();
 	}
@@ -59,8 +68,10 @@ public class GUI {
 	
 	/**
 	 * Initialize the contents of the frame.
+	 * @throws Exception 
+	 * @wbp.parser.entryPoint
 	 */
-	private void initialize() {
+	private void initialize() throws Exception {
 		frame = new JFrame();
 		frame.getContentPane().setBackground(new Color(135, 206, 235));
 		frame.setBounds(100, 100, 700, 550);
@@ -68,18 +79,25 @@ public class GUI {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
-		JDesktopPane desktopPane = new JDesktopPane();
+	/**	JDesktopPane desktopPane = new JDesktopPane();
 		desktopPane.setBounds(0, 0, 0, 0);
-		frame.getContentPane().add(desktopPane);
+		frame.getContentPane().add(desktopPane);**/
 		frame.setVisible(true);
 		
+		//sl=myClientController.getmem("carlos95");
 		loginFrame();
-
+		
+		frame.repaint();
 		
 		
 
 	}
-	public void loginFrame(){
+	
+	
+	/**
+	 * @wbp.parser.entryPoint
+	 */
+public void loginFrame(){
 		JInternalFrame LoginFrame = new JInternalFrame("Log In");
 		LoginFrame.setBounds(163, 70, 381, 231);
 		frame.getContentPane().add(LoginFrame);
@@ -117,18 +135,25 @@ public class GUI {
 					for(int i=0;i<passwordField.getPassword().length;i++){
 						pass=pass+passwordField.getPassword()[i];
 					}	
-					System.out.println("pass");
-				myClientController.SignIn(userField.getText(),pass);
-				System.out.println(userField.getText());
-				System.out.println("Bien logeado");
-				adminPanel();
+				//System.out.println("pass");
+				//System.out.println(userField.getText());
+
+				if(myClientController.SignIn(userField.getText(),pass)){
+					System.out.println("Bien logeado");
+					LoginFrame.dispose();
+					adminPanel(userField.getText());
+					frame.repaint();
+				}else{
+					System.out.println("Mal logeado");
+
+					LoginFrame.dispose();
+					frame.repaint();
+				}
+
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
-				LoginFrame.dispose();
-
-				frame.repaint();
 			}
 		});
 		btnDone.setBounds(146, 167, 89, 23);
@@ -148,7 +173,16 @@ public class GUI {
 		
 		frame.repaint();
 	}
-	public void adminPanel(){
+
+	@SuppressWarnings({ "unchecked", "serial", "rawtypes" })
+	public void adminPanel(String user) throws Exception{
+		
+		ArrayList<String> la = this.myClientController.getAllMembers("admin");
+		String[]laa = new String [la.size()] ; 
+		la.toArray(laa);
+		ArrayList<String> lu = this.myClientController.getAllMembers("user");
+		String[]lua = new String [lu.size()] ; 
+		lu.toArray(lua);
 		
 		JPanel listspanel = new JPanel();
 		listspanel.setBackground(new Color(176, 224, 230));
@@ -177,18 +211,36 @@ public class GUI {
 		gbc_lblAdminList.gridy = 0;
 		listspanel.add(lblAdminList, gbc_lblAdminList);
 		
-		@SuppressWarnings("rawtypes")
 		JList userList = new JList();
+		userList.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		userList.setModel(new AbstractListModel() {
+			String[] values = new String[] {lua[0],lua[1],lua[2],lua[3]};
+			public int getSize() {
+				return values.length;
+			}
+			public Object getElementAt(int index) {
+				return values[index];
+			}
+		});
 		userList.setBorder(new LineBorder(new Color(0, 0, 0)));
 		GridBagConstraints gbc_userList = new GridBagConstraints();
 		gbc_userList.insets = new Insets(0, 0, 0, 5);
 		gbc_userList.fill = GridBagConstraints.BOTH;
 		gbc_userList.gridx = 1;
 		gbc_userList.gridy = 1;
-		listspanel.add(userList, gbc_userList);
+
 		
-		@SuppressWarnings("rawtypes")
 		JList adminList = new JList();
+		adminList.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		adminList.setModel(new AbstractListModel() {
+			String[] values = new String[] {laa[0],laa[1],laa[2],laa[3]};
+			public int getSize() {
+				return values.length;
+			}
+			public Object getElementAt(int index) {
+				return values[index];
+			}
+		});
 		adminList.setBorder(new LineBorder(new Color(0, 0, 0)));
 		GridBagConstraints gbc_adminList = new GridBagConstraints();
 		gbc_adminList.insets = new Insets(0, 0, 0, 5);
@@ -199,18 +251,55 @@ public class GUI {
 		
 		JPanel utilitiesPanel = new JPanel();
 		utilitiesPanel.setBorder(new SoftBevelBorder(BevelBorder.LOWERED, null, null, null, null));
+		utilitiesPanel.setLayout(null);
 		GridBagConstraints gbc_utilitiesPanel = new GridBagConstraints();
 		gbc_utilitiesPanel.fill = GridBagConstraints.BOTH;
 		gbc_utilitiesPanel.gridx = 6;
 		gbc_utilitiesPanel.gridy = 1;
 		listspanel.add(utilitiesPanel, gbc_utilitiesPanel);
 		
-		frame.repaint();
+		JButton btnInfo = new JButton("+ INFO");
+		btnInfo.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				listspanel.setVisible(false);
+				try {
+					userData(myClientController.getmem(lua[userList.getSelectedIndex()]),listspanel);
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				frame.repaint();
+				
+			}
+		});
+		btnInfo.setBounds(10, 56, 115, 37);
+		utilitiesPanel.add(btnInfo);
 		
+		JButton btnLogout = new JButton("LOGOUT");
+		btnLogout.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				// TODO Auto-generated method stub
+				try {
+					myClientController.SignOut(user);
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				frame.remove(listspanel);;
+				frame.validate();
+				loginFrame();
+				frame.repaint();
+			}
+		});
+		btnLogout.setBounds(10, 230, 115, 37);
+		utilitiesPanel.add(btnLogout);
+		listspanel.add(userList, gbc_userList);
+		frame.repaint();
 		
 	}
 	
-	public void userData(){
+	public void userData(List<String>sl, JPanel pp) throws Exception{
 		JPanel panel = new JPanel();
 		panel.setBackground(new Color(176, 224, 230));
 		panel.setBounds(6, 6, 672, 499);
@@ -237,6 +326,26 @@ public class GUI {
 		lblNewLabel.setFont(new Font("SansSerif", Font.BOLD, 18));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.LEFT);
 		headpanel.add(lblNewLabel);
+		
+		JButton btnBackB = new JButton("BACK");
+		btnBackB.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				// TODO Auto-generated method stub
+				try {
+					frame.remove(panel);
+					frame.validate();
+					pp.setVisible(true);
+					
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				frame.repaint();
+			}
+		});
+		btnBackB.setBounds(484, 11, 109, 54);
+		headpanel.add(btnBackB);
 		
 		JPanel datapanel = new JPanel();
 		datapanel.setBorder(new EtchedBorder(EtchedBorder.LOWERED, null, null));
@@ -337,6 +446,15 @@ public class GUI {
 		valuespanel.add(addressValue, gbc_addressValue);
 		addressValue.setBackground(new Color(211, 211, 211));
 		
+		bdayValue.setText("Unknown Bithdate");
+		usernameValue.setText(sl.get(0));
+		nameValue.setText(sl.get(1));
+		mailValue.setText(sl.get(2));
+		passValue.setText(sl.get(3));
+		countryValue.setText(sl.get(4));
+		addressValue.setText(sl.get(5));
+		
+		
 		JLabel lblName = new JLabel("Real name: ");
 		GridBagConstraints gbc_lblName = new GridBagConstraints();
 		gbc_lblName.anchor = GridBagConstraints.WEST;
@@ -390,20 +508,5 @@ public class GUI {
 		gbc_lblAddress.gridy = 7;
 		datapanel.add(lblAddress, gbc_lblAddress);
 		lblAddress.setFont(new Font("SansSerif", Font.BOLD, 13));
-	}
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-				//	GUI window = new GUI(myClientController);
-				//		window.frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
 	}
 }

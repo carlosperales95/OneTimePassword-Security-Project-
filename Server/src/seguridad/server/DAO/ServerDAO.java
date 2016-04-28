@@ -45,9 +45,9 @@ public class ServerDAO implements IServerDAO {
 				q.setFilter("username == user_name");
 				q.declareParameters("String user_name");
 				List<Member> result = (List<Member>)q.execute(username);	
-				System.out.println(result.get(0).getUsername());
+				System.out.println(result.get(0).toString());
 				
-				if(!result.isEmpty())remember = result.get(0);
+				if(!result.isEmpty()){remember=new Member(false, result.get(0).getUsername(), result.get(0).getPassword(), result.get(0).getName(), result.get(0).getEmail(), null, result.get(0).getAddress(), result.get(0).getCountry());}
 					
 			}catch(Exception e){
 				e.printStackTrace();
@@ -60,7 +60,7 @@ public class ServerDAO implements IServerDAO {
 				if (pm != null && !pm.isClosed()) {
 					pm.close();
 				}
-				System.out.println("getMember() Returning " + remember);
+				System.out.println("getMember() Returning " + remember.toString());
 				return remember;
 			}
 		}
@@ -74,14 +74,7 @@ public class ServerDAO implements IServerDAO {
 		@SuppressWarnings("unchecked")
 		public List<Member> getallMembers(String admin) {
 			List<Member> remember = null;
-			System.out.println("es admin?");
-			System.out.println(admin == "admin");
-			System.out.println(admin);
-			System.out.println("es user?");
-			System.out.println(admin == "admin");
-			System.out.println(admin);
-
-			if(admin=="admin"){
+			if(admin.equals("admin")){
 			try{
 				System.out.println("INFO: Getting all the admins from the db: ");
 				pm = pmf.getPersistenceManager();
@@ -109,7 +102,7 @@ public class ServerDAO implements IServerDAO {
 					pm.close();
 				}
 			}
-}else if(admin=="user"){
+}else if(admin.equals("user")){
 	try{
 		System.out.println("INFO: Getting all the admins from the db: ");
 		pm = pmf.getPersistenceManager();
