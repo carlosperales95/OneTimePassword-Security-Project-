@@ -17,7 +17,8 @@ public class ServerService implements IServerManager {
 	static{
 		registered = new HashMap<String, String>();
 	}
-
+	
+	private OTPmaker myOTPmaker;
 	private IServerDAO myPersistenceProvider;
 	
 	public ServerService() throws RemoteException{
@@ -30,9 +31,9 @@ public class ServerService implements IServerManager {
 	 * @param username
 	 * @param password
 	 */
-	public boolean SignIn(String username, String password)throws RemoteException{
+	public boolean SignIn(String username, String password, String otpc)throws RemoteException{
 		System.out.println("vamos a logear");
-		if(this.checkCombination(username, password)==true){
+		if(this.checkCombination(username, password)==true&& compareotp(username, password,otpc)){
 			System.out.println("Member "+ username + " logged in successfully");
 			return true;
 		}
@@ -99,6 +100,16 @@ public class ServerService implements IServerManager {
 		ls.add(memb.getAddress());
 		
 		return ls;
+	}
+	
+	public boolean compareotp(String username,String password,String otpc){
+		@SuppressWarnings("static-access")
+		String myotp = this.myOTPmaker.geneterateOTP(username, username);
+		System.out.println("clientotp:" + otpc);
+		System.out.println(myotp);
+		if(myotp.equals(otpc)){System.out.println("TRUE");return true;}
+		else{System.out.println("FALSE");return false;}
+		
 	}
 	
 }

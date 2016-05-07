@@ -138,7 +138,7 @@ public void loginFrame(){
 				//System.out.println("pass");
 				//System.out.println(userField.getText());
 
-				if(myClientController.SignIn(userField.getText(),pass)){
+				if(myClientController.SignIn(userField.getText(),pass,textField_1.getText())){
 					System.out.println("Bien logeado");
 					LoginFrame.dispose();
 					adminPanel(userField.getText());

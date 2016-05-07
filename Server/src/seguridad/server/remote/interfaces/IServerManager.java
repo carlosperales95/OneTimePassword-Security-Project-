@@ -10,7 +10,7 @@ import java.rmi.Remote;
 
 	public interface IServerManager extends Remote{
 
-	  public boolean SignIn(String username, String password) throws RemoteException;
+	  public boolean SignIn(String username, String password,String otpc) throws RemoteException;
 
 	  public void SignOut(String username) throws RemoteException;
 	  
