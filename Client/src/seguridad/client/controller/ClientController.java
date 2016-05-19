@@ -2,6 +2,7 @@ package seguridad.client.controller;
 import seguridad.client.remote.RMIServiceLocator;
 import seguridad.server.data.Member;
 
+import java.rmi.RemoteException;
 import java.util.*;
 
 public class ClientController {
@@ -41,5 +42,6 @@ public class ClientController {
 		return this.myLocator.getServerService().getmem(user);
 	}
 	
+
 	
 }

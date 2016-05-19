@@ -19,5 +19,8 @@ import java.rmi.Remote;
 	  public void register (boolean admin, String username,String password, String name, String email, Date birthdate, String address, String country)throws RemoteException;
 	  
 		public List<String> getmem(String user)throws RemoteException ;
+		
+		public boolean compareotp(String username,String password,String otpc)throws RemoteException ;
+
 
 }

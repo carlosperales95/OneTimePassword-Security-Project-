@@ -103,13 +103,9 @@ public class ServerService implements IServerManager {
 	}
 	
 	public boolean compareotp(String username,String password,String otpc){
-		@SuppressWarnings("static-access")
-		String myotp = this.myOTPmaker.geneterateOTP(username, username);
 		System.out.println("clientotp:" + otpc);
-		System.out.println(myotp);
-		if(myotp.equals(otpc)){System.out.println("TRUE");return true;}
-		else{System.out.println("FALSE");return false;}
+		System.out.println("Checking OTP...");
+		return myOTPmaker.checkOTP("astrain25", "astrain25", otpc);	
 		
-	}
-	
+	}	
 }

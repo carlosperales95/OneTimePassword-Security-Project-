@@ -5,16 +5,23 @@ import java.awt.EventQueue;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 
+import seguridad.otpg.main.OTPmaker;
+import java.awt.event.MouseAdapter;
+
 public class OtpGUI implements Runnable{
 
 	private JFrame frame;
+	private OTPmaker myotpmk;
 
 	/**
 	 * Launch the application.
@@ -64,42 +71,58 @@ public class OtpGUI implements Runnable{
 		lblOtpGenerator.setBounds(105, 38, 218, 29);
 		panel.add(lblOtpGenerator);
 		
-		JPanel panel_1 = new JPanel();
-		panel_1.setBackground(new Color(255, 255, 255));
-		panel_1.setBounds(60, 91, 301, 38);
-		panel.add(panel_1);
-		panel_1.setLayout(null);
-		
-		JLabel label = new JLabel("");
-		label.setBounds(301, 36, -302, -38);
-		label.setHorizontalAlignment(SwingConstants.CENTER);
-		label.setBackground(Color.WHITE);
-		panel_1.add(label);
+
+
+	//	label.setText(myotpmk.geneterateOTP("astrain25", "astrain25"));
+
 		
 		JButton btnNewButton = new JButton("GENERATE KEY");
-		btnNewButton.setForeground(new Color(255, 255, 255));
-		btnNewButton.setBackground(new Color(0, 204, 102));
-		btnNewButton.setFont(new Font("Narkisim", Font.BOLD, 16));
-		btnNewButton.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
+		btnNewButton.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent arg0) {	
+	
 				btnNewButton.setEnabled(false);
 				try {
-					Thread.sleep(180000);
-					System.out.println("Vuelve el hilo");
-					btnNewButton.setEnabled(true);
-					label.setText("");
+					String otp=myotpmk.geneterateOTP("astrain25", "astrain25");
+					
+					JLabel lblotp = new JLabel(otp);
+					lblotp.setHorizontalAlignment(SwingConstants.CENTER);
+					lblotp.setForeground(Color.WHITE);
+					lblotp.setFont(new Font("Lucida Console", Font.BOLD, 24));
+					lblotp.setBounds(105, 97, 240, 39);
+					panel.add(lblotp);
+					frame.repaint();
+					
+					Thread.sleep(2);
+					frame.repaint();
+					System.out.println(lblotp.getText());
+
+					
 				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
-				}
-				
-				//CODIGO PARA LA LLAMADA AL CODIGO OTP
-				
+				}finally{
+					try {
+						Thread.sleep(180000);
+					} catch (InterruptedException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+					System.out.println("Vuelve el hilo");
+					btnNewButton.setEnabled(true);
+					frame.repaint();
+					}
 			}
 		});
+		btnNewButton.setForeground(new Color(255, 255, 255));
+		btnNewButton.setBackground(new Color(0, 204, 102));
+		btnNewButton.setFont(new Font("Narkisim", Font.BOLD, 16));
+		
 		btnNewButton.setBounds(130, 172, 158, 53);
 		panel.add(btnNewButton);
 		frame.setVisible(true);
+
+
 		
 
 	}
