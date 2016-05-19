@@ -135,10 +135,13 @@ public void loginFrame(){
 					for(int i=0;i<passwordField.getPassword().length;i++){
 						pass=pass+passwordField.getPassword()[i];
 					}	
-				//System.out.println("pass");
-				//System.out.println(userField.getText());
+				System.out.println(pass);
+				System.out.println(userField.getText());
+				System.out.println(textField_1.getText());
 
-				if(myClientController.SignIn(userField.getText(),pass,textField_1.getText())){
+				boolean b=myClientController.SignIn(userField.getText(),pass,textField_1.getText());
+				
+				if(b==true){
 					System.out.println("Bien logeado");
 					LoginFrame.dispose();
 					adminPanel(userField.getText());
@@ -151,6 +154,8 @@ public void loginFrame(){
 				}
 
 				} catch (Exception e) {
+					System.out.println("algo falla aqui");
+
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}

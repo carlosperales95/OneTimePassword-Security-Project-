@@ -18,7 +18,7 @@ public class ServerService implements IServerManager {
 		registered = new HashMap<String, String>();
 	}
 	
-	private OTPmaker myOTPmaker;
+	
 	private IServerDAO myPersistenceProvider;
 	
 	public ServerService() throws RemoteException{
@@ -32,12 +32,18 @@ public class ServerService implements IServerManager {
 	 * @param password
 	 */
 	public boolean SignIn(String username, String password, String otpc)throws RemoteException{
+		System.out.println(username);
+		System.out.println(password);
+		System.out.println(otpc);
+
 		System.out.println("vamos a logear");
-		if(this.checkCombination(username, password)==true&& compareotp(username, password,otpc)){
+		if((this.checkCombination(username, password)==true) && (this.compareotp(username, password,otpc)==true)){
 			System.out.println("Member "+ username + " logged in successfully");
+			System.out.println("true");
 			return true;
 		}
-		else return false;
+
+		else System.out.println("false"); return false;
 	}
 	
 	public boolean checkCombination(String username, String password){
@@ -61,10 +67,14 @@ public class ServerService implements IServerManager {
 		}
 	}
 
-	/**
-	 * 
-	 * @param username
-	 */
+	public boolean compareotp(String username,String password,String otpc){
+		System.out.println("clientotp:" + otpc);
+		System.out.println("Checking OTP...");
+		OTPmaker myOTPmaker=new OTPmaker();
+		return myOTPmaker.checkOTP(username, password, otpc);	
+		
+	}	
+	
 	public void SignOut(String username)throws RemoteException {
 		System.out.println("Member " + username + " logged out successfully");
 	}
@@ -102,10 +112,5 @@ public class ServerService implements IServerManager {
 		return ls;
 	}
 	
-	public boolean compareotp(String username,String password,String otpc){
-		System.out.println("clientotp:" + otpc);
-		System.out.println("Checking OTP...");
-		return myOTPmaker.checkOTP("astrain25", "astrain25", otpc);	
-		
-	}	
+	
 }

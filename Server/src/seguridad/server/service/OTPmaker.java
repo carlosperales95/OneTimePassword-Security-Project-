@@ -7,23 +7,6 @@ import java.util.Random;
 public class OTPmaker {
 
 	
-	
-	public static void main(String[] args) {
-/**
-		if (conectadoServerClient) {
-			String otp = geneterateOTP("astrain25", "astrain25");
-			System.out.println(otp);
-			new ArrayList<>();
-			// otps = geneterateOTP2("astrain25", "astrain25");
-			conectadoServerClient = checkOTP("astrain25", "astrain25", otp);
-			System.out.println(" ");
-			System.out.println(otp);
-			System.out.println(conectadoServerClient);
-		}**/
-
-	}
-
-	
 	public static ArrayList<String> geneterateOTP2(String userNick, String userPasswrod) {
 		String otp;
 		String nombre = userNick + userPasswrod;

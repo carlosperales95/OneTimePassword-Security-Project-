@@ -20,7 +20,5 @@ import java.rmi.Remote;
 	  
 		public List<String> getmem(String user)throws RemoteException ;
 		
-		public boolean compareotp(String username,String password,String otpc)throws RemoteException ;
-
 
 }

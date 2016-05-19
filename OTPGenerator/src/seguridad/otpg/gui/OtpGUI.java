@@ -14,6 +14,8 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;
+import javax.swing.SwingUtilities;
+import javax.swing.plaf.SliderUI;
 
 import seguridad.otpg.main.OTPmaker;
 import java.awt.event.MouseAdapter;
@@ -22,22 +24,31 @@ public class OtpGUI implements Runnable{
 
 	private JFrame frame;
 	private OTPmaker myotpmk;
+	private boolean freeze;
+	protected JButton btnNewButton;
 
 	/**
 	 * Launch the application.
 	 */
 	public static void main(String[] args) {
-		OtpGUI g=new OtpGUI();
-		
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
 
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
+		
+		Thread t = new Thread(new Runnable() {
+			    public void run() {
+					OtpGUI g=new OtpGUI();
+			    	while(true){
+			    		//System.out.println("hola");
+			    		if(g.freeze==true){
+			    			g.stopthr();
+			    			System.out.println("Vuelve el hilo");
+			    			g.freeze=false;
+			    			g.btnNewButton.setEnabled(true);
+			    			}
+			    		}
+			    }
+			});
+
+			t.start();
 	}
 
 	/**
@@ -53,6 +64,7 @@ public class OtpGUI implements Runnable{
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
+		this.freeze=false;
 		frame = new JFrame();
 		frame.setBounds(100, 100, 450, 300);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -71,47 +83,37 @@ public class OtpGUI implements Runnable{
 		lblOtpGenerator.setBounds(105, 38, 218, 29);
 		panel.add(lblOtpGenerator);
 		
+		JLabel lblotp = new JLabel();
+		lblotp.setHorizontalAlignment(SwingConstants.CENTER);
+		lblotp.setForeground(Color.WHITE);
+		lblotp.setFont(new Font("Lucida Console", Font.BOLD, 24));
+		lblotp.setBounds(105, 97, 240, 39);
+		panel.add(lblotp);
+
+		
 
 
 	//	label.setText(myotpmk.geneterateOTP("astrain25", "astrain25"));
 
 		
-		JButton btnNewButton = new JButton("GENERATE KEY");
-		btnNewButton.addMouseListener(new MouseAdapter() {
+		 btnNewButton = new JButton("GENERATE KEY");
+		 btnNewButton.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent arg0) {	
-	
-				btnNewButton.setEnabled(false);
-				try {
+					
 					String otp=myotpmk.geneterateOTP("astrain25", "astrain25");
 					
-					JLabel lblotp = new JLabel(otp);
-					lblotp.setHorizontalAlignment(SwingConstants.CENTER);
-					lblotp.setForeground(Color.WHITE);
-					lblotp.setFont(new Font("Lucida Console", Font.BOLD, 24));
-					lblotp.setBounds(105, 97, 240, 39);
-					panel.add(lblotp);
+					lblotp.setText(otp);
 					frame.repaint();
 					
-					Thread.sleep(2);
-					frame.repaint();
 					System.out.println(lblotp.getText());
-
 					
-				} catch (InterruptedException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}finally{
-					try {
-						Thread.sleep(180000);
-					} catch (InterruptedException e) {
-						// TODO Auto-generated catch block
-						e.printStackTrace();
-					}
-					System.out.println("Vuelve el hilo");
-					btnNewButton.setEnabled(true);
+					btnNewButton.setEnabled(false);
+				
 					frame.repaint();
-					}
+					
+					freeze=true;
+		
 			}
 		});
 		btnNewButton.setForeground(new Color(255, 255, 255));
@@ -122,16 +124,28 @@ public class OtpGUI implements Runnable{
 		panel.add(btnNewButton);
 		frame.setVisible(true);
 
-
-		
-
 	}
 
-	@Override
-	public void run() {
-		// TODO Auto-generated method stub
+public void stopthr(){
+	try {
+		//180000
+		Thread.sleep(180000);
 		
+		
+	} catch (InterruptedException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
 	}
+}
 
+@Override
+public void run() {
+	// TODO Auto-generated method stub
 
 }
+	
+	  
+}	
+	
+
+

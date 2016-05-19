@@ -65,10 +65,5 @@ public class ServerFacade extends UnicastRemoteObject implements IServerManager 
 		return this.myAssociatedService.getmem(user);
 	}
 
-	@Override
-	public boolean compareotp(String username, String password, String otpc) throws RemoteException {
-		// TODO Auto-generated method stub
-		return this.myAssociatedService.compareotp(username, password, otpc);
-	}
 
 }
