@@ -1,42 +1,28 @@
 package seguridad.client.gui;
 
-import java.awt.EventQueue;
-
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import java.awt.GridBagLayout;
-
 import seguridad.client.controller.ClientController;
-import seguridad.server.data.Member;
-
-import javax.swing.BoxLayout;
-import javax.swing.JDesktopPane;
-import javax.swing.JLayeredPane;
 import java.awt.Color;
 import javax.swing.JInternalFrame;
-import java.awt.Window.Type;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import java.awt.Font;
 import javax.swing.JPasswordField;
 import javax.swing.JButton;
-import java.awt.Component;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.util.ArrayList;
 import java.util.List;
-import java.awt.GridLayout;
 import java.awt.GridBagConstraints;
 import java.awt.Insets;
 import javax.swing.JList;
 import javax.swing.border.BevelBorder;
-import javax.swing.border.CompoundBorder;
 import javax.swing.border.LineBorder;
 import javax.swing.border.EtchedBorder;
 import javax.swing.border.SoftBevelBorder;
-import javax.swing.JTextPane;
-import javax.swing.ListModel;
 import javax.swing.AbstractListModel;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
@@ -51,10 +37,8 @@ public class GUI {
 	private JTextField textField_1;
 	public List<String>sl;
 
-
-
 	/**
-	 * Create the application.
+	 * Constructor de la interfaz.
 	 * @throws Exception 
 	 */
 	public GUI(ClientController tc) throws Exception {
@@ -72,32 +56,25 @@ public class GUI {
 	 * @wbp.parser.entryPoint
 	 */
 	private void initialize() throws Exception {
+		//Crea el JFrame
 		frame = new JFrame();
 		frame.getContentPane().setBackground(new Color(135, 206, 235));
 		frame.setBounds(100, 100, 700, 550);
 		frame.setResizable(false);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
-		
-	/**	JDesktopPane desktopPane = new JDesktopPane();
-		desktopPane.setBounds(0, 0, 0, 0);
-		frame.getContentPane().add(desktopPane);**/
 		frame.setVisible(true);
 		
-		//sl=myClientController.getmem("carlos95");
+		//	Método para cargar la vista de LogIn
 		loginFrame();
 		
 		frame.repaint();
-		
-		
 
 	}
 	
-	
-	/**
-	 * @wbp.parser.entryPoint
-	 */
-public void loginFrame(){
+	public void loginFrame(){
+		
+		//Creando el JInternalframe
 		JInternalFrame LoginFrame = new JInternalFrame("Log In");
 		LoginFrame.setBounds(163, 70, 381, 231);
 		frame.getContentPane().add(LoginFrame);
@@ -105,6 +82,7 @@ public void loginFrame(){
 		LoginFrame.setResizable(false);
 		LoginFrame.getContentPane().setLayout(null);
 		
+		//LABELS Y TEXTFIELDS
 		JLabel lblUser = new JLabel("User");
 		lblUser.setFont(new Font("Verdana", Font.BOLD, 14));
 		lblUser.setHorizontalAlignment(SwingConstants.CENTER);
@@ -126,44 +104,6 @@ public void loginFrame(){
 		passwordField.setBounds(109, 84, 196, 20);
 		LoginFrame.getContentPane().add(passwordField);
 		
-		JButton btnDone = new JButton("Done");
-		btnDone.addMouseListener(new MouseAdapter() {
-			@Override
-			public void mouseClicked(MouseEvent arg0) {
-				try {
-					String pass="";
-					for(int i=0;i<passwordField.getPassword().length;i++){
-						pass=pass+passwordField.getPassword()[i];
-					}	
-				System.out.println(pass);
-				System.out.println(userField.getText());
-				System.out.println(textField_1.getText());
-
-				boolean b=myClientController.SignIn(userField.getText(),pass,textField_1.getText());
-				
-				if(b==true){
-					System.out.println("Bien logeado");
-					LoginFrame.dispose();
-					adminPanel(userField.getText());
-					frame.repaint();
-				}else{
-					System.out.println("Mal logeado");
-
-					LoginFrame.dispose();
-					frame.repaint();
-				}
-
-				} catch (Exception e) {
-					System.out.println("algo falla aqui");
-
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-			}
-		});
-		btnDone.setBounds(146, 167, 89, 23);
-		LoginFrame.getContentPane().add(btnDone);
-		
 		JLabel lblOtp = new JLabel("OTP");
 		lblOtp.setHorizontalAlignment(SwingConstants.CENTER);
 		lblOtp.setFont(new Font("Verdana", Font.BOLD, 14));
@@ -175,20 +115,61 @@ public void loginFrame(){
 		LoginFrame.getContentPane().add(textField_1);
 		textField_1.setColumns(10);
 		LoginFrame.setVisible(true);
+		//
 		
+		//BOTON CON FUNCIONALIDAD 
+		JButton btnDone = new JButton("Done");
+		btnDone.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent arg0) {
+				try {
+					String pass="";
+					for(int i=0;i<passwordField.getPassword().length;i++){
+						pass=pass+passwordField.getPassword()[i];
+					}	
+					
+			/**	System.out.println("Sending out loginInfo:");
+				System.out.println(pass);
+				System.out.println(userField.getText());
+				System.out.println(textField_1.getText());**/
+
+				boolean b=myClientController.SignIn(userField.getText(),pass,textField_1.getText());
+				
+				if(b==true){
+					LoginFrame.dispose();
+					adminPanel(userField.getText());
+					frame.repaint();
+				}else{
+					LoginFrame.dispose();
+					frame.repaint();
+				}
+
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+		});
+		btnDone.setBounds(146, 167, 89, 23);
+		LoginFrame.getContentPane().add(btnDone);
+			
 		frame.repaint();
 	}
 
 	@SuppressWarnings({ "unchecked", "serial", "rawtypes" })
 	public void adminPanel(String user) throws Exception{
 		
+		//List of admins
 		ArrayList<String> la = this.myClientController.getAllMembers("admin");
 		String[]laa = new String [la.size()] ; 
 		la.toArray(laa);
+		
+		//List of users
 		ArrayList<String> lu = this.myClientController.getAllMembers("user");
 		String[]lua = new String [lu.size()] ; 
 		lu.toArray(lua);
 		
+		//Panel para mostrar las listas
 		JPanel listspanel = new JPanel();
 		listspanel.setBackground(new Color(176, 224, 230));
 		listspanel.setBounds(6, 6, 658, 417);
@@ -200,6 +181,7 @@ public void loginFrame(){
 		gbl_listspanel.rowWeights = new double[]{0.0, 0.0, Double.MIN_VALUE};
 		listspanel.setLayout(gbl_listspanel);
 		
+		//Creando ls JList y los labels
 		JLabel lblUserList = new JLabel("USER LIST");
 		lblUserList.setFont(new Font("SansSerif", Font.BOLD, 18));
 		GridBagConstraints gbc_lblUserList = new GridBagConstraints();
@@ -233,7 +215,7 @@ public void loginFrame(){
 		gbc_userList.fill = GridBagConstraints.BOTH;
 		gbc_userList.gridx = 1;
 		gbc_userList.gridy = 1;
-
+		listspanel.add(userList, gbc_userList);
 		
 		JList adminList = new JList();
 		adminList.setFont(new Font("Tahoma", Font.PLAIN, 15));
@@ -254,6 +236,7 @@ public void loginFrame(){
 		gbc_adminList.gridy = 1;
 		listspanel.add(adminList, gbc_adminList);
 		
+		//Panel de utilidades
 		JPanel utilitiesPanel = new JPanel();
 		utilitiesPanel.setBorder(new SoftBevelBorder(BevelBorder.LOWERED, null, null, null, null));
 		utilitiesPanel.setLayout(null);
@@ -263,6 +246,7 @@ public void loginFrame(){
 		gbc_utilitiesPanel.gridy = 1;
 		listspanel.add(utilitiesPanel, gbc_utilitiesPanel);
 		
+		//Boton para ver info de los usuarios
 		JButton btnInfo = new JButton("+ INFO");
 		btnInfo.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
@@ -273,8 +257,7 @@ public void loginFrame(){
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
-				frame.repaint();
-				
+				frame.repaint();	
 			}
 		});
 		btnInfo.setBounds(10, 56, 115, 37);
@@ -299,12 +282,13 @@ public void loginFrame(){
 		});
 		btnLogout.setBounds(10, 230, 115, 37);
 		utilitiesPanel.add(btnLogout);
-		listspanel.add(userList, gbc_userList);
 		frame.repaint();
 		
 	}
 	
 	public void userData(List<String>sl, JPanel pp) throws Exception{
+		
+		//Creando panel donde se mostrará la info de los usuarios
 		JPanel panel = new JPanel();
 		panel.setBackground(new Color(176, 224, 230));
 		panel.setBounds(6, 6, 672, 499);
@@ -451,6 +435,7 @@ public void loginFrame(){
 		valuespanel.add(addressValue, gbc_addressValue);
 		addressValue.setBackground(new Color(211, 211, 211));
 		
+		//Añadiendo los valoreas a los campos
 		bdayValue.setText("Unknown Bithdate");
 		usernameValue.setText(sl.get(0));
 		nameValue.setText(sl.get(1));
@@ -459,7 +444,7 @@ public void loginFrame(){
 		countryValue.setText(sl.get(4));
 		addressValue.setText(sl.get(5));
 		
-		
+		//Labels de descripción de campo
 		JLabel lblName = new JLabel("Real name: ");
 		GridBagConstraints gbc_lblName = new GridBagConstraints();
 		gbc_lblName.anchor = GridBagConstraints.WEST;

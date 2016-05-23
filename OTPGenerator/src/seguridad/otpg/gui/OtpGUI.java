@@ -24,7 +24,6 @@ import java.awt.event.MouseAdapter;
 public class OtpGUI implements Runnable {
 
 	private static JFrame frame;
-	private OTPmaker myotpmk;
 	private static boolean freeze;
 	private static String otp = "";
 	private static JLabel lblotp;
@@ -43,16 +42,12 @@ public class OtpGUI implements Runnable {
 				OtpGUI g = new OtpGUI();
 				while (true) {
 					if (freeze) {
-
 						g.stopthr();
 						freeze = false;
 						btnNewButton.setEnabled(true);
-
 					}
 					if (!freeze) {
-
 						frame.repaint();
-
 					}
 				}
 			}
@@ -74,6 +69,7 @@ public class OtpGUI implements Runnable {
 	 */
 	private void initialize() {
 		freeze = false;
+		
 		frame = new JFrame();
 		frame.setBounds(100, 100, 450, 300);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -99,27 +95,18 @@ public class OtpGUI implements Runnable {
 		lblotp.setBounds(105, 97, 240, 39);
 		panel.add(lblotp);
 
-		// label.setText(myotpmk.geneterateOTP("astrain25", "astrain25"));
-
 		btnNewButton = new JButton("GENERATE KEY");
 		btnNewButton.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
-				System.out.println(freeze);
-				btnNewButton.setEnabled(freeze);
-
+				btnNewButton.setEnabled(false);
 				if (!freeze) {
 					otp = OTPmaker.geneterateOTP("astrain25", "astrain25");
-
 					System.out.println(lblotp.getText());
-
-					btnNewButton.setEnabled(freeze);
-
+					btnNewButton.setEnabled(true);
 					frame.repaint();
-
+					
 					freeze = true;
-					// stopthr();
-
 				}
 			}
 		});
@@ -139,13 +126,12 @@ public class OtpGUI implements Runnable {
 		lblotp.setVisible(true);
 		frame.repaint();
 		try {
-			// 180000
 
-			System.out.println("dormidoo");
-			Thread.sleep(10000);
+			System.out.println("dormido");
+			Thread.sleep(18000);
 
 			freeze = false;
-			System.out.println("despiertoo");
+			System.out.println("despierto");
 
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block

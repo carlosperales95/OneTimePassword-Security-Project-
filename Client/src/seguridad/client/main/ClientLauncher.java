@@ -5,28 +5,30 @@ import seguridad.client.gui.GUI;
 import seguridad.client.remote.RMIServiceLocator;
 
 public class ClientLauncher{
-
-	/**
+	
+	/*
+	 * MAIN PROGRAM 
 	 * 
-	 * @param args
-	 */
+	 * Clase inicial que corre en el cliente.
+	 * En ella establecemos: 
+	 * El Servicio RMI 
+	 * El Controlador para el cliente
+	 * La interfaz gráfica
+	 * 
+	 */ 
+	@SuppressWarnings("unused")
 	public static void main(String[] args) {
 		RMIServiceLocator rsl = new RMIServiceLocator(args[0],args[1],args[2]);
-		System.out.println("Llamar a "+ args[0]);
+		System.out.println("Llamando al sevidor: "+ args[0]);
 		try {
 			ClientController tc = new ClientController(rsl);
 			rsl.getServerService();
-		//	tc.SignIn("astrain25", "astrain25");
-		//	String admin = "user";
-		//	tc.getAllMembers(admin);
-		//	tc.getAllMembers("admin");
 			GUI g = new GUI(tc);
 			
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-	
 	}
 
 }

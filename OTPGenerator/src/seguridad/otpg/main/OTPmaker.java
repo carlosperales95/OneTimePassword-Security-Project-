@@ -1,54 +1,9 @@
 package seguridad.otpg.main;
 
-import java.sql.Date;
-import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
-import java.util.Calendar;
 import java.util.Random;
-import java.util.Scanner;
-import java.util.Timer;
-import java.util.TimerTask;
 
 public class OTPmaker {
-
-	private boolean isTimedOut = false;
-	private static boolean conectadoServerClient = true;
-
-	private static long time1;
-	private static long time2;
-	private static long diferencia;
-
-	public static void main(String[] args) {
-
-		/*
-		 * String cad; Scanner teclado = new Scanner(System.in);
-		 * 
-		 * // Se toma la hora en el inicio del programa
-		 * 
-		 * System.out.print("Pulsa Intro para terminar.");
-		 * 
-		 * // Se espera a que el usuario pulse intro cad = teclado.nextLine();
-		 * 
-		 * // Se vuelve a tomar la hora una vez que ha pulsado Intro Calendar
-		 * ahora2 = Calendar.getInstance(); time2 = ahora2.getTimeInMillis();
-		 * 
-		 * // Se calcula la diferencia de tiempo diferencia = time2 - time1;
-		 * 
-		 * // Se muestra en pantalla la diferencia de tiempo obtenido
-		 * System.out.println("Has tardado: " + diferencia + " milisegundos");
-		 * System.out.printf("Equivale a: %.3f segundos", (double) diferencia /
-		 * 1000);
-		 */
-
-		if (conectadoServerClient) {
-			String otp = geneterateOTP("astrain25", "astrain25");
-			System.out.println(otp);
-			// otp = geneterateOTPPassword(9999, "fuckermaister");
-			// System.out.println(otp);
-
-		}
-
-	}
 
 	public static String geneterateOTP(String userNick, String userPasswrod) {
 		String otp;
