@@ -3,10 +3,8 @@ import java.util.Date;
 
 
 import seguridad.server.service.ServerService;
-//POPULATE ONLY
-import java.io.File;
-import java.io.FileInputStream;
 
+//POPULATE ONLY
 public class ServerLauncher_populate{
 	
 	public static void main(String[] args){
@@ -23,16 +21,10 @@ public class ServerLauncher_populate{
 			ts1.register(false, "vlad.empaik", "password", "Vladimir Aiken", "vlad_empaler@outlook.com", new Date(), "calle en la que vive este señor", "lejos");
 			ts1.register(false, "ninstur", "1234", "Ninoslav Arthur", "ruskininosl@vk.com", new Date(), "calle rusa 3", "Russia");
 			ts1.register(false, "choe222", "1212", "Nico Choe", "choemail@gmail.com", new Date(), "calle aleatoria", "Aqui no");
-
 			
 		}catch(Exception e){
 			e.printStackTrace();
-		}
-			
+		}		
 	}
-	
-	
 	//POPULATE ONLY
-
-
 }

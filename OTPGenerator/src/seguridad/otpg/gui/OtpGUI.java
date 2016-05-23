@@ -126,12 +126,10 @@ public class OtpGUI implements Runnable {
 		lblotp.setVisible(true);
 		frame.repaint();
 		try {
-
-			System.out.println("dormido");
-			Thread.sleep(18000);
-
+			System.out.println("3 minutes asleep");
+			Thread.sleep(180000);
+			System.out.println("New OTP ready");
 			freeze = false;
-			System.out.println("despierto");
 
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block

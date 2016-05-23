@@ -1,14 +1,10 @@
 package seguridad.server.remote.interfaces;
 
-	import java.util.*;
-
-import seguridad.server.data.Member;
-
+import java.util.*;
 import java.rmi.Remote;
-	import java.rmi.RemoteException;
+import java.rmi.RemoteException;
 
-
-	public interface IServerManager extends Remote{
+public interface IServerManager extends Remote{
 
 	  public boolean SignIn(String username, String password,String otpc) throws RemoteException;
 
@@ -18,7 +14,7 @@ import java.rmi.Remote;
 	  
 	  public void register (boolean admin, String username,String password, String name, String email, Date birthdate, String address, String country)throws RemoteException;
 	  
-		public List<String> getmem(String user)throws RemoteException ;
+	  public List<String> getmem(String user)throws RemoteException ;
 		
 
 }
