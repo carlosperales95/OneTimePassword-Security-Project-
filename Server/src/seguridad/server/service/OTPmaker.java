@@ -112,7 +112,6 @@ public class OTPmaker {
 		boolean ok = false;
 		ArrayList<String> otps = new ArrayList<String>();
 		otps = OTPmaker.geneterateOTP2(username, password);
-		System.out.println("llega");
 		for (int i = 0; i < otps.size(); i++) {
 			System.out.println(otp + "=" + otps.get(i) + " ?");
 			if (otp.equals(otps.get(i)))
