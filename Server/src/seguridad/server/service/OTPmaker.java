@@ -36,40 +36,25 @@ public class OTPmaker {
 		}
 
 		// paso 2.
-		int min = LocalDateTime.now().getMinute();
-		for (int i = 0; i < 4; i++) {
+		int sec = LocalDateTime.now().getSecond();
+		for (int i = 0; i < 29; i++) {
 
-			fechas.add(((LocalDateTime.now().getMonthValue() * 1000000)
-					+ (LocalDateTime.now().getDayOfMonth() * 10000) + (LocalDateTime.now().getHour() * 100) + min));
+			fechas.add((LocalDateTime.now().getMonthValue() * 1000000) + (LocalDateTime.now().getDayOfMonth() * 10000)
+					+ (LocalDateTime.now().getHour() * 100) + LocalDateTime.now().getMinute() + LocalDateTime.now().getSecond() - sec);
 
-			if (min == 0) {
-				min = 59;
+			if (sec == 0) {
+				sec = 59;
 			} else
-				min--;
+				sec--;
 		}
-		
-		for (int i = 0; i < 4; i++) {
-
-			fechas.add(((LocalDateTime.now().getMonthValue() * 1000000)
-					+ (LocalDateTime.now().getDayOfMonth() * 10000) + (LocalDateTime.now().getHour() * 100) + min));
-
-			if (min == 59) {
-				min = 0;
-			} else
-				min++;
-		}
-
-		fechas.add(((LocalDateTime.now().getMonthValue() * 1000000)
-					+ (LocalDateTime.now().getDayOfMonth() * 10000) + (LocalDateTime.now().getHour() * 100) + (LocalDateTime.now().getMinute())));
-
-		for (int j = 0; j < 9; j++) {
+		for (int j = 0; j < 29; j++) {
 
 			// paso 3.
 			semilla = nickPassInt + fechas.get(j);
 
 			// paso 4.
 			random = new Random(semilla);
-			numRandom = random.nextInt(999999 - 0 + 1) + 0;
+			numRandom = random.nextInt(999999 - 100000 + 1) + 100000;
 
 			// paso 5.
 			alfabetoa[0] = 'a';
@@ -89,7 +74,7 @@ public class OTPmaker {
 					alfabeto[i] = alfabetoA[i - 26];
 			}
 
-			// 3 digitos aleatorios y distintos 1-6
+			// 3 digitos aleatorios y distintos 0-5
 			do {
 				digito1 = random.nextInt(5 - 0 + 1) + 0;
 				digito2 = random.nextInt(5 - 0 + 1) + 0;
@@ -118,6 +103,7 @@ public class OTPmaker {
 
 			otps.add(otp);
 		}
+
 		return otps;
 	}
 
@@ -125,8 +111,8 @@ public class OTPmaker {
 		System.out.println("Checking otp");
 		boolean ok = false;
 		ArrayList<String> otps = new ArrayList<String>();
-		new OTPmaker();
 		otps = OTPmaker.geneterateOTP2(username, password);
+		System.out.println("llega");
 		for (int i = 0; i < otps.size(); i++) {
 			System.out.println(otp + "=" + otps.get(i) + " ?");
 			if (otp.equals(otps.get(i)))

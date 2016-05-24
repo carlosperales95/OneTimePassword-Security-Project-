@@ -126,9 +126,9 @@ public class OtpGUI implements Runnable {
 		lblotp.setVisible(true);
 		frame.repaint();
 		try {
-			System.out.println("3 minutes asleep");
-			Thread.sleep(180000);
-			System.out.println("New OTP ready");
+			System.out.println("Tienes 40 segundos para introducir la contraseña");
+			Thread.sleep(40000);
+			System.out.println("Para logear deberás generar otra OTP");
 			freeze = false;
 
 		} catch (InterruptedException e) {

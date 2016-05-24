@@ -33,10 +33,11 @@ public class OTPmaker {
 
 		// paso 2.
 		fecha = (LocalDateTime.now().getMonthValue() * 1000000) + (LocalDateTime.now().getDayOfMonth() * 10000)
-				+ (LocalDateTime.now().getHour() * 100) + LocalDateTime.now().getMinute();
+				+ (LocalDateTime.now().getHour() * 100) + LocalDateTime.now().getMinute() + LocalDateTime.now().getSecond();
+		
 		System.out.println("Ahora, cogemos la fecha actual-->mes: " + (LocalDateTime.now().getMonthValue()) + ", dia: "
 				+ (LocalDateTime.now().getDayOfMonth()) + ", hora: " + (LocalDateTime.now().getHour()) + ", mins: "
-				+ LocalDateTime.now().getMinute());
+				+ LocalDateTime.now().getMinute() + ", secs: " + LocalDateTime.now().getSecond());
 		System.out.println("Y la concatenamos '" + fecha + "'");
 		System.out.println(" ");
 
@@ -49,7 +50,7 @@ public class OTPmaker {
 		System.out.println("Generando numero random (de 6 digitos) con semilla del random " + semilla);
 		random = new Random(semilla);
 		// Numero entero entre 0 y 999999, esto es, int de 4 digitos
-		numRandom = random.nextInt(999999 - 0 + 1) + 0;
+		numRandom = random.nextInt(999999 - 100000 + 1) + 100000;
 
 		System.out.println("Gerenando random.... " + numRandom);
 
